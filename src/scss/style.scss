@@ -18,12 +18,12 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 
 
 // Основные цвета
-$mainColor: #000; // Цвет шрифта по умолчанию   
+$mainColor: #020020; // Цвет шрифта по умолчанию   
 $blueColor: #120B8D; 
 $redColor: #FF2E00;
 $greenColor: #00BF36;
+$darkColor: #02002080;
 $lightGrey: #F0F2F8;
-$inputColor: #02002008;
 
 // Анимации
 $mainTransition: all 0.6s ease 0s; // Главная анимация
@@ -35,7 +35,7 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1410;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;

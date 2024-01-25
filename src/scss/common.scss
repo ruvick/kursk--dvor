@@ -1,5 +1,25 @@
 // Заголовки, общие БЄМ блоки и проче... 
 
+// Заголовки 
+h1 {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 40.8 / 30 * 100%;
+}
+h2 {
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 40.8 / 30 * 100%;
+}
+h3	{
+	font-size: 24px;
+	font-weight: 500;
+}
+h4 {
+	font-size: 20px;
+	font-weight: 500;
+}
+
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 
 
@@ -29,7 +49,7 @@
 	background-position: 0 0;
 	background-size: cover;
 	background-repeat: no-repeat;
-	flex: 0px 0px 250px / $maxWidthContainer * 100%;
+	// flex: 0px 0px 250px / $maxWidthContainer * 100%;
 	
 }
 
