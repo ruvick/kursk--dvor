@@ -79,7 +79,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formMasks(true);
 
 /* Модуль формы "колличество" */
-// flsForms.formQuantity();
+flsForms.formQuantity();
 
 /* Модуль формы "показать пароль" */
 // flsForms.formViewpass();

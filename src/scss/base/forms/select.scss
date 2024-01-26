@@ -4,7 +4,7 @@
 	position: relative;
 	// .select__body
 	&__body {
-		position: relative;
+		position: relative; 
 	}
 	// .select__title
 	&__title {
@@ -15,23 +15,40 @@
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
+		background: rgba(2, 0, 32, 0.03); 
+	}
+	&__content {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: 0em;
 	}
 	// .select__value
 	&__value {
 		display: flex;
 		align-items: center;
 		height: 30px;
-		padding: 0px 15px;
 		justify-content: space-between;
 		flex-direction: row-reverse;
+		height: 50px;
+		padding: 14px 20px 14px 15px;
+		border-radius: 3px;
 		&:before {
-			content: "";
 			align-self: stretch;
 			flex: 0 0 10px;
 			transition: all 0.3s ease 0s;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			content: "\e903";
+			font-family: "icons";
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
 			._select-open & {
 				transform: rotate(-180deg);
 			}
@@ -48,17 +65,19 @@
 	}
 	// .select__options
 	&__options {
-		color: #000;
+		color: $mainColor;
 		position: absolute;
-		top: 29px;
-		border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
 		background-color: #fff;
-		border-top: 0;
-		border: 1px solid #d9d9d9;
-		border-top: 0;
-		padding: 10px 0px 5px 0px;
+		top: 55px;
+		border-radius: 3px;
+		background: linear-gradient(0deg, rgba(2, 0, 32, 0.03), rgba(2, 0, 32, 0.03)),
+		linear-gradient(0deg, #FFFFFF, #FFFFFF);
+		border: 1px solid rgba(2, 0, 32, 0.03);
+		padding: 0;
+		max-height: 204px;
+		overflow: auto;
 	}
 	// .select__scroll
 	&__scroll {
@@ -120,4 +139,14 @@
 // Тег
 ._select-tag {
 	cursor: pointer;
+}
+
+.select__options::-webkit-scrollbar {
+	overflow-y: scroll;
+	width: 3px;
+	background: #fff;
+}
+
+.select__options::-webkit-scrollbar-thumb {
+	background: rgba(2, 0, 32, 0.3);
 }

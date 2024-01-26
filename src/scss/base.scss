@@ -2,8 +2,11 @@
 // Для подключения/отключения стилей конкретного єлемента формы смотри base/forms/forms.scss
 @import "base/forms/forms";
 
-// Стили radio
+// Стили button
 @import "base/forms/button";
+
+// Стили quantity
+@import "base/forms/quantity";
 
 // Стили попапов
 // @import "base/popup";

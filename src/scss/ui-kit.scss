@@ -1,5 +1,5 @@
 .page__ui-kit	{
-	padding: 50px 0;
+	padding: 50px 0 100px 0;
 	background: #c8cbd178;
 }
 
@@ -11,7 +11,9 @@
 .ui-kit__col {
 	flex: 0 1 50%;
 	padding: 0 20px;
-	margin-bottom: 25px;
+	margin-bottom: 65px;
+	// border: 1px solid #000;
+	border-radius: 3px;
 }
 
 // Заголовки
@@ -29,11 +31,22 @@
 
 .ui-kit__row {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	flex-wrap: wrap;
+	margin-bottom: 15px;
 	.btn, button, a {
 		margin-right: 10px;
 		margin-bottom: 15px;
+	}
+}
+
+.ui-kit__row {
+	.dropdown-list {
+		margin-right: 15px;
+		margin-bottom: 25px;
+	}
+	.options__item {
+		margin-bottom: 10px;
 	}
 }
 //========================================================================================================================================================

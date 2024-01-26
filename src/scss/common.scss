@@ -112,105 +112,162 @@ h4 {
 	}
 }
 
-// Select ==================================================
-.select__title {
 
-	background: rgba(2, 0, 32, 0.03);
+// Cat-Nav-Btn ===========================================
+.cat-nav-btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 5px 10px;
+	font-size: 16px;
+	font-weight: 400;
+	color: $mainColor;
+	background: transparent;
+	border-radius: 3px;
+	transition: $mainTransition;
+
+	&::before{
+		font-size: 14px;
+		margin-right: 10px;
+	}
+
+	span {
+		color: rgba(2, 0, 32, 0.5);
+		margin-left: 10px;
+	}
+
+	&._active{
+		background: rgba(2, 0, 32, 0.03);
+	}
+
+	@media (any-hover: hover) {
+	&:hover {
+		color: $blueColor;
+		&::before{
+			color: $blueColor;
+		}
+	}
 }
-.select__content {
+}
+
+// Stickers ===========================================
+.sticker-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	.sticker {
+		&:not(:last-child){
+			margin-bottom: 5px;
+		}
+	}
+}
+.sticker {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 3px 6px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 18px;
+	color: #fff;
+	background: $blueColor;
+	border-radius: 3px;
+}
+
+._red {
+	background-color: $redColor;
+}
+._green {
+	background-color: $greenColor;
+}
+._dark-blue {
+	background-color: $blueColor;
+}
+
+// Dropdown-list =========================================================
+
+.dropdown-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: #fff;
+	border-radius: 3px;
+	padding: 5px;
+	overflow: hidden;
+	&__item {
+		display: flex;
+		width: 100%;
+	}
+
+	&__link {
+	width: 100%;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 22px;
 	letter-spacing: 0em;
-}
-.select__value {
-	height: 50px;
-	padding: 14px 25px 14px 15px;
-	border-radius: 3px;
-}
-.select__value:before {
-	content: "\e903";
-	font-family: "icons";
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-.select__options {
-	color: #000;
-	top: 55px;
-	border-radius: 3px;
-	background: linear-gradient(0deg, rgba(2, 0, 32, 0.03), rgba(2, 0, 32, 0.03)),
-	linear-gradient(0deg, #FFFFFF, #FFFFFF);
-	border: 1px solid rgba(2, 0, 32, 0.03);
-	padding: 0;
-	max-height: 204px;
-	overflow: auto;
-}
-.select__options::-webkit-scrollbar {
-	overflow-y: scroll;
-	width: 3px;
-	background: #fff;
-}
-
-.select__options::-webkit-scrollbar-thumb {
-	background: rgba(2, 0, 32, 0.3);
-}
-
-// Tabs =================================================================
-.tabs {
-	width: 100%;
-	display: flex;
-}
-.tabs__navigation {
-	display: flex;
-	flex-direction: column;
-	flex: 0 1 345px;
-}
-.tabs__title {
-	border: none;
-	padding: 15px;
-	border-radius: 3px;
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	justify-content: space-between;
-	color: rgba(2, 0, 32, 0.3);
-	&::before{
-		color: rgba(2, 0, 32, 0.3);
-}
-@media (any-hover: hover) {
-	&:hover {
 	color: $mainColor;
-		background: #fff;
-		&::before{
-			color: $mainColor;
-	}
-	}
+	padding: 10px 20px;
+	transition: $mainTransition;
+	@media (any-hover: hover) {
+		&:hover {
+			background: $lightGrey;
+		}
+		}
+	// Убрать
+	margin: 0 !important;
 	}
 }
-.tabs__title._tab-active {
-    border: none;
-	 background: $lightGrey;
-	 color: $mainColor;
-	 &::before{
-		 color: $mainColor;
- }
-}
 
-.tabs__content {
-	border: none;
-	padding: 0 0 0 30px;
-	flex: 1 1 auto;
-}
+.dropdown-list._secondary {
+		.dropdown-list__link {
+			font-size: 14px;
+			line-height: 17.85px;
+			padding: 10px 15px;
+		}
+	}
 
+// Switch-block ================================================================
+	.switch-block {}
 
-
-
-
+	.switch-block__label {
+		position: relative;
+		display: inline-block;
+		width: 33.33px;
+		height: 20px;
+		background: $lightGrey;
+		border-radius: 3px;
+		transition: $mainTransition;
+		cursor: pointer;
+	}
+	
+	.switch-block__label:after {
+		content: "";
+		position: absolute;
+		width: 13.33px;
+		height: 13.33px;
+		border-radius: 3px;
+		background: rgba(2, 0, 32, 0.3);
+		top: 3.5px;
+		left: 3px;
+		transition: $mainTransition;
+	}
+	
+	input[type='checkbox']:checked+.switch-block__label:after {
+		transform: translateX(16px);
+		background-color: #fff;
+		top: 3.5px;
+		left: 0px;
+	}
+	
+	input[type='checkbox']:checked+.switch-block__label {
+		background-color: $greenColor;
+	}
+	
+	.switch-block__input {
+		position: absolute;
+	}
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 
