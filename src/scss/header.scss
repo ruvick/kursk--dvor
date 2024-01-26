@@ -78,14 +78,13 @@
 //====================================================================================================
 
 //Burger
-/*
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	// @media (max-width: $mobile) {
 		display: block;
 		position: relative; 
-		width: 30px;
-		height: 18px;
+		width: 17px;
+		height: 17px;
 		cursor: pointer;
 		z-index: 5;
 		span,
@@ -97,7 +96,7 @@
 			position: absolute;
 			width: 100%;
 			height: 2px;
-			background-color: #000;
+			background-color: #fff;
 		}
 		&::before {
 			top: 0px;
@@ -122,5 +121,5 @@
 			}
 		}
 	}
-}
-*/
+// }
+

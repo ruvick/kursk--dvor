@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"UI-KIT"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="page__ui-kit ui-kit">
+				<div class="__container">
+
+					<div class="ui-kit__inner">
+
+						<div class="ui-kit__col">
+							<div class="ui-kit__title">Typography</div>
+							<h1>Заголовок h1</h1>
+							<h2>Заголовок h2</h2>
+							<h3>Заголовок h3</h3>
+							<h4>Заголовок h2</h4>
+						</div>
+
+						<div class="ui-kit__col">
+							<div class="ui-kit__title">Кнопки</div>
+							<div class="ui-kit__row">
+
+								<button type="button" class="catalog-btn btn">
+									<span type="button" class="icon-menu">
+										<span></span>
+										<span></span>
+										<span></span>
+									</span>
+									<span class="catalog-btn__text">Каталог</span>
+								</button>
+								<button type="button" class="catalog-btn btn">
+									<span type="button" class="icon-menu">
+										<span></span>
+										<span></span>
+										<span></span>
+									</span>
+								</button>
+								<button type="button" class="btn _icon-baskcet">В корзину</button>
+								<button type="button" class="btn _icon-calculator">Secondary</button>
+								<button type="button" class="btn btn_light _icon-calculator">Secondary</button>
+								<button type="button" class="btn">Смотреть коллекцию</button>
+								<button type="button" class="btn btn_light">Сообщить о поступлении</button>
+								<button type="button" class="btn fw">Смотреть коллекцию</button>
+
+								<div class="ui-kit__row">
+									<a href="" class="action-btn _icon-user">Войти</a>
+									<a href="" class="action-btn _icon-favorite">Избранное <span>0</span></a>
+									<a href="" class="action-btn _icon-baskcet">Корзина <span>0</span></a>
+								</div>
+
+								<div class="ui-kit__row">
+									<button type="button" class="arrow-sl-btn _icon-arrow-sl-left"></button>
+									<button type="button" class="arrow-sl-btn _icon-arrow-sl-right"></button>
+									<button type="button" class="arrow-btn _icon-arrow-sl-left"></button>
+									<button type="button" class="arrow-btn _icon-arrow-sl-right"></button>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="ui-kit__col">
+							<div class="ui-kit__title">Inputs</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+		<!-- @@include('html/_footer.htm',{}) -->
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
