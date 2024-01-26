@@ -64,8 +64,62 @@
 							</div>
 						</div>
 
-						<div class="ui-kit__col">
+						<!-- <div class="ui-kit__col">
 							<div class="ui-kit__title">Inputs</div>
+							<div action="#" class="form">
+								<div class="form__line">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="Имя"
+										class="input">
+								</div>
+							</div>
+						</div> -->
+
+						<div class="ui-kit__col">
+							<div class="ui-kit__title">Selects</div>
+
+							<select name="form[]" class="form">
+								<option value="1" selected="selected">15 дней</option>
+								<option value="2">20 дней</option>
+								<option value="3">25 дней</option>
+								<option value="4">1 месяца</option>
+								<option value="5">2 месяца</option>
+								<option value="6">3 месяца</option>
+								<option value="7">4 месяца</option>
+								<option value="8">5 месяца</option>
+							</select>
+
+						</div>
+
+						<div class="ui-kit__col">
+							<div class="ui-kit__title">Tabs</div>
+
+							<div data-tabs class="tabs">
+								<nav data-tabs-titles class="tabs__navigation">
+									<button type="button" class="tabs__title _icon-arrow-big-right _tab-active">Личные
+										данные</button>
+									<button type="button" class="tabs__title _icon-arrow-big-right">Текущие заказы</button>
+									<button type="button" class="tabs__title _icon-arrow-big-right">История заказов</button>
+									<button type="button" class="tabs__title _icon-arrow-big-right">Сменить пароль</button>
+									<button type="button" class="tabs__title _icon-arrow-big-right">Выйти</button>
+								</nav>
+								<div data-tabs-body class="tabs__content">
+									<div class="tabs__body">
+										Содержимое первого таба
+									</div>
+									<div class="tabs__body">
+										Содержимое второго таба
+									</div>
+									<div class="tabs__body">
+										Содержимое третьего таба
+									</div>
+									<div class="tabs__body">
+										Содержимое Четвертого таба
+									</div>
+									<div class="tabs__body">
+										Содержимое Пятого таба
+									</div>
+								</div>
+							</div>
 
 						</div>
 

@@ -79,14 +79,14 @@
 		display: block;
 		text-align: left;
 		cursor: pointer;
-		padding: 5px 15px;
+		padding: 10px 15px;
 		color: inherit;
 		&._select-selected {
 			background-color: #eee;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				background: rgba(2, 0, 32, 0.03);
 			}
 		}
 	}
