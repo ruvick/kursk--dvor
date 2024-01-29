@@ -14,15 +14,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		flex-wrap: wrap;
+		flex-wrap: wrap; 
 	}
 
 	&__col {
 		display: flex;
 		align-items: center;
-		*:last-child {
-			margin: 0;
-		}
+		// *:last-child {
+		// 	margin: 0;
+		// }
 		&:not(:last-child){
 			margin-right: 25px;
 		}
@@ -56,22 +56,146 @@
 	}
 }
 
+.header__item {
+	display: flex;
+	align-items: center;
+	&::before{
+		margin-right: 10px;
+	}
+}
+
+.logo-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 167px;
+	height: 53px;
+	overflow: hidden;
+	svg {
+		width: 100%;
+		height: 100%;
+		flex: 0 1 100%;
+	}
+}
+
 .menu {
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		li {
-			&:not(:last-child){
-				margin-right: 20px;
-			}
+
 		}
 	}
 
 	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0px 3px;
+		padding: 5px 0px;
+		position: relative;
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+		@media (any-hover: hover){ //Стили будут работать на устройствах, где есть мышь
+			&:hover{
+			 .menu__sub-list {
+				 transform: translate(0px, 0px);
+				 opacity: 1;
+				 visibility: visible;
+				 pointer-events: auto;
+			 }
+			 .menu__arrow {
+				 transform: rotate(-180deg);
+			 }
+			 .menu__arrow,
+			 .menu__link {
+				//  color: $orangeColor;
+			 }
+			}
+	 }
+	 @media (min-width: 768px){
+		&._hover {
+		 .menu__sub-list {
+			 transform: translate(0px, 0px);
+			 opacity: 1;
+			 visibility: visible;
+			 pointer-events: auto;
+		 }
+		 .menu__arrow {
+			 transform: rotate(-180deg);
+		 }
+		 .menu__arrow,
+		 .menu__link {
+			//  color: $orangeColor;
+		 }
+		}
+	 }
+	 @media (max-width: 768px){
+			margin: 0px 0px 15px 0px;
+			&:last-child{
+			 margin-bottom: 0;
+			}
+	 }
 	}
 
 	&__link {
+    	color: inherit;
+    	transition: $mainTransition;
+	}
+	&__arrow {
+		margin: 0px 0px 0px 8px;
+		transition: all 0.3s ease 0s;
+		font-size: 10px;
+	}
+	&__sub-list {
+		position: relative;
+		// background-color: $orangeColor;
+		padding: 15px;
+		flex: 1 1 100%;
+		@media (min-width: 768px){
+			//Скрываем меню
+			opacity: 0;
+			visibility: hidden;
+			transform: translate(0px, 10px);
+			transition: all 0.3s ease 0s;
+			min-width: 250px;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			z-index: 5;
+			pointer-events: none;
+		}
+		@media (max-width: 768px){
+			 margin: 10px -15px 0px -15px; 
+		}
+	}
+}
+
+.header__main {
+	display: flex;
+	align-items: center;
+	padding: 10px 0 17px 0;
+	.catalog-btn {
+		margin-right: 10px;
+	}
+	*:last-child {
+		margin-right: 0;
+	}
+}
+.header__search {
+	flex: 1 1 auto;
+	margin-right: 10px;
+}
+.actions-header {
+	display: flex;
+	align-items: center;
+	&__item {
+		&:not(:last-child){
+			margin-right: 10px;
+		}
 	}
 }
 

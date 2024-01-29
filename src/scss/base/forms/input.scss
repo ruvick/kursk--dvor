@@ -12,18 +12,99 @@ textarea {
 	}
 }
 .input {
-	border-radius: 0 !important;
+	display: flex;
 	width: 100%;
-	display: block;
-	padding: 0px 20px;
+	height: 50px;
+	padding: 0px 39px 0 15px;
+	border-radius: 3px;
+	background: rgba(2, 0, 32, 0.03);
+
 	&._focus {
+		background: grey;
 	}
+
 	&._error {
+		border: 1px solid red;
 	}
 }
+
+.input {
+	position: relative;
+	overflow: hidden;
+	&__label {
+		position: absolute;    
+		top: 50%;                       
+		transform: translate(0, -50%);
+		// left: 20px;
+	}
+	input {
+		width: 100%;
+	}
+}
+
+.input._form-focus .input__label {
+	top: 5%;
+	transform: translate(0, 0);
+	font-size: 12px;
+	color: #8f8e8e;
+}
+
+.input._form-focus._form-error .input__label {
+	top: 16px;
+	font-size: inherit;
+	color: #ea2838;
+}
+
+.search-form__check {
+   position: absolute;    
+   top: 50%;                       
+	right: 15px;
+   transform: translate(0, -50%);
+	color: $greenColor;
+	font-size: 20px;
+}
+
+input {
+	// width: 100%;
+	background: transparent;
+}
+
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	padding: 5px 10px;
+}
+
+// Описываем focus label, подписи поля или блок
+// .form__line._focus .form__label {
+// 	background: red;
+// }
+
+// // Описываем ошибку label, подписи поля или блок
+// .form__line._error .form__label {
+// 	color: red;
+// }
+
+// Стилизация placeholder 
+::-webkit-input-placeholder {
+	transition: $mainTransition;
+	color: rgba(2, 0, 32, 0.3);
+}
+
+::-moz-placeholder {
+	transition: $mainTransition;
+	color: rgba(2, 0, 32, 0.3);
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+	transition: $mainTransition;
+	color: rgba(2, 0, 32, 0.3);
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+	transition: $mainTransition;
+	color: rgba(2, 0, 32, 0.3);
 }
 
 // Убираем стрелки у цифрового инпута

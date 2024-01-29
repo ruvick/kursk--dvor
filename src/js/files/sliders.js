@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay, Thumbs } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -46,39 +46,95 @@ function initSliders() {
 
 	// Перечень слайдеров
 	if (document.querySelector('.swiper')) {
-		new Swiper('.swiper', {
+		new Swiper('.image-card-product', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			//modules: [Navigation, Pagination],
-			/*
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+			modules: [Pagination],
+			// effect: 'fade',
+			// autoplay: {
+			// 	delay: 1000,
+			// 	disableOnInteraction: false,
+			// },
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
 			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
 			spaceBetween: 0,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
-			parallax: true,
+			// parallax: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			//pagination: {
-			//	el: '.slider-quality__pagging',
-			//	clickable: true,
-			//},
+			pagination: {
+				el: '.image-card-product__dotts',
+				clickable: true,
+			},
+			// Arrows
+			// navigation: {
+			// 	nextEl: '.slider-rooms .slider-arrow_next',
+			// 	prevEl: '.slider-rooms .slider-arrow_prev',
+			// },
+			/*
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+					autoHeight: true,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+				},
+			},
+			*/
+			on: {
+
+			}
+		});
+
+		new Swiper('.slider-cards-block', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation],
+			// effect: 'fade',
+			// autoplay: {
+			// 	delay: 1000,
+			// 	disableOnInteraction: false,
+			// },
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
+			spaceBetween: 10,
+			// autoHeight: true,
+			speed: 800,
+			// parallax: true,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			// pagination: {
+			// 	el: '.image-card-product__dotts',
+			// 	clickable: true,
+			// },
 			// Arrows
 			navigation: {
-				nextEl: '.slider-rooms .slider-arrow_next',
-				prevEl: '.slider-rooms .slider-arrow_prev',
+				nextEl: '.product-cards-block .arrow-sl-btn_next',
+				prevEl: '.product-cards-block .arrow-sl-btn_prev',
 			},
 			/*
 			breakpoints: {

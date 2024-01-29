@@ -70,19 +70,19 @@ flsFunctions.tabs();
 import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы: добавление классов, работа с placeholder. */
-// flsForms.formFieldsInit();
+flsForms.formFieldsInit();
 
 /* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
-// flsForms.formSubmit(true);
+flsForms.formSubmit(true);
 
 /* (В работе) Работа с масками. Для включения ??? (подсказок в консоли) передать true */
-// flsForms.formMasks(true);
+flsForms.formMasks(true);
 
 /* Модуль формы "колличество" */
 flsForms.formQuantity();
 
 /* Модуль формы "показать пароль" */
-// flsForms.formViewpass();
+flsForms.formViewpass();
 
 /* Модуль звездного рейтинга */
 // flsForms.formRating();
@@ -115,7 +115,7 @@ flsForms.formSelect(true);
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================
 

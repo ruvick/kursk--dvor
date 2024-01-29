@@ -269,6 +269,107 @@ h4 {
 		position: absolute;
 	}
 
+// Search ====================================================================================
+.search-form { 
+	max-width: 100%;
+	background: rgba(2, 0, 32, 0.03);
+	border-radius: 3px;
+	overflow: hidden;
+
+	&._active{
+		.search-form__item {
+			opacity: 1;
+			visibility: visible;
+			top: 100%;
+		}
+	}
+		&__icon {
+			position: relative;
+			z-index: 5;
+			font-size: 22px;
+			color: #262f56;
+			// @media (min-width: 992px){
+			// 	display: none; 
+			// }
+		}
+	
+		&__item {
+			display: flex;
+			align-items: center;
+			background: rgba(2, 0, 32, 0.03);
+			padding-right: 20px;
+			// @media (max-width: 992px){
+			// 	  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+			// 	position:absolute; 
+			// 	top: -100%; 
+			// 	left: 0%; 
+			// 	z-index: 5; 
+			// 	left: 0; 
+			// 	width: 100%; 
+			// 	opacity: 0;
+			// 	visibility: hidden;
+			// 	transition: all 0.3s ease 0s;
+			// }
+		}
+	
+		&__btn {
+			flex: 0 0 24px;
+			height: 24px;
+			font-size: 25px;
+			color: rgba(2, 0, 32, 0.3);
+			background: transparent;
+			&::before{
+				transition: $mainTransition;
+			}
+		}
+	
+		&__input {
+			font-size: 14px;
+			// color: $darkGrayColor;
+			width: 100%;
+			padding: 16px 10px 16px 20px;
+			background: transparent;
+			transition: $mainTransition;
+		}
+		&__btn_reset {
+			margin-right: 10px;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.6s ease 0s;
+			&._active{
+					opacity: 1;
+					visibility: visible;
+			}
+		}
+	}
+
+	.search-form__item {
+		@media (any-hover: hover) {
+		&:hover {
+			.search-form__input::-webkit-input-placeholder {
+				color: $mainColor;
+			}
+			
+			.search-form__input::-moz-placeholder {
+				color: $mainColor;
+			}
+			
+			/* Firefox 19+ */
+			.search-form__input:-moz-placeholder {
+				color: $mainColor;
+			}
+			
+			/* Firefox 18- */
+			.search-form__input:-ms-input-placeholder {
+				color: $mainColor;
+			}
+			.search-form__btn:before {
+				color: $mainColor;
+			}
+		}
+		}
+	}
+
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 
 
@@ -276,6 +377,15 @@ h4 {
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
+
+._bg-card-prod {
+	background-position: 0 0;
+	background: url("../img/card-product/nophoto.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transition: background-size 1s ease 0s;
+}
+
 
 // Свойсьво Blur 
 .backdrop-filter {
@@ -695,13 +805,12 @@ body.ie {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 31px;
 }
 
 .swiper-pagination-bullet {
-	flex: 0 0 10px;
-	height: 10px;
-	background: #660B1D;
+	flex: 0 0 8px;
+	height: 8px;
+	background: rgba(2, 0, 32, 0.3); 
 	border-radius: 50%;
 	opacity: 0.6;
 	cursor: pointer;
@@ -713,9 +822,9 @@ body.ie {
 }
 
 .swiper-pagination-bullet-active {
-	flex: 0 0 15px;
-	height: 15px;
-	background: #660B1D;
+	flex: 0 0 8px;
+	height: 8px;
+	background: $blueColor;
 	opacity: 1;
 }
 
