@@ -3,7 +3,7 @@
 	position: relative;
 	z-index: 5;
 	padding: 10px 0;
-	background-color: #fff;
+	// background-color: #fff;
 	&__wrapper {
 	}
 
@@ -54,6 +54,10 @@
 
 	&__bottom {
 	}
+}
+
+.header__inner {
+	background-color: #fff;
 }
 
 .header__item {
@@ -112,7 +116,7 @@
 			 }
 			 .menu__arrow,
 			 .menu__link {
-				//  color: $orangeColor;
+				 color: $mainColor;
 			 }
 			}
 	 }
@@ -142,7 +146,7 @@
 	}
 
 	&__link {
-    	color: inherit;
+    	color: rgba(2, 0, 32, 0.7);
     	transition: $mainTransition;
 	}
 	&__arrow {
@@ -178,6 +182,7 @@
 	display: flex;
 	align-items: center;
 	padding: 10px 0 17px 0;
+	bgc
 	.catalog-btn {
 		margin-right: 10px;
 	}
@@ -198,6 +203,62 @@
 		}
 	}
 }
+
+.header__bottom {
+	background-color: transparent;
+}
+.bottom-header-menu {
+	.menu__list {
+		justify-content: space-between;
+	}
+	.menu__sub-list {
+		min-width: 285px;
+	}
+	.menu__item {
+		@media (any-hover: hover){ //Стили будут работать на устройствах, где есть мышь
+			&:hover{
+			 .menu__arrow,
+			 .menu__link {
+				 color: $blueColor;
+			 }
+			}
+	 }
+	}
+	.menu__link {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+		color: $mainColor;
+		svg {
+			flex: 0 0 24px;
+			width: 24px;
+			height: 24px;
+			margin-right: 10px;
+		}
+	}
+
+}
+
+.menu__link._color-red {
+		color: #FF2E00;
+  }
+
+.menu {
+}
+.menu__list {
+}
+.menu__item {
+}
+
+.menu__arrow {
+}
+._icon-arrow-down {
+}
+._color-red {
+}
+
 
 //====================================================================================================
 
@@ -246,4 +307,8 @@
 		}
 	}
 // }
+
+
+
+
 

@@ -18,6 +18,7 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 
 
 // Основные цвета
+$mainBgColor: #fbfbfb;
 $mainColor: #020020; // Цвет шрифта по умолчанию   
 $blueColor: #120B8D; 
 $redColor: #FF2E00;
@@ -59,6 +60,7 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "base/null";
 
 body {
+	background-color: $mainBgColor;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -430,7 +432,7 @@ text-decoration: line-through $redColor;
 	flex: 0 0 95px;
 	.arrow-sl-btn {
 		flex: 0 0 45px;
-		height: 45px;
+		height: 45px;  
 	}
 }
 .arrow-sl-btn {
