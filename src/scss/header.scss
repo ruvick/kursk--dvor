@@ -131,15 +131,11 @@
 }
 
 .menu {
-	ul {
+	&__list {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		li {
-
-		}
 	}
-
 	&__item {
 		display: flex;
 		align-items: center;
@@ -185,7 +181,7 @@
 		 }
 		}
 	 }
-	 @media (max-width: 768px){
+	 @media (max-width: 769px){
 			margin: 0px 0px 15px 0px;
 			&:last-child{
 			 margin-bottom: 0;
@@ -207,7 +203,7 @@
 		// background-color: $orangeColor;
 		padding: 15px;
 		flex: 1 1 100%;
-		@media (min-width: 768px){
+		@media (min-width: 769px){
 			//Скрываем меню
 			opacity: 0;
 			visibility: hidden;
@@ -220,7 +216,7 @@
 			z-index: 5;
 			pointer-events: none;
 		}
-		@media (max-width: 768px){
+		@media (max-width: 769px){
 			 margin: 10px -15px 0px -15px; 
 		}
 	}
@@ -292,6 +288,13 @@
 	}
 	.menu__sub-list {
 		min-width: 285px;
+		@media (max-width: 768px){
+			  margin: 0;
+			  padding: 10px 35px;
+			  .dropdown-list__link {
+				padding: 8px 0;
+			  }
+		}
 	}
 	.menu__item {
 		@media (any-hover: hover){ //Стили будут работать на устройствах, где есть мышь
@@ -305,8 +308,19 @@
 	 @media (max-width: 768px){
 		margin: 0;
 		width: 100%; 
+		padding: 8px 0;
 	  .menu__arrow {
 		  font-size: 18px;
+		  margin-left: 0;
+		  &::before{
+			transition: all 0.3s ease 0s;
+		  }
+		  &._spoller-active {
+			&::before{
+				transform: rotate(-180deg);
+			}
+
+		  }
 		}
   }
 	}
