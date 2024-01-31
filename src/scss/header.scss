@@ -4,6 +4,9 @@
 	z-index: 50;
 	padding: 10px 0;
 	// background-color: #fff;
+	@media (max-width: 768px){
+		  padding-top: 0;
+	}
 	&__wrapper {
 	}
 
@@ -18,6 +21,9 @@
 		background-color: #fff;
 		z-index: 50;
 		position: relative;
+		@media (max-width: 768px){
+			  padding-top: 10px;
+		}
 	}
 
 	&__col {
@@ -29,6 +35,13 @@
 		&:not(:last-child){
 			margin-right: 25px;
 		}
+
+		&:nth-child(2) {
+			flex-wrap: wrap;
+			flex: 0 1 50%;
+			justify-content: flex-end;
+		}
+
 		@media (max-width: 1024px) {
 			  &:nth-child(2) {
 				flex-direction: column;
@@ -69,9 +82,11 @@
 	}
 
 	&__item {
-		&:not(:last-child){
-			margin-right: 20px;
-		}
+		// &:not(:last-child){
+		// 	margin-left: 20px;
+		// 	// margin-right: 20px;
+		// }
+		margin-left: 20px;
 		&_address {
 		}
 
@@ -97,6 +112,7 @@
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
+	padding: 3px 0;
 	&::before{
 		margin-right: 10px;
 	}
@@ -225,6 +241,7 @@
 .header__main { 
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	padding: 10px 0 17px 0;
 	.catalog-btn {
 		margin-right: 10px;
@@ -251,15 +268,18 @@
 
 .header__search {
 	flex: 1 1 auto;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 .actions-header {
-	display: flex;
+	display: grid;
+	grid-template-columns: auto;
+	grid-auto-flow: column;
 	align-items: center;
+	gap: 20px;
 	&__item {
-		&:not(:last-child){
-			margin-right: 10px;
-		}
+		// &:not(:last-child){
+		// 	margin-right: 10px;
+		// }
 	}
 }
 

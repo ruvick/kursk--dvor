@@ -43,7 +43,7 @@ h4 {
 	letter-spacing: 0em;
 	transition: $mainTransition;
 	&::before{
-		font-size: 22px;
+		font-size: 18px;
 		font-weight: 500;
 	}
 	@media (any-hover: hover) {
@@ -69,6 +69,10 @@ h4 {
 		background-color: $redColor;
 		border-radius: 50px;
 		overflow: hidden;
+		padding: 0px 5px;
+	}
+	&._icon-favorite span {
+		right: 3px;
 	}
 }
 
