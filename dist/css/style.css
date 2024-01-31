@@ -1813,12 +1813,15 @@ body.ie ._ibg img {
     top: 0%;
     left: -100%;
     z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     background-color: #fff;
     overflow: auto;
     transition: left 0.3s ease 0s;
-    padding: 160px 15px 30px 15px;
+    padding: 145px 15px 30px 15px;
   }
 }
 .bottom-header-menu .menu__list {
@@ -1836,9 +1839,13 @@ body.ie ._ibg img {
   .bottom-header-menu .menu__sub-list {
     margin: 0;
     padding: 10px 35px;
+    padding-bottom: 0;
   }
   .bottom-header-menu .menu__sub-list .dropdown-list__link {
-    padding: 8px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 6px 0;
   }
 }
 @media (any-hover: hover) {
@@ -1858,6 +1865,7 @@ body.ie ._ibg img {
     margin-left: 0;
   }
   .bottom-header-menu .menu__item .menu__arrow::before {
+    font-size: 13px;
     transition: all 0.3s ease 0s;
   }
   .bottom-header-menu .menu__item .menu__arrow._spoller-active::before {
@@ -1883,6 +1891,12 @@ body.ie ._ibg img {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__item_stock {
+    display: none;
   }
 }
 
@@ -1932,6 +1946,49 @@ body.ie ._ibg img {
 .menu-open .icon-menu::after {
   transform: rotate(45deg);
   bottom: calc(50% - 1px);
+}
+
+.header__bottom .bottom-header-menu__mob-main,
+.header__bottom .bottom-header-menu__mob-contacts {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__bottom .bottom-header-menu__mob-main,
+  .header__bottom .bottom-header-menu__mob-contacts {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-header-menu__mob-main {
+    margin-top: 30px;
+    margin-bottom: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-header-menu__mob-contacts {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .bottom-header-menu__mob-contacts .header__item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .bottom-header-menu__mob-contacts .header__item_phone svg {
+    display: none;
+  }
+}
+@media (max-width: 612px) {
+  .bottom-header-menu__mob-contacts {
+    flex-direction: column;
+  }
+  .bottom-header-menu__mob-contacts .header__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .footer {
