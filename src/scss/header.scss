@@ -268,7 +268,7 @@
 }
 
 .bottom-header-menu {
-	@media (max-width: 768px){
+	@media (max-width: 768px) {
 		position: fixed; 
 		top: 0%; 
 		left: -100%; 
@@ -352,6 +352,13 @@
 		}
 	}
 
+}
+
+.bottom-header-menu::-webkit-scrollbar-thumb,
+.bottom-header-menu::-webkit-scrollbar {
+	@media (max-width: 768px){
+		  display: none;
+	}
 }
 
 .menu__item_stock {
