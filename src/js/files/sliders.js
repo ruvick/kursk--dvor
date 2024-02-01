@@ -133,8 +133,8 @@ function initSliders() {
 			// },
 			// Arrows
 			navigation: {
-				nextEl: '.product-cards-block .arrow-sl-btn_next',
-				prevEl: '.product-cards-block .arrow-sl-btn_prev',
+				nextEl: '.navigation-panel-product .arrow-sl-btn_next',
+				prevEl: '.navigation-panel-product .arrow-sl-btn_prev',
 			},
 			/*
 			breakpoints: {

@@ -83,7 +83,8 @@
 // // Карта Яндекс с одной меткой
 // // YA
 // function map(n) {
-ymaps.ready(init);
+
+// ymaps.ready(init);
 function init() {
 	// Создание карты.
 	var myMap = new ymaps.Map("map", {

@@ -589,3 +589,18 @@ color: rgba(2, 0, 32, 0.5);
 	}
 
 }
+//========================================================================================================================================================
+.page__great-deals {
+	padding: 50px 0;
+	@media (max-width: 768px){
+		  padding: 40px 0;
+	}
+	@media (max-width: 480px){
+		  padding: 30px 0;
+	}
+}
+.great-deals__navigation-panel {
+	&:not(:last-child){
+		margin-bottom: 40px;
+	}
+}

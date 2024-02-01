@@ -162,7 +162,7 @@ h4 {
 	align-items: flex-start;
 	.sticker {
 		&:not(:last-child){
-			margin-bottom: 5px;
+			margin-bottom: 5px; 
 		}
 	}
 }
@@ -408,15 +408,19 @@ h4 {
 }
 .card-product__image {
 	position: relative;
-	margin-bottom: 15px;
+	margin: -10px -10px 15px -10px;
+	// margin-bottom: 15px;
 	overflow: visible !important;
 }
 .image-card-product {
+	.swiper-pagination-bullets {
+		margin-top: 10px;
+  }
 }
 .image-card-product__stikcers-block {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 10px;
+	left: 10px;
 	z-index: 2;
 }
 .sticker-block {
@@ -514,6 +518,13 @@ color: rgba(2, 0, 32, 0.5);
 	line-height: 22.4px;
 	margin-bottom: 10px;
 	// margin: 0 0 10px/16px * 1em 0px;
+	transition: $mainTransition;
+
+	@media (any-hover: hover) {
+	&:hover {
+		color: rgba(2, 0, 32, 0.5);
+	}
+	}
 }
 .body-card-product__size {
 	margin-bottom: 15px;
@@ -1113,12 +1124,13 @@ body.ie {
 
 .swiper-pagination-bullet {
 	flex: 0 0 8px;
+	width: 8px;
 	height: 8px;
 	background: rgba(2, 0, 32, 0.3); 
 	border-radius: 50%;
 	opacity: 0.6;
 	cursor: pointer;
-	margin-right: 20px;
+	margin-right: 5px;
 
 	&:last-child {
 		margin: 0px 0px 0px 0px;
@@ -1127,6 +1139,7 @@ body.ie {
 
 .swiper-pagination-bullet-active {
 	flex: 0 0 8px;
+	width: 8px;
 	height: 8px;
 	background: $blueColor;
 	opacity: 1;

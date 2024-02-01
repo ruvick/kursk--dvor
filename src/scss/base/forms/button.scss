@@ -13,11 +13,13 @@
 	background: $blueColor;
 	border-radius: 3px;
 	transition: $mainTransition;
+
 	@media (any-hover: hover) {
 	&:hover {
 		background: $mediumGrey;
 	}
 	}
+	
 	&.fw {
 		width: 100%;
 	}
@@ -26,9 +28,34 @@
 		margin-right: 10px;
 		font-size: 20px;
 	}
+	&._btn_white {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: 0em;
+			color: rgba(2, 0, 32, 0.5);
+			background-color: transparent;
+			&::before{
+				font-size: 13px;
+				margin-left: 10px;
+				margin-top: 1px;
+			}
+			transition: $mainTransition;
+
+			@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+			}
+		}
 }
 
 .btn_light {
 	color: $mainColor;
 	background: $lightGrey;
 }
+
+
