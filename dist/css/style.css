@@ -2870,12 +2870,11 @@ body.ie ._ibg img {
   align-items: center;
   padding: 60px;
   width: 100%;
-  background-position: center;
-  background-size: cover;
   background: url("../img/main-sliders/01.jpg");
-  background-repeat: no-repeat;
   height: 100%;
-  background-size: cover;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .main-slider-big__arrow-block {
@@ -2962,12 +2961,11 @@ body.ie ._ibg img {
 
 .main-slider-small__slide {
   width: 100%;
-  background-position: center;
-  background-size: cover;
   background: url("../img/main-sliders/02.jpg");
-  background-repeat: no-repeat;
   height: 100%;
-  background-size: cover;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .main-slider-small__descp {
