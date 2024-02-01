@@ -83,48 +83,49 @@
 // // Карта Яндекс с одной меткой
 // // YA
 // function map(n) {
+document.addEventListener("DOMContentLoaded", () => {
+	ymaps.ready(init);
+	function init() {
+		// Создание карты.
+		var myMap = new ymaps.Map("map", {
+			// Координаты центра карты.
+			// Порядок по умолчанию: «широта, долгота».
+			// Чтобы не определять координаты центра карты вручную,
+			// воспользуйтесь инструментом Определение координат.
+			controls: [],
+			center: [51.652578, 36.129944],
+			// Уровень масштабирования. Допустимые значения: 
+			// от 0 (весь мир) до 19.
+			zoom: 15
+		});
 
-// ymaps.ready(init);
-function init() {
-	// Создание карты.
-	var myMap = new ymaps.Map("map", {
-		// Координаты центра карты.
-		// Порядок по умолчанию: «широта, долгота».
-		// Чтобы не определять координаты центра карты вручную,
-		// воспользуйтесь инструментом Определение координат.
-		controls: [],
-		center: [51.652578, 36.129944],
-		// Уровень масштабирования. Допустимые значения: 
-		// от 0 (весь мир) до 19.
-		zoom: 15
-	});
+		let myPlacemark = new ymaps.Placemark([51.652578, 36.129944], {
+		}, {
+			// Опции
+			balloonContentHeader: 'Курский двор',
+			balloonContentBody: 'Курск ул. Магистральная 1',
+			balloonContentFooter: '+7 (4712) 39 07 37',
+			hasBalloon: true,
+			hideIconOnBalloonOpen: true,
 
-	let myPlacemark = new ymaps.Placemark([51.652578, 36.129944], {
-	}, {
-		// Опции
-		balloonContentHeader: 'Курский двор',
-		balloonContentBody: 'Курск ул. Магистральная 1',
-		balloonContentFooter: '+7 (4712) 39 07 37',
-		hasBalloon: true,
-		hideIconOnBalloonOpen: true,
+			hasBalloon: true,
+			hideIconOnBalloonOpen: true,
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#imageWithContent',
+			// Своё изображение иконки метки.
+			iconImageHref: 'img/icons/map.svg',
+			// Размеры метки.
+			iconImageSize: [50.4, 70],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [-30, -55],
+			// Смещение слоя с содержимым относительно слоя с картинкой.
+			iconContentOffset: [0, 0],
+		});
+		myMap.geoObjects.add(myPlacemark);
 
-		hasBalloon: true,
-		hideIconOnBalloonOpen: true,
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#imageWithContent',
-		// Своё изображение иконки метки.
-		iconImageHref: 'img/icons/map.svg',
-		// Размеры метки.
-		iconImageSize: [50.4, 70],
-		// Смещение левого верхнего угла иконки относительно
-		// её "ножки" (точки привязки).
-		iconImageOffset: [-30, -55],
-		// Смещение слоя с содержимым относительно слоя с картинкой.
-		iconContentOffset: [0, 0],
-	});
-	myMap.geoObjects.add(myPlacemark);
-
-	// myMap.behaviors.disable('scrollZoom');
-	// myMap.behaviors.disable('drag');
-}
-// }
+		// myMap.behaviors.disable('scrollZoom');
+		// myMap.behaviors.disable('drag');
+	}
+	// }
+})
