@@ -115,7 +115,7 @@ function initSliders() {
 			// },
 			observer: true,
 			observeParents: true,
-			slidesPerView: 4,
+			slidesPerView: 1.1,
 			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
 			spaceBetween: 10,
 			// autoHeight: true,
@@ -136,27 +136,27 @@ function initSliders() {
 				nextEl: '.navigation-panel-product .arrow-sl-btn_next',
 				prevEl: '.navigation-panel-product .arrow-sl-btn_prev',
 			},
-			/*
 			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+				345: {
+					slidesPerView: 1.5,
 				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+				376: {
+					slidesPerView: 2.1,
 				},
-				992: {
+				540: {
+					slidesPerView: 2.6,
+				},
+				767: {
 					slidesPerView: 3,
-					spaceBetween: 20,
 				},
-				1268: {
+				1023: {
 					slidesPerView: 4,
-					spaceBetween: 30,
 				},
+				// 1268: {
+				// 	slidesPerView: 4,
+				// 	spaceBetween: 30,
+				// },
 			},
-			*/
 			on: {
 
 			}
