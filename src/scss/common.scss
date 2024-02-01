@@ -717,10 +717,57 @@ text-decoration: line-through $redColor;
 		padding-right: 21px;
 	}
 }
+// ================================================
+
+.bottom-icons-panel {
+	display: none;
+	padding: 13px 30px;
+	border-top: 1px solid rgba(2, 0, 32, 0.03);
+	@media (max-width: 768px){
+		  display: block;
+		  position: fixed; 
+		  bottom: 0;
+		  left: 0%; 
+		  z-index: 5; 
+		  width: 100%; 
+		  background-color: #fff;
+	}
+	@media (max-width: 515px){
+		  padding: 10px 13px;
+		//   margin: 0 -13px;
+	}
+}
+.bottom-icons-panel__body {
+display: flex;
+align-items: center;
+justify-content: space-between;
+@media (max-width: 515px){
+	  width: auto;
+	  overflow: auto;
+	  margin: 0 -13px;
+}
+}
+.bottom-icons-panel__item {
+	@media (max-width: 515px){
+		flex: 0 0 100px;
+	}
+	.action-btn {
+font-size: 10px;
+font-weight: 400;
+line-height: 13px;
+	}
+&::before{
+	font-size: 23px;
+}
+}
+.action-btn {
+}
+._icon-user {
+}
+._icon-favorite {
+}
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
-
-
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
