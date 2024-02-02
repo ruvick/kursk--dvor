@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page page-template">
+
+			<div class="breadcrumbs">
+				<div class="__container">
+					<div class="breadcrumbs__inner">
+						<a href="home.html"> Главная </a> - <span class="breadcrumb_last" aria-current="page">О
+							компании</span>
+					</div>
+				</div>
+			</div>
+
+			<section class="template">
+				<div class="__container">
+
+					<div class="template__title-block title-block">
+						<div class="title-block__title">
+							<h1>О компании</h1>
+						</div>
+					</div>
+
+					<div class="template__tabs">
+
+						<div data-tabs class="tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _icon-arrow-big-right _tab-active">О магазине</button>
+								<button type="button" class="tabs__title _icon-arrow-big-right">Контакты</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+
+									<div class="content">
+
+										<p>
+											Торговый дом «Курский двор» современная динамично развивающаяся компания. Осуществляет
+											поставки отечественных
+											и импортных отделочных материалов для ремонта и строительства на рынок Курской области
+											и Центрального Черноземья. Компания работает на рынке отделочных материалов свыше 10
+											лет и занимает позицию лидера в сфере оптовых поставок стройматериалов для отделки
+											жилых и коммерческих помещений
+										</p>
+
+									</div>
+
+								</div>
+								<div class="tabs__body">
+
+									<div class="contacts">
+
+										<div class="contacts__inner">
+
+											<div id="map" class="contacts__map map"></div>
+											<div class="contacts__descp descp-contacts">
+
+												<div class="descp-contacts__title">Курский двор</div>
+
+												<div class="descp-contacts__inner">
+
+													<div class="descp-contacts__row">
+														<div class="descp-contacts__subtitle">Контакты</div>
+														<div class="descp-contacts__item"><a href="#"
+																class="location-contacts _icon-location">Курск
+																ул.
+																Магистральная 1</a></div>
+														<div class="descp-contacts__item"><a href="tel:+74712390737"
+																class="phone-contacts _icon-telephone">+7 (4712) 39 07 37</a></div>
+														<div class="descp-contacts__item"><a href="mailto:dvormail@gmail.ru"
+																class="email-contacts _icon-mail">dvormail@gmail.ru</a></div>
+													</div>
+
+													<div class="descp-contacts__row">
+														<div class="descp-contacts__subtitle">График работы</div>
+														<div class="descp-contacts__item">пн-сб 9:00 - 17:00</div>
+														<div class="descp-contacts__item">вс - выходной</div>
+														<div class="descp-contacts__item descp-contacts__item_sticker"><span
+																class="sticker _green">Открыто</span></div>
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+									<div class="template__requesites requesites-template">
+										<div class="requesites-template__title">
+											<h2>Реквизиты</h2>
+										</div>
+										<div class="requesites-template__inner">
+
+											<div class="requesites-template__row">
+												<div class="requesites-template__item">Наименование организации</div>
+												<div class="requesites-template__item">ИП Курилкин Алексей Александрович</div>
+											</div>
+
+											<div class="requesites-template__row">
+												<div class="requesites-template__item">ИНН организации</div>
+												<div class="requesites-template__item">463204215979</div>
+											</div>
+
+											<div class="requesites-template__row">
+												<div class="requesites-template__item">КПП организации</div>
+												<div class="requesites-template__item">304463230900530</div>
+											</div>
+
+											<div class="requesites-template__row">
+												<div class="requesites-template__item">Номер расчётного счёта</div>
+												<div class="requesites-template__item">40802810316030000707</div>
+											</div>
+
+											<div class="requesites-template__row">
+												<div class="requesites-template__item">БИК Банка</div>
+												<div class="requesites-template__item">043807330</div>
+											</div>
+
+											<div class="requesites-template__row">
+												<div class="requesites-template__item">Корреспондентский счёт</div>
+												<div class="requesites-template__item">30101810345250000330</div>
+											</div>
+
+											<div class="requesites-template__row">
+												<div class="requesites-template__item">Банк</div>
+												<div class="requesites-template__item">Центрально-черноземный филиал АО «Экспобанк»
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<section class="page__order-call order-call">
+				<div class="__container">
+
+					<div class="order-call__inner">
+
+						<div class="order-call__descp">
+							<div class="order-call__title">Заказать звонок</div>
+							<div class="order-call__text">Мы перезвоним в ближайшее время</div>
+						</div>
+
+						<form action="#" class="order-call__form form-order-call">
+							<div class="form__line">
+								<div class="form-order-call__input input _form-error">
+									<label for="name-inp" class="input__label">Имя</label>
+									<input id="name-inp" type="text" name="name" data-validate="" data-required="name"
+										class="_form-error">
+									<!-- <span class="search-form__check _icon-check"></span> -->
+								</div>
+								<div class="form-order-call__input input _form-error">
+									<label for="phone-inp" class="input__label">Телефон</label>
+									<input id="phone-inp" type="text" name="phone" data-validate="" data-required="phone"
+										class="_form-error">
+								</div>
+								<button type="submit" class="form-order-call__btn btn">Заказать</button>
+							</div>
+							<div class="form-order-call__text">Заказывая звонок, Вы соглашаетесь с <a href="#">политикой
+									конфиденциальности</a></div>
+						</form>
+
+					</div>
+
+				</div>
+			</section>
+
+	</div>
+	</section>
+
+	</main>
+	@@include('html/_footer.htm',{})
+	@@include('sprite.svg',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -165,7 +165,7 @@ function initSliders() {
 		new Swiper('.main-slider-big', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
+			modules: [Navigation, Pagination, Autoplay],
 			effect: 'fade',
 			// autoplay: {
 			// 	delay: 1500,
@@ -176,7 +176,7 @@ function initSliders() {
 			slidesPerView: 1,
 			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
 			spaceBetween: 0,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 1500,
 			// parallax: true,
 			//touchRatio: 0,
@@ -185,10 +185,10 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			// pagination: {
-			// 	el: '.image-card-product__dotts',
-			// 	clickable: true,
-			// },
+			pagination: {
+				el: '.main-slider-big__dotts',
+				clickable: true,
+			},
 			// Arrows
 			navigation: {
 				nextEl: '.main-slider-big .arrow-sl-btn_next',
@@ -223,7 +223,7 @@ function initSliders() {
 		new Swiper('.main-slider-small', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
+			modules: [Navigation, Pagination, Autoplay],
 			// effect: 'fade',
 			// autoplay: {
 			// 	delay: 1500,
@@ -231,10 +231,10 @@ function initSliders() {
 			// },
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
+			slidesPerView: 2,
 			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
-			spaceBetween: 0,
-			autoHeight: true,
+			spaceBetween: 10,
+			// autoHeight: true,
 			speed: 1500,
 			// parallax: true,
 			//touchRatio: 0,
@@ -243,36 +243,34 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			// pagination: {
-			// 	el: '.image-card-product__dotts',
-			// 	clickable: true,
-			// },
+			pagination: {
+				el: '.main-slider-small__dotts',
+				clickable: true,
+			},
 			// Arrows
 			navigation: {
 				nextEl: '.main-slider-small .arrow-sl-btn_next',
 				prevEl: '.main-slider-small .arrow-sl-btn_prev',
 			},
-			/*
 			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
+				// 320: {
+				// 	slidesPerView: 1,
+				// 	spaceBetween: 0,
+				// 	autoHeight: true,
+				// },
+				// 768: {
+				// 	slidesPerView: 2,
+				// 	spaceBetween: 20,
+				// },
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+					slidesPerView: 1,
+					// spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
+				// 1268: {
+				// 	slidesPerView: 4,
+				// 	spaceBetween: 30,
+				// },
 			},
-			*/
 			on: {
 
 			}
