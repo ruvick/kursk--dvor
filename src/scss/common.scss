@@ -2,30 +2,34 @@
 
 // Заголовки =================================================
 h1 {
-	font-size: 32px;
+	font-size: rem(32);
 	font-weight: 500;
-	line-height: 40.8px;
+	line-height: math.div(40.8, 32);
 }
 h2 {
-	font-size: 30px;
+	font-size: rem(30);
 	font-weight: 500;
-	line-height: 38.25px;
+	line-height: math.div(38.25, 30);
 }
 h3	{
-	font-size: 24px;
+	font-size: rem(24);
 	font-weight: 500;
-	line-height: 30.6px;
+	line-height: math.div(30.6, 24);
 }
 h4 {
-	font-size: 20px;
+	font-size: rem(20);
 	font-weight: 500;
-	line-height: 25.5px;
+	line-height: math.div(25.5, 20);
+}
+
+.fw-40 {
+	font-weight: 400;
 }
 
 // Кнопка Каталог ===========================================
 .catalog-btn {
 	.catalog-btn__text {
-		margin-left: 10px;
+		margin-left: rem(10);
 	}
 	.icon-menu {
 	}
@@ -38,12 +42,12 @@ h4 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-size: 10px;
-	line-height: 13px;
+	font-size: rem(10);
+	line-height: math.div(13, 10);
 	letter-spacing: 0em;
 	transition: $mainTransition;
 	&::before{
-		font-size: 18px;
+		font-size: rem(18);
 		font-weight: 500;
 	}
 	@media (any-hover: hover) {

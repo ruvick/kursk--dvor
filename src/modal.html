@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"Избранное пусто"
+"title":"Модальные окна"
 })
 
 <body>
@@ -12,7 +12,8 @@
 			<div class="breadcrumbs">
 				<div class="__container">
 					<div class="breadcrumbs__inner">
-						<a href="home.html"> Главная </a> - <span class="breadcrumb_last" aria-current="page">Избранное</span>
+						<a href="home.html"> Главная </a> - <span class="breadcrumb_last" aria-current="page">Модальные
+							окна</span>
 					</div>
 				</div>
 			</div>
@@ -22,23 +23,31 @@
 
 					<div class="template__title-block title-block">
 						<div class="title-block__title">
-							<h1>Избранное</h1>
+							<h1>Модальные окна</h1>
 						</div>
 					</div>
 
-					<div class="template__empty empty-template">
+				</div>
+			</section>
 
-						<div class="empty-template__body">
-							<div class="empty-template__image" style="background-image: url(../img/template/favourite.png);">
-							</div>
-							<div class="empty-template__title">
-								<h2>В избранном пока нет товаров</h2>
-							</div>
-							<div class="empty-template__subtitle">Вы можете добавлять понравившиеся товары с помощью иконки
-							</div>
-							<a href="home.html" class="empty-template__link btn">Перейти на главную</a>
-						</div>
+			<section class="page-template__modal modal">
+				<div class="__container">
 
+					<div class="modal__inner">
+
+						<button type="button" data-popup="#log-register" class="btn">Войти или зарегистрироваться</button>
+						<button type="button" data-popup="#register" class="btn">Регистрация</button>
+						<button type="button" data-popup="#password-recovery" class="btn">Восстановление пароля</button>
+						<button type="button" data-popup="#receipt-notification" class="btn">Уведомление о
+							поступлении</button>
+						<button type="button" data-popup="#submit-application" class="btn">Заявка под заказ</button>
+						<button type="button" data-popup="#application-design" class="btn">Заявка на дизайн проект</button>
+						<button type="button" data-popup="#receipt-successful" class="btn">Уведомление о
+							поступлении</button>
+						<button type="button" data-popup="#order-placed" class="btn">Заказ оформлен</button>
+						<button type="button" data-popup="#order-sent" class="btn">Заявка отправлена</button>
+						<button type="button" data-popup="#confirmation-code" class="btn">Код подтверждения</button>
+						<button type="button" data-popup="#log-password" class="btn">Войти по паролю</button>
 					</div>
 
 				</div>

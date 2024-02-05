@@ -6,42 +6,43 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 14.5px 23.7px;
-	font-size: 16px;
+	padding: rem(14.5) rem(23.7);
+	font-size: rem(16);
 	font-weight: 600;
 	color: #fff;
 	background: $blueColor;
-	border-radius: 3px;
+	border-radius: rem(3);
 	transition: $mainTransition;
 
 	@media (any-hover: hover) {
 	&:hover {
 		background: $mediumGrey;
 	}
+
 	}
 	
 	&.fw {
 		width: 100%;
 	}
 	&::before{
-		margin-top: -2px;
-		margin-right: 10px;
-		font-size: 20px;
+		margin-top: rem(-2);
+		margin-right: rem(10);
+		font-size: rem(20);
 	}
 	&._btn_white {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
-		font-size: 16px;
+		font-size: rem(16);
 		font-weight: 400;
-		line-height: 22px;
+		line-height: rem(22);
 		letter-spacing: 0em;
 			color: rgba(2, 0, 32, 0.5);
 			background-color: transparent;
 			&::before{
-				font-size: 13px;
-				margin-left: 10px;
-				margin-top: 1px;
+				font-size: rem(13);
+				margin-left: rem(10);
+				margin-top: rem(1);
 			}
 			transition: $mainTransition;
 

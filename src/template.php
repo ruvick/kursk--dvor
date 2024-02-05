@@ -87,9 +87,6 @@
 				</div>
 			</section>
 
-	</div>
-	</section>
-
 	</main>
 	@@include('html/_footer.htm',{})
 	@@include('sprite.svg',{})

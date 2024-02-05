@@ -1,5 +1,5 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
-import { isMobile } from "./functions.js";
+import { isMobile, removeClasses } from "./functions.js";
 import { formsModules } from "./forms/forms.js";
 
 // Работа на тачскринах
@@ -32,14 +32,20 @@ window.onload = function () {
 		// 	document.querySelector('.search-form').classList.remove('_active');
 		// }
 	}
+
 }
 
-// Переключить из файла function 
-export function removeClasses(array, className) {
-	for (var i = 0; i < array.length; i++) {
-		array[i].classList.remove(className);
-	}
+// Input file
+function getFileName() {
+	var file = document.getElementById('myfile').value;
+	file = file.replace(/\\/g, '/').split('/').pop();
+	document.getElementById('file-name').innerHTML = '' + file;
+
+	var file = document.getElementById('myfiles').value;
+	file = file.replace(/\\/g, '/').split('/').pop();
+	document.getElementById('file-names').innerHTML = '' + file;
 }
+
 
 
 

@@ -64,7 +64,7 @@ flsFunctions.tabs();
 Сниппет (HTML): pl
 */
 // Для включения ??? (подсказок в консоли) передать true * /
-// flsFunctions.initPopups(false);
+flsFunctions.initPopups(true);
 
 // Работа с формами ========================================================================================================================================================================================================================================================
 import * as flsForms from "./files/forms/forms.js";
@@ -82,7 +82,7 @@ flsForms.formFieldsInit();
 flsForms.formQuantity();
 
 /* Модуль формы "показать пароль" */
-// flsForms.formViewpass();
+flsForms.formViewpass();
 
 /* Модуль звездного рейтинга */
 // flsForms.formRating();
