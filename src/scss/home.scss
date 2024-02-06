@@ -1,16 +1,4 @@
 //====================================================================================================
-.page__main-sliders {
-	padding: 30px 0 50px 0;
-	@media (max-width: 768px){
-		padding: 30px 0 40px 0;
-	}
-	@media (max-width: 480px){
-		padding: 30px 0 30px 0;
-	}
-	@media (max-width: 375px){
-		padding: 25px 0 30px 0;
-	}
-}
 .main-sliders {
 
 }
@@ -349,15 +337,6 @@ transform: rotate(8deg);
 }
 //========================================================================================================================================================
 
-.page__advantages {
-	padding: 50px 0;
-	@media (max-width: 768px){
-		padding: 40px 0;
-	}
-	@media (max-width: 480px){
-		padding: 30px 0;
-	}
-}
 .advantages { 
 }
 .advantages__inner {
@@ -462,16 +441,6 @@ line-height: 16px;
 	}
 }
 //========================================================================================================================================================
-
-.page__contacts {
-	padding: 50px 0;
-	@media (max-width: 860px){
-		  padding: 40px 0;
-	}
-	@media (max-width: 480px){
-		  padding: 30px 0;
-	}
-}
 .contacts {
 }
 .contacts__inner {
@@ -633,15 +602,6 @@ color: rgba(2, 0, 32, 0.5);
 }
 //========================================================================================================================================================
 
-.page__order-call {
-	padding: 50px 0 0 0;
-	@media (max-width: 768px){
-		  padding: 40px 0;
-	}
-	@media (max-width: 480px){
-		  padding: 30px 0;
-	}
-}
 .order-call {
 }
 .__container {
@@ -787,13 +747,6 @@ color: rgba(2, 0, 32, 0.5);
 }
 //========================================================================================================================================================
 .page__great-deals {
-	padding: 50px 0;
-	@media (max-width: 768px){
-		  padding: 40px 0;
-	}
-	@media (max-width: 480px){
-		  padding: 30px 0;
-	}
 	@media (max-width: 612px){
 		.navigation-panel-product {
 			flex-direction: column;
