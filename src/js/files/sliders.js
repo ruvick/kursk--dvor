@@ -44,12 +44,12 @@ function initSliders() {
 	// при необходимости отключить
 	bildSliders();
 
-	// Перечень слайдеров
+	// Перечень слайдеров   
 	if (document.querySelector('.swiper')) {
 		new Swiper('.image-card-product', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Pagination],
+			modules: [Pagination, Autoplay],
 			// effect: 'fade',
 			// autoplay: {
 			delay: 1000,
@@ -91,7 +91,11 @@ function initSliders() {
 				},
 				992: {
 					slidesPerView: 3,
-					spaceBetween: 20,
+					spaceBetween: 20, swiper.disable()
+				},
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
 				},
 				1268: {
 					slidesPerView: 4,
@@ -100,9 +104,20 @@ function initSliders() {
 			},
 			*/
 			on: {
-
+				resize: function enableOnlyMobile(swiper) {
+					if (1024 >= window.innerWidth) {
+						swiper.disable()
+						swiper.el.classList.add('-non-slider')
+					} else {
+						swiper.enable()
+						swiper.el.classList.remove('-non-slider')
+					}
+				},
 			}
 		});
+
+		// var thumbs = document.querySelectorAll('.image-card-product .swiper-slide');
+		// for (var i = 0; i < thumbs.length; i++) thumbs[i].addEventListener('mouseover', function () { this.click() });
 
 		new Swiper('.slider-cards-block', {
 			// Подключаем модули слайдера
@@ -140,13 +155,13 @@ function initSliders() {
 				345: {
 					slidesPerView: 1.5,
 				},
-				376: {
-					slidesPerView: 2.1,
+				375: {
+					slidesPerView: 2.15,
 				},
 				540: {
 					slidesPerView: 2.6,
 				},
-				769: {
+				730: {
 					slidesPerView: 3,
 				},
 				1023: {

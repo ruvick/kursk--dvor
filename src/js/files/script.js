@@ -46,6 +46,10 @@ function getFileName() {
 	document.getElementById('file-names').innerHTML = '' + file;
 }
 
+// document.querySelector("._icon-search-plus").addEventListener('click', function () {
+// 	var startGalleryEvent = new CustomEvent('click', { bubbles: true, cancelable: true });
+// 	document.querySelector(".firstGalleryItem").dispatchEvent(startGalleryEvent);
+// })
 
 
 
