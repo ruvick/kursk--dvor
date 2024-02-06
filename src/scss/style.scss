@@ -206,6 +206,11 @@ body {
 	@media (max-width: 768px){
 		  padding: rem(40) 0;
 	}
+	.__container {
+		@media (max-width: 768px){
+			 padding: 0; 
+		}
+	  }
 	@media (max-width: 480px){
 		  padding: rem(30) 0;
 	}

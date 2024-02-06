@@ -17,11 +17,11 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+// import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
 // import "../../scss/libs/swiper.scss";
-// Полный набор стилей из node_modules
-// import 'swiper/css';
+// Полный набор стилей из node_modules 
+import 'swiper/css';
 
 // Добавление классов слайдерам
 // swiper главному блоку, swiper-wrapper оболочке, swiper-slide для слайдов
@@ -52,7 +52,7 @@ function initSliders() {
 			modules: [Pagination],
 			// effect: 'fade',
 			// autoplay: {
-			// 	delay: 1000,
+			delay: 1000,
 			// 	disableOnInteraction: false,
 			// },
 			observer: true,
@@ -146,7 +146,7 @@ function initSliders() {
 				540: {
 					slidesPerView: 2.6,
 				},
-				767: {
+				769: {
 					slidesPerView: 3,
 				},
 				1023: {
@@ -168,14 +168,17 @@ function initSliders() {
 			modules: [Navigation, Pagination, Autoplay],
 			// effect: 'fade',
 			// autoplay: {
-			// 	delay: 1500,
-			// 	disableOnInteraction: false,
+			delay: 1500,
+			disableOnInteraction: false,
 			// },
+
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
+			// freeMode: true,
+			// freeModeMomentum: false,
 			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
-			spaceBetween: 0,
+			// spaceBetween: 0,
 			// autoHeight: true,
 			speed: 1500,
 			// parallax: true,
@@ -226,7 +229,7 @@ function initSliders() {
 			modules: [Navigation, Pagination, Autoplay],
 			// effect: 'fade',
 			// autoplay: {
-			// 	delay: 1500,
+			delay: 1500,
 			// 	disableOnInteraction: false,
 			// },
 			observer: true,
@@ -235,7 +238,7 @@ function initSliders() {
 			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
 			spaceBetween: 10,
 			// autoHeight: true,
-			speed: 1500,
+			// speed: 1500,
 			// parallax: true,
 			//touchRatio: 0,
 			//simulateTouch: false,

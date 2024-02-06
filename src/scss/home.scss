@@ -16,6 +16,7 @@
 }
 .main-sliders__big-slider {
 	position: relative;
+	// min-width: 0;
 	.nuar_blk {
 		display: none;
 		background-color: #00000025;
@@ -88,6 +89,7 @@
 .main-slider-big__dotts {
 	display: none;
 	position: absolute;
+	z-index: 5;
 	padding: rem(5);
 	border-radius: rem(3);
 	background-color: #fff; 
@@ -261,9 +263,10 @@ font-size: rem(12);
 .main-slider-small__dotts {
 	display: none;
 	padding: rem(5);
-	margin-top: 10px;
+	margin: rem(10) auto 0 auto;
 	justify-content: center;
 	border-radius: rem(3);
+	z-index: 2;
 	@media (max-width: 991px){
 		 display: flex; 
 	}
@@ -859,26 +862,45 @@ color: rgba(2, 0, 32, 0.5);
 //========================================================================================================================================================
 .page__great-deals {
 	@media (max-width: 612px){
-		.navigation-panel-product {
-			flex-direction: column;
-			align-items: flex-start;
-	  }
-	  .navigation-panel-product__actions {
-		display: flex;
-		align-items: flex-start;
-		flex-direction: column;
-		margin-top: rem(15);
-  }
+	// 	.navigation-panel-product {
+	// 		flex-direction: column;
+	// 		align-items: flex-start;
+	//   }
+// 	  .navigation-panel-product__actions {
+// 		display: flex;
+// 		align-items: flex-start;
+// 		flex-direction: column;
+// 		margin-top: rem(15);
+//   }
 	}
 }
 .great-deals__navigation-panel {
 	&:not(:last-child){
 		margin-bottom: rem(40);
 	}
+	@media (max-width: 991px){
+		.arrow-block-navigation {
+			display: none;
+		}
+		.navigation-panel-product__link {
+			margin-right: 0;
+		}
+	}
 	@media (max-width: 768px){
 		  &:not(:last-child){
 			margin-bottom: rem(20);
 		  }
+		  padding: 0 rem(15);
+	}
+	@media (max-width: 480px){
+		.navigation-panel-product__title {
+			max-width: rem(210);
+	  }
+	}
+	@media (max-width: 365px){
+		.navigation-panel-product__link {
+			margin-top: rem(10);
+		}
 	}
 }
 //========================================================================================================================================================
@@ -887,22 +909,23 @@ color: rgba(2, 0, 32, 0.5);
 	&:not(:last-child){
 		margin-bottom: rem(20);
 	}
-	@media (max-width: 1024px){
+	@media (max-width: 1024px){ 
 		.form-cat-panel {
 			flex-wrap: nowrap;
 			width: auto;
 			overflow: auto;
 			margin: 0 rem(-15);
-			padding: 0 rem(10);
+			padding: 0 rem(15);
 			.cat-button__btn {
-				width: rem(200);
+				// width: rem(200);
 			}
 		}
 	}
 	@media (max-width: 768px){
+		padding: 0 rem(15);
 		.form-cat-panel {
 			.cat-button__btn {
-				min-width: rem(165);
+				// min-width: rem(165);
 font-size: rem(14);
 font-weight: 400;
 line-height: math.div(20, 14);
@@ -925,6 +948,9 @@ padding: rem(10);
 		margin-right: rem(10);
 	}
 	margin-bottom: rem(10);
+	@media (max-width: 1024px){
+		flex: 0 0 auto;
+	}
 }
 .cat-button {
 	display: flex;

@@ -411,6 +411,7 @@ h4 {
 		}
 }
 .card-product__image {
+	width: 100%;
 	position: relative;
 	margin: -10px -10px 15px -10px;
 	// margin-bottom: 15px;
@@ -715,6 +716,7 @@ text-decoration: line-through $redColor;
 .slider-cards-block {
 	.swiper-slide {
 		display: flex;
+		height: auto;
 	}
 	.btn {
 		padding-left: 21px;
