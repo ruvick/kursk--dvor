@@ -166,7 +166,7 @@ function initSliders() {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation, Pagination, Autoplay],
-			effect: 'fade',
+			// effect: 'fade',
 			// autoplay: {
 			// 	delay: 1500,
 			// 	disableOnInteraction: false,

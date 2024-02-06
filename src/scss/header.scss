@@ -238,7 +238,7 @@
 	}
 }
 
-.header__main { 
+.header__main {  
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -250,6 +250,7 @@
 		margin-right: 0;
 	}
 	@media (max-width: 768px){
+		padding-bottom: 0;
 		.catalog-btn {
 			height: rem(50);
 		}
