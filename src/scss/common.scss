@@ -57,26 +57,26 @@ h4 {
 		}
 	span {
 		position: absolute;
-		top: -6px;
-		right: -2px;
+		top: rem(-6);
+		right: rem(-2);
 		z-index: 2;
-		min-width: 18px;
-		height: 13px;
+		min-width: rem(18);
+		height: rem(13);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		font-size: 10px;
+		font-size: rem(10);
 		font-weight: 500;
-		line-height: 13px;
+		line-height: math.div(13, 10);
 		color: #fff;
 		background-color: $redColor;
-		border-radius: 50px;
+		border-radius: rem(50);
 		overflow: hidden;
-		padding: 0px 5px;
+		padding: 0px rem(5);
 	}
 	&._icon-favorite span {
-		right: 3px;
+		right: rem(3);
 	}
 }
 
@@ -87,12 +87,12 @@ h4 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex: 0 0 50px;
-	width: 50px;
-	height: 50px;
+	flex: 0 0 rem(50);
+	width: rem(50);
+	height: rem(50);
 	background-color: $lightGrey;
 	transition: $mainTransition;
-	border-radius: 3px;
+	border-radius: rem(3);
 	@media (any-hover: hover) {
 		&:hover {
 			color: $darkColor;
@@ -107,11 +107,11 @@ h4 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex: 0 0 30px;
-	width: 30px;
-	height: 30px;
+	flex: 0 0 rem(30);
+	width: rem(30);
+	height: rem(30);
 	background: transparent;
-	border-radius: 3px;
+	border-radius: rem(3);
 	transition: $mainTransition;
 	@media (any-hover: hover) {
 		&:hover {
@@ -127,22 +127,22 @@ h4 {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 5px 10px;
-	font-size: 16px;
+	padding: rem(5) rem(10);
+	font-size: rem(16);
 	font-weight: 400;
 	color: $mainColor;
 	background: transparent;
-	border-radius: 3px;
+	border-radius: rem(3);
 	transition: $mainTransition;
 
 	&::before{
-		font-size: 14px;
-		margin-right: 10px;
+		font-size: rem(14);
+		margin-right: rem(10);
 	}
 
 	span {
 		color: rgba(2, 0, 32, 0.5);
-		margin-left: 10px;
+		margin-left: rem(10);
 	}
 
 	&._active{
@@ -166,7 +166,7 @@ h4 {
 	align-items: flex-start;
 	.sticker {
 		&:not(:last-child){
-			margin-bottom: 5px; 
+			margin-bottom: rem(5);
 		}
 	}
 }
@@ -175,13 +175,13 @@ h4 {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 3px 6px;
-	font-size: 14px;
+	padding: rem(3) rem(6);
+	font-size: rem(14);
 	font-weight: 600;
-	line-height: 18px;
+	line-height: math.div(18, 14);
 	color: #fff;
 	background: $blueColor;
-	border-radius: 3px;
+	border-radius: rem(3);
 }
 
 ._red {
@@ -201,8 +201,8 @@ h4 {
 	flex-direction: column;
 	align-items: flex-start;
 	background-color: #fff;
-	border-radius: 3px;
-	padding: 5px;
+	border-radius: rem(3);
+	padding: rem(5);
 	overflow: hidden;
 	&__item {
 		display: flex;
@@ -211,12 +211,12 @@ h4 {
 
 	&__link {
 	width: 100%;
-	font-size: 16px;
+	font-size: rem(16);
 	font-weight: 400;
-	line-height: 22px;
+	line-height: math.div(22, 16);
 	letter-spacing: 0em;
 	color: $mainColor;
-	padding: 10px 20px;
+	padding: rem(10) rem(20);
 	transition: $mainTransition;
 	@media (any-hover: hover) {
 		&:hover {
@@ -230,9 +230,9 @@ h4 {
 
 .dropdown-list._secondary {
 		.dropdown-list__link {
-			font-size: 14px;
-			line-height: 17.85px;
-			padding: 10px 15px;
+			font-size: rem(14);
+			line-height: math.div(17.85, 14);
+			padding: rem(10) rem(15);
 		}
 	}
 
@@ -242,10 +242,10 @@ h4 {
 	.switch-block__label {
 		position: relative;
 		display: inline-block;
-		width: 33.33px;
-		height: 20px;
+		width: rem(33.33);
+		height: rem(20);
 		background: $lightGrey;
-		border-radius: 3px;
+		border-radius: rem(3);
 		transition: $mainTransition;
 		cursor: pointer;
 	}
@@ -253,20 +253,20 @@ h4 {
 	.switch-block__label:after {
 		content: "";
 		position: absolute;
-		width: 13.33px;
-		height: 13.33px;
-		border-radius: 3px;
+		width: rem(13.33);
+		height: rem(13.333);
+		border-radius: rem(3);
 		background: rgba(2, 0, 32, 0.3);
-		top: 3.5px;
-		left: 3px;
+		top: rem(3.5);
+		left: rem(3);
 		transition: $mainTransition;
 	}
 	
 	input[type='checkbox']:checked+.switch-block__label:after {
 		transform: translateX(16px);
 		background-color: #fff;
-		top: 3.5px;
-		left: 0px;
+		top: rem(3.5);
+		left: rem(0);
 	}
 	
 	input[type='checkbox']:checked+.switch-block__label {
@@ -281,7 +281,7 @@ h4 {
 .search-form { 
 	max-width: 100%;
 	background: rgba(2, 0, 32, 0.03);
-	border-radius: 3px;
+	border-radius: rem(3);
 	overflow: hidden;
 
 	&._active{
@@ -294,7 +294,7 @@ h4 {
 		&__icon {
 			position: relative;
 			z-index: 5;
-			font-size: 22px;
+			font-size: rem(22);
 			color: #262f56;
 			// @media (min-width: 992px){
 			// 	display: none; 
@@ -305,7 +305,7 @@ h4 {
 			display: flex;
 			align-items: center;
 			background: rgba(2, 0, 32, 0.03);
-			padding-right: 20px;
+			padding-right: rem(20);
 			// @media (max-width: 992px){
 			// 	  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 			// 	position:absolute; 
@@ -321,9 +321,9 @@ h4 {
 		}
 	
 		&__btn {
-			flex: 0 0 24px;
-			height: 24px;
-			font-size: 25px;
+			flex: 0 0 rem(24);
+			height: rem(24);
+			font-size: rem(25);
 			color: rgba(2, 0, 32, 0.3);
 			background: transparent;
 			&::before{
@@ -332,15 +332,15 @@ h4 {
 		}
 	
 		&__input {
-			font-size: 14px;
+			font-size: rem(14);
 			// color: $darkGrayColor;
 			width: 100%;
-			padding: 16px 10px 16px 20px;
+			padding: rem(16) rem(10) rem(16) rem(20);
 			background: transparent;
 			transition: $mainTransition;
 		}
 		&__btn_reset {
-			margin-right: 10px;
+			margin-right: rem(10);
 			opacity: 0;
 			visibility: hidden;
 			transition: all 0.6s ease 0s;
@@ -382,11 +382,11 @@ h4 {
 .flex__inner {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -25px;
+	margin: 0 rem(-25);
 }
 .flex__column {
 	display: flex;
-	padding: 0 25px 50px 25px;
+	padding: 0 rem(25) rem(50) rem(25);
 	flex: 0 1 27.82%;
 	overflow: hidden;
 }
@@ -419,7 +419,7 @@ h4 {
 }
 .image-card-product {
 	.swiper-pagination-bullets {
-		margin-top: 10px;
+		margin-top: rem(10);
 		@media (max-width: 1024px){
 			  display: none;
 		}
@@ -427,8 +427,8 @@ h4 {
 }
 .image-card-product__stikcers-block {
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	top: rem(10);
+	left: rem(10);
 	z-index: 2;
 }
 .sticker-block {
@@ -456,7 +456,7 @@ h4 {
 }
 .icons-card-product__icon {
 	&:not(:last-child){
-		margin-bottom: 5px;
+		margin-bottom: rem(10);
 	}
 }
 .icon-card-product {
@@ -464,11 +464,11 @@ h4 {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	flex: 0 0 30px;
-	width: 30px;
-	height: 30px;
+	flex: 0 0 rem(30);
+	width: rem(30);
+	height: rem(30);
 	background-color: #fff;
-	border-radius: 3px;
+	border-radius: rem(3);
 	overflow: hidden;
 	&::before{
 		color: rgba(2, 0, 32, 0.3);
@@ -508,20 +508,20 @@ h4 {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-bottom: 10px;
+	margin-bottom: rem(10);
 }
 .body-card-product__item {
 	&:not(:last-child){
-		margin-right: 10px;
+		margin-right: rem(10);
 	}
 	&.article-card  {
 		font-size: rem(12); 
 	}
 }
 .availability-card {
-font-size: 14px;
+font-size: rem(14);
 font-weight: 400;
-line-height: 18px;
+line-height: math.div(18, 14);
 letter-spacing: 0em;
 }
 .article-card {
@@ -549,18 +549,18 @@ color: rgba(2, 0, 32, 0.5);
 	}
 }
 .body-card-product__size {
-	margin-bottom: 15px;
+	margin-bottom: rem(15);
 }
 .size-product-card {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 14px;
-	line-height: 18px;
+	font-size: rem(14);
+	line-height: math.div(18, 14);
 	letter-spacing: 0em;
-	padding: 3px 6px;
-	border-radius: 3px;
+	padding: rem(3) rem(6);
+	border-radius: rem(3);
 	background-color: $lightGrey;
 }
 .body-card-product__price {
@@ -569,10 +569,10 @@ color: rgba(2, 0, 32, 0.5);
 .price-card-product {
 }
 .price-card-product__name {
-	font-size: 14px;
+	font-size: rem(14);
 	font-weight: 400;
-	line-height: 18px;
-	margin-bottom: 5px;
+	line-height: math.div(18, 14);
+	margin-bottom: rem(5);
 	color: rgba(2, 0, 32, 0.5);
 }
 .price-card-product__row {
@@ -586,7 +586,7 @@ color: rgba(2, 0, 32, 0.5);
 }
 
 .new-price-card {
-	font-size: 30px;
+	font-size: rem(30);
 	font-weight: 500;
 	line-height: math.div(38, 30);
 	color: $mainColor;
@@ -594,11 +594,11 @@ color: rgba(2, 0, 32, 0.5);
 .price-card-product__new-price {
 	margin-right: 10px;
 	@media (max-width: 1024px){
-		  font-size: 23px;
+		  font-size: rem(23);
 	}
 	@media (max-width: 768px){
-		font-size: 23px;
-		line-height: 29px;
+		// font-size: 23px;
+		// line-height: 29px;
 	}
 	@media (max-width: 414px){
 		  font-size: rem(18);
@@ -607,7 +607,7 @@ color: rgba(2, 0, 32, 0.5);
 .rub {
 }
 .old-price-card {
-font-size: 16px;
+font-size: rem(16);
 font-weight: 400;
 line-height: math.div(22, 16);
 color: rgba(2, 0, 32, 0.5);
@@ -616,7 +616,7 @@ text-decoration: line-through $redColor;
 
 .price-card-product__old-price {
 @media (max-width: 414px){
-	  font-size: 12px;
+	  font-size: rem(12);
 }
 }
 
@@ -624,15 +624,15 @@ text-decoration: line-through $redColor;
 	padding: 0 rem(10) 0 rem(10);
 	@media (max-width: 1024px){  
 		.actions-card-product__btn {
-			font-size: 14px;
-			padding: 15px;
+			font-size: rem(14);
+			padding: rem(15);
 			&::before{
 				display: none;
 			}
 			@media (max-width: 768px){
-				font-size: 12px;
-				line-height: 15px;	
-				padding: 7.5px 16px;
+				font-size: rem(12);
+				line-height: rem(15);	
+				padding: rem(7.5) rem(16);
 			}
 			@media (max-width: 414px){ 
 			text-align: left;
@@ -653,9 +653,9 @@ text-decoration: line-through $redColor;
 	flex-wrap: wrap;
 }
 .actions-card-product__quantity {
-	margin-right: 5px;
+	margin-right: rem(5);
 	flex: 1 1 auto;
-	margin-bottom: 5px;
+	margin-bottom: rem(5);
 }
 .quantity {
 }
@@ -669,7 +669,7 @@ text-decoration: line-through $redColor;
 }
 .actions-card-product__btn-bascket {
 	flex: 1 1 auto;
-	margin-bottom: 5px;
+	margin-bottom: rem(5);
 }
 .actions-card-product__btn {
 	width: 100%;
@@ -690,7 +690,7 @@ text-decoration: line-through $redColor;
 .product-cards-block {
 }
 .product-cards-block__navigation-panel {
-	margin-bottom: 40px;
+	margin-bottom: rem(40);
 }
 .navigation-panel-product {
 	display: flex;
@@ -699,16 +699,16 @@ text-decoration: line-through $redColor;
 	align-items: center;
 }
 .navigation-panel-product__title {
-	font-size: 32px;
+	font-size: rem(32);
 	font-weight: 500;
-	line-height: 41px;
+	line-height: math.div(41, 32);
 	&:not(:last-child){
-		margin-right: 20px;
+		margin-right: rem(20);
 	}
 	@media (max-width: 768px){
-		font-size: 26px;
+		font-size: rem(26);
 		font-weight: 500;
-		line-height: 33px;
+		// line-height: 33px;
 	}
 }
 .navigation-panel-product__actions {
@@ -716,11 +716,11 @@ text-decoration: line-through $redColor;
 	align-items: center;
 }
 .navigation-panel-product__link {
-	font-size: 16px;
+	font-size: rem(16);
 	font-weight: 400;
-	line-height: 22px;
+	line-height: math.div(22, 16);
 	color: rgba(2, 0, 32, 0.7);
-	margin-right: 30px;
+	margin-right: rem(30);
 	transition: $mainTransition;
 	@media (any-hover: hover) {
 		&:hover {
@@ -735,10 +735,10 @@ text-decoration: line-through $redColor;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex: 0 0 95px;
+	flex: 0 0 rem(95);
 	.arrow-sl-btn {
-		flex: 0 0 45px;
-		height: 45px;  
+		flex: 0 0 rem(45);
+		height: rem(45);
 	}
 }
 .arrow-sl-btn {
@@ -762,7 +762,7 @@ text-decoration: line-through $redColor;
 
 .bottom-icons-panel {
 	display: none;
-	padding: 13px 30px;
+	padding: rem(13) rem(30);
 	border-top: 1px solid rgba(2, 0, 32, 0.03);
 	@media (max-width: 768px){
 		  display: block;
@@ -774,7 +774,7 @@ text-decoration: line-through $redColor;
 		  background-color: #fff;
 	}
 	@media (max-width: 515px){
-		  padding: 10px 13px;
+		  padding: rem(10) rem(13);
 		//   margin: 0 -13px;
 	}
 }
@@ -785,20 +785,20 @@ justify-content: space-between;
 @media (max-width: 515px){
 	  width: auto;
 	  overflow: auto;
-	  margin: 0 -13px;
+	  margin: 0 rem(-13);
 }
 }
 .bottom-icons-panel__item {
 	@media (max-width: 515px){
-		flex: 0 0 100px;
+		flex: 0 0 rem(100);
 	}
 	.action-btn {
-font-size: 10px;
+font-size: rem(10);
 font-weight: 400;
-line-height: 13px;
+line-height: math.div(13, 10);
 	}
 &::before{
-	font-size: 23px;
+	font-size: rem(23);
 }
 }
 .action-btn {
