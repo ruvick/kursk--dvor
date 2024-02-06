@@ -215,3 +215,46 @@ body {
 	padding: rem(50) 0;
 }
 
+.page__catalog-root {
+	display: none;
+	padding: rem(25) 0 rem(15) 0;
+	@media (max-width: 540px){
+		 display: block; 
+	}
+	.catalog-root__inner {
+		@media (max-width: 445px){
+			justify-content: space-between;
+		}
+  }
+  .catalog-root__column {
+	@media (max-width: 350px){
+		 flex: 0 1 50%; 
+	}
+}
+	.card-catalog {
+		padding: rem(19);
+		@media (max-width: 445px){
+			  padding: rem(5);
+		}
+		@media (max-width: 375px){
+			  padding: 0;
+		}
+  }
+  .card-catalog__img {
+	width: 75%;
+	padding-bottom: 75%;
+}
+  .card-catalog__descp {
+	font-size: rem(12);
+	line-height: 22px;
+	line-height: math.div(15.6, 12);
+}
+	.catalog-root__link {
+font-size: rem(14);
+font-weight: 600;
+line-height: math.div(18, 14);
+		width: 100%;
+		margin-top: rem(10);
+		padding: rem(11) rem(20);
+	}
+}
