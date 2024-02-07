@@ -22,6 +22,16 @@
 			line-height: math.div(33, 26);
 		}
 	  }
+	  &:not(:last-child){
+		margin-right: rem(10);
+	  }
+}
+.title-block__sticker {
+	&._grey {
+		font-weight: 400;
+		color: rgba(2, 0, 32, 0.7);
+		background-color: $lightGrey;
+	}
 }
 //========================================================================================================================================================
 

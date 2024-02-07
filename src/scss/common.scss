@@ -182,6 +182,12 @@ h4 {
 	color: #fff;
 	background: $blueColor;
 	border-radius: rem(3);
+	span {
+		font-weight: 400;
+		margin-left: rem(3);
+		color: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+	}
 }
 
 ._red {
@@ -498,8 +504,10 @@ h4 {
 }
 .card-product__body {
 	flex: 1 1 auto;
-	padding: rem(10);
-	// margin-bottom: rem(10);
+	padding: 0.625rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 .body-card-product {
 }
@@ -549,19 +557,22 @@ color: rgba(2, 0, 32, 0.5);
 	}
 }
 .body-card-product__size {
+	flex: 1 1 auto;
 	margin-bottom: rem(15);
 }
 .size-product-card {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-size: rem(14);
-	line-height: math.div(18, 14);
-	letter-spacing: 0em;
-	padding: rem(3) rem(6);
-	border-radius: rem(3);
-	background-color: $lightGrey;
+	span {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font-size: rem(14);
+		line-height: math.div(18, 14);
+		letter-spacing: 0em;
+		padding: rem(3) rem(6);
+		border-radius: rem(3);
+		background-color: $lightGrey;
+	}
 }
 .body-card-product__price {
 

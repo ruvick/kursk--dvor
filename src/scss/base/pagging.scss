@@ -54,3 +54,53 @@
 		}
 	}
 }
+//========================================================================================================================================================
+
+.pagging {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pagging__arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	flex: 0 0 rem(20);
+	width: rem(20);
+	height: rem(20);
+	background: #F0F2F8;
+	&::before{
+		font-size: rem(8);
+	}
+}
+.pagging__list {
+	display: flex;
+	align-items: center;
+}
+.pagging__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(22, 16);
+	letter-spacing: 0em;
+	flex: 0 0 rem(20);
+	width: rem(20);
+	height: rem(20);
+	margin: 0 rem(10) 0 rem(10);
+	transition: $mainTransition;
+
+	@media (any-hover: hover) {
+	&:hover {
+		background: #F0F2F8;
+	}
+	}
+	&._active {
+		background: #F0F2F8;
+	}
+}
+
