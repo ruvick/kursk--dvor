@@ -1,6 +1,15 @@
 // Хлебные крошки ===============================================================================================================================================
 .breadcrumbs {
-	// padding-top: 40px;
+	white-space: nowrap;
+	overflow: auto;
+}
+
+.breadcrumbs::-webkit-scrollbar {
+	display: none;
+}
+
+.breadcrumbs::-webkit-scrollbar-thumb {
+	display: none;
 }
 
 .breadcrumbs__inner {
