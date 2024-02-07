@@ -1,0 +1,139 @@
+.catalog {
+	padding-top: rem(40);
+}
+.catalog__container {
+}
+.catalog__body {
+	display: grid; 
+	grid-template-columns: rem(325) 1fr;
+	gap: rem(30);
+}
+
+.sidebar {
+	width: 100%;
+	// border: 1px solid #000;
+}
+.catalog__sidebar {
+}
+
+.catalog-filter {
+}
+.filter-catalog {
+}
+.filter-catalog__action {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: rem(25);
+}
+.filter-catalog__item {
+}
+.item-filter-catalog {
+	padding: rem(10) rem(10) rem(10) 0;
+}
+.item-filter-catalog__title {
+	display: flex;
+	align-items: center;
+	font-size: rem(16);
+	font-weight: 600;
+	line-height: math.div(20, 16);
+	letter-spacing: 0em;
+	color: $mainColor;
+	&::before{
+		font-weight: 600;
+		font-size: rem(11);
+		// margin-top: rem(3);
+		margin-right: rem(10);
+		transition: $mainTransition;
+	}
+	&._spoller-active{
+		&::before{
+			transform: rotate(-180deg);
+		}
+	}
+}
+._icon-arrow-down {
+}
+.item-filter-catalog__body {
+	padding: rem(15) 0;
+	.checkbox{
+		display: block;
+		&:not(:last-child){
+			margin-bottom: rem(10);
+		}
+	}
+}
+
+.filter-catalog__price {
+}
+.price-filter {
+}
+.price-filter__body {
+	display: flex;
+	flex-direction: column;
+}
+.price-filter__range {
+	margin: 15px 0;
+}
+.price-filter__inputs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.price-filter__input-label {
+	display: flex;
+	align-items: center;
+	&:not(:last-child){
+		margin-right: rem(20);
+	}
+}
+.price-filter__input-text {
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(22, 16);
+	letter-spacing: 0em;
+	color: rgba(2, 0, 32, 0.5);
+	margin-right: rem(10);
+}
+.price-filter__input {
+	width: rem(123);
+	height: rem(50);
+	padding: 14px 20px;
+	background: rgba(2, 0, 32, 0.03);
+}
+
+.item-filter-catalog__checks {
+}
+.checks-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.checks-item__name {
+font-size: rem(16);
+font-weight: 600;
+line-height: math.div(20, 16);
+letter-spacing: 0em;
+text-align: left;
+color: $mainColor;
+}
+.checks-item__switch-block {
+}
+
+
+
+.filter-catalog__footer {
+	display: flex;
+	flex-direction: column;
+}
+.filter-catalog__btn {
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
+}
+
+
+
+.catalog__content {
+
+}

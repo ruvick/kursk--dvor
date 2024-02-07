@@ -33,12 +33,14 @@
 		display: flex;
 		align-items: center;
 		position: relative;
-		font-size: 14px;
 		// color: #ffffff;
 		// letter-spacing: -0.3px;
 		// line-height: calc(20 / 14);
-		line-height: 1;
-		color: #161615;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: math.div(22, 16);
+		letter-spacing: 0em;
+		color: $mainColor;
 		cursor: pointer;
 
 		&:before {
@@ -54,6 +56,9 @@
 			border: 1px solid rgba(2, 0, 32, 0.3);
 			border-radius: 3px;
 			// transition: all 0.3s;
+		}
+		span {
+			margin-left: 10px;
 		}
 	}
 
@@ -97,6 +102,10 @@
 		background-position: center;
 		background-repeat: no-repeat;
 	}
+}
+
+.checkbox__value {
+	color: rgba(2, 0, 32, 0.5);
 }
 
 .text-name_new-check:before {

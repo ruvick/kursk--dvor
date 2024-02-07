@@ -40,7 +40,7 @@ h4 {
 	display: flex;
 	align-items: center;
 	font-size: rem(16);
-	font-weight: 400;
+	font-weight: 400; 
 	line-height: math.div(22, 16);
 	letter-spacing: 0em;
 	white-space: nowrap;
@@ -51,6 +51,41 @@ h4 {
 	}
 	span {
 		margin-left: rem(5);
+	}
+}
+//========================================================================================================================================================
+
+.selection-group {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.selection-group__link {
+	&:not(:last-child){
+		margin-right: rem(10);
+	}
+	margin-bottom: 10px;
+}
+.link-selection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(22, 16);
+	letter-spacing: 0em;
+	color: $mainColor;
+	background: rgba(240, 242, 248, 1);
+	transition: $mainTransition;
+	padding: rem(10);
+	border-radius: rem(3);
+
+	@media (any-hover: hover) {
+	&:hover {
+		background: $mediumGrey;
+	}
 	}
 }
 //========================================================================================================================================================
