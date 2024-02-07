@@ -180,6 +180,7 @@ h4 {
 	font-weight: 600;
 	line-height: math.div(18, 14);
 	color: #fff;
+	white-space: nowrap;
 	background: $blueColor;
 	border-radius: rem(3);
 	span {
@@ -436,6 +437,11 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 	top: rem(10);
 	left: rem(10);
 	z-index: 2;
+	@media (max-width: 414px){
+		.sticker {
+			font-size: rem(10);
+		}
+	}
 }
 .sticker-block {
 }
@@ -517,6 +523,9 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 	align-items: center;
 	flex-wrap: wrap;
 	margin-bottom: rem(10);
+	@media (max-width: 414px){
+		  flex-direction: column;
+	}
 }
 .body-card-product__item {
 	&:not(:last-child){
@@ -654,6 +663,17 @@ text-decoration: line-through $redColor;
 			}
 	  }
 	}
+	.actions-card-product__quantity {
+		&:not(:last-child){
+			margin-right: rem(5);
+			margin-bottom: rem(5);
+		}
+		@media (max-width: 1366px){
+			  &:not(:last-child){
+				margin-right: 0;
+			  }
+		}
+	}
 }
 .actions-card-product {
 }
@@ -664,9 +684,7 @@ text-decoration: line-through $redColor;
 	flex-wrap: wrap;
 }
 .actions-card-product__quantity {
-	margin-right: rem(5);
 	flex: 1 1 auto;
-	margin-bottom: rem(5);
 }
 .quantity {
 }
@@ -681,6 +699,12 @@ text-decoration: line-through $redColor;
 .actions-card-product__btn-bascket {
 	flex: 1 1 auto;
 	margin-bottom: rem(5);
+	@media (max-width: 414px){
+		  font-size: rem(12);
+	}
+	@media (max-width: 345px){
+		padding: rem(13) rem(10);
+	}
 }
 .actions-card-product__btn {
 	width: 100%;

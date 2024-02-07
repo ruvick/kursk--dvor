@@ -8,23 +8,50 @@
 	&:not(:last-child){
 		margin-bottom: rem(25);
 	}
+	@media (max-width: 414px){
+		  &:not(:last-child){
+			margin-bottom: rem(20);
+		  }
+	}
 }
 
 .products-group__filter {
 	&:not(:last-child){
 		margin-bottom: rem(25);
 	}
+	@media (max-width: 414px){
+		  &:not(:last-child){
+			margin-bottom: rem(20);
+		  }
+	}
 }
 .filter-products-group {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .filter-products-group__butons {
 	display: flex;
 	align-items: center;
+	&:not(:last-child){
+		margin-bottom: rem(3);
+	}
+	@media (max-width: 768px){
+		  display: none;
+	}
+}
+.filter-products-group__control_mob {
+	display: none;
+	@media (max-width: 768px){
+		  display: flex;
+	}
 }
 .filter-products-group__btn {
+	white-space: nowrap;
+	&:not(:last-child){
+		margin-bottom: rem(3);
+	}
 }
 .btn-products-group {
 	display: flex;
@@ -62,9 +89,6 @@
 	color: $mainColor;
 }
 
-.filter-products-group__control {
-
-}
 .control-products-group {
 	display: flex;
 	align-items: center;
@@ -112,6 +136,12 @@
 		font-size: rem(14);
   }
 }
+
+.filter-products-group__control {
+	@media (max-width: 480px){
+		  display: none;
+	}
+}
 //========================================================================================================================================================
 
 .products {
@@ -124,15 +154,38 @@
 	display: flex;
 	padding: 0 rem(5) rem(10) rem(5);
 	overflow: hidden;
+	@media (max-width: 1024px){
+		  flex: 0 1 33.333%;
+	}
+	@media (max-width: 612px){
+		  flex: 0 1 50%;
+	}
+	.actions-card-product__quantity {
+		@media (max-width: 414px){
+			  display: none;
+		}
+	}
+	.slider-card-product__slide {
+		@media (max-width: 414px){
+			padding-bottom: 100%;
+		}
+  }
 }
 
 .page-products__products {
-	margin-bottom: rem(40);
+	&:not(:last-child){
+		margin-bottom: rem(40);
+	}
+	@media (max-width: 414px){
+		&:not(:last-child){
+			margin-bottom: rem(35);
+		}
+	}
 }
 
 .page-products__show-more {
 	width: 100%;
-}
+} 
 //========================================================================================================================================================
 
 .page-products__paggination {

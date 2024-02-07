@@ -94,6 +94,11 @@
 	margin: 0 rem(10) 0 rem(10);
 	transition: $mainTransition;
 
+	@media (max-width: 540px){
+		font-size: rem(14);
+		margin: 0 rem(3) 0 rem(3);
+	}
+
 	@media (any-hover: hover) {
 	&:hover {
 		background: #F0F2F8;
