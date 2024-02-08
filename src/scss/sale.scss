@@ -168,9 +168,22 @@
 //========================================================================================================================================================
 
 .products {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 rem(-10);
+	// display: flex;
+	// flex-wrap: wrap;
+	// margin: 0 rem(-10); 
+	display: grid;
+	gap: rem(10);
+	grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+	margin: 0;
+	&:not(:last-child){
+		margin-bottom: rem(50);
+	}
+	@media (max-width: 812px){
+		grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+	}
+	@media (max-width: 445px){
+		grid-template-columns: repeat(auto-fit, minmax(rem(160), 1fr));
+	}
 }
 .products__column {
 	flex: 0 1 25%;

@@ -1,5 +1,5 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
-import { isMobile, removeClasses, bodyLockStatus, bodyLockToggle, bodyUnlock, bodyLock } from "./functions.js";
+import { isMobile, removeClasses, bodyLockStatus, bodyLockToggle, bodyUnlock, bodyLock, darkBody } from "./functions.js";
 import { formsModules } from "./forms/forms.js";
 
 // Работа на тачскринах
@@ -27,7 +27,7 @@ window.onload = function () {
 			}
 		}
 
-		// Активация поиска при клике на иконку 
+		// Активация поиска
 		if (targetElement.classList.contains('search-form__input')) {
 			document.querySelector('.search-form').classList.toggle('_active');
 			darkBody();
@@ -38,9 +38,9 @@ window.onload = function () {
 		}
 	}
 
-	if (window.innerWidth < 768 && isMobile.any()) {
+	if (window.innerWidth <= 768 && isMobile.any()) {
 
-		// Мобильные фильтры
+		// Активация Мобильных фильтров
 		const btnFilter = document.querySelector('.btn-filter');
 		const filterCatalog = document.querySelector('.filter-catalog');
 		const mobFiltercl = document.querySelector('.mob-filter-cl');
@@ -63,10 +63,6 @@ window.onload = function () {
 		}
 		mobFiltersOp();
 		mobFiltersCl();
-	}
-
-	function darkBody() {
-		document.body.classList.toggle('popup-show');
 	}
 }
 

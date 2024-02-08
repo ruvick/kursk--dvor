@@ -35,6 +35,8 @@
 }
 
 .catalog__filter {
+	position: sticky;
+    top: 10px;
 	@media (max-width: 768px){
 		position: fixed; 
 		top: 0%; 
@@ -294,7 +296,7 @@ color: $mainColor;
 
 .filter-products-group__btn-filter {
 	display: none;
-	@media (max-width: 768px){
+	@media (max-width: 768px){ 
 		 display: block; 
 	}
 }
