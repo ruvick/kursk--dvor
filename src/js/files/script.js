@@ -1,5 +1,5 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
-import { isMobile, removeClasses } from "./functions.js";
+import { isMobile, removeClasses, bodyLockStatus, bodyLockToggle, bodyUnlock, bodyLock } from "./functions.js";
 import { formsModules } from "./forms/forms.js";
 
 // Работа на тачскринах
@@ -19,18 +19,47 @@ window.onload = function () {
 			if (targetElement.classList.contains('menu__arrow')) {
 				targetElement.closest('.menu__item').classList.toggle('_hover')
 			}
+
 			// Закрываем подменю при клике на пустое пространство
 			if (!targetElement.closest('.menu__item') && document.querySelectorAll('.menu__item._hover').length > 0) {
 				// Отдаем нашей функции _removeClasses() коллекцию обьектов, и указываем какой кдасс нужно убрать.
 				removeClasses(document.querySelectorAll('.menu__item._hover'), "_hover");
 			}
 		}
+
 		// Активация поиска при клике на иконку 
 		// if (targetElement.classList.contains('search-form__icon')) {
 		// 	document.querySelector('.search-form').classList.toggle('_active');
 		// } else if (!targetElement.closest('.search-form') && document.querySelector('.search-form._active')) {
 		// 	document.querySelector('.search-form').classList.remove('_active');
 		// }
+	}
+
+	if (window.innerWidth < 768 && isMobile.any()) {
+
+		// Мобильные фильтры
+		const btnFilter = document.querySelector('.btn-filter');
+		const filterCatalog = document.querySelector('.filter-catalog');
+		const mobFiltercl = document.querySelector('.mob-filter-cl');
+
+		function mobFiltersOp() {
+			if (btnFilter && filterCatalog) {
+				btnFilter.addEventListener("click", function (e) {
+					filterCatalog.classList.add('_active');
+					bodyLock();
+				});
+			}
+		}
+		function mobFiltersCl() {
+			if (mobFiltercl && filterCatalog) {
+				mobFiltercl.addEventListener("click", function (e) {
+					filterCatalog.classList.remove('_active');
+					bodyUnlock();
+				});
+			}
+		}
+		mobFiltersOp();
+		mobFiltersCl();
 	}
 
 }

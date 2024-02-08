@@ -725,9 +725,9 @@ text-decoration: line-through $redColor;
 			margin-bottom: rem(5);
 		}
 		@media (max-width: 1366px){
-			  &:not(:last-child){
-				margin-right: 0;
-			  }
+			//   &:not(:last-child){
+			// 	margin-right: 0;
+			//   }
 		}
 	}
 }
