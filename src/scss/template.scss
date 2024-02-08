@@ -35,6 +35,13 @@
 		margin-right: rem(10);
 	  }
 }
+.title-block__subtitle {
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: math.div(22, 16);
+		letter-spacing: 0em;
+		margin-top: rem(10);
+}
 .title-block__sticker {
 	@media (max-width: 480px){
 		  font-size: 12px;
