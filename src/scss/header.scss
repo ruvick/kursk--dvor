@@ -1,7 +1,7 @@
 //====================================================================================================
 .header {
 	position: relative;
-	z-index: 50;
+	z-index: 40;
 	padding: rem(10) 0;
 	// background-color: #fff;
 	@media (max-width: em(768)){
@@ -18,7 +18,7 @@
 		justify-content: space-between;
 		align-items: center;
 		// flex-wrap: wrap; 
-		background-color: #fff;
+		// background-color: #fff;
 		z-index: 50;
 		position: relative;
 		@media (max-width: 768px) {
@@ -105,7 +105,7 @@
 }
 
 .header__inner {
-	background-color: #fff;
+	// background-color: #fff;
 }
 
 .header__item {

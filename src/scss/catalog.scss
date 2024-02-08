@@ -12,6 +12,9 @@
 	@media (max-width: 950px){
 		 flex-wrap: wrap; 
 	}
+	@media (max-width: 768px){
+		 gap: 0; 
+	}
 }
 
 .sidebar {
@@ -293,5 +296,17 @@ color: $mainColor;
 	display: none;
 	@media (max-width: 768px){
 		 display: block; 
+	}
+}
+
+.item-filter-catalog_category {
+	@media (max-width: 768px){
+		 display: none; 
+	}
+	.checkbox__text:before {
+		display: none;
+	}
+	.checkbox__input:checked + .checkbox__text:before {
+		display: none;
 	}
 }
