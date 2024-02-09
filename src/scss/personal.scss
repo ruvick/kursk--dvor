@@ -146,3 +146,147 @@
 	width: 100%;
 }
 
+.personal-content__orders {
+}
+.orders-personal {
+	display: flex;
+	flex-direction: column;
+}
+.orders-personal__item {
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
+}
+.item-orders {
+	display: flex;
+	flex-direction: column;
+}
+.item-orders__header {
+	display: flex;
+	// flex-wrap: wrap;
+	justify-content: space-between;
+	padding: rem(20);
+	background: rgba(240, 242, 248, 1);
+}
+.item-orders__numbering {
+	&:not(:last-child){
+		margin-right: rem(15);
+	}
+}
+.numbering-orders {
+}
+.numbering-orders__number {
+	font-size: rem(24);
+	font-weight: 500;
+	line-height: math.div(31, 24);
+	&:not(:last-child){
+		margin-bottom: rem(5);
+	}
+}
+.numbering-orders__data {
+	font-size: rem(16);
+	line-height: math.div(22, 16);
+	color: rgba(2, 0, 32, 0.5);
+}
+.item-orders__prices {
+}
+.prices-orders {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.prices-orders__price {
+	font-size: rem(24);
+	font-weight: 500;
+	line-height: math.div(31, 24);
+	&:not(:last-child){
+		margin-bottom: rem(5);
+	}
+}
+.prices-orders__stickers {
+}
+.prices-orders__sticker {
+}
+.sticker {
+}
+._red {
+}
+
+
+.item-orders__body {
+}
+.body-orders {
+	display: flex;
+	justify-content: space-between;
+	padding: rem(20);
+	background-color: #fff;
+}
+.body-orders__actions {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	&:not(:last-child){
+		margin-right: rem(20);
+	}
+}
+.body-orders__address {
+	display: flex;
+	align-items: center;
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(22, 16);
+	span {
+		color: rgba(2, 0, 32, 0.5);
+		margin-right: rem(10);
+	}
+	&:not(:last-child){
+		margin-bottom: rem(20);
+	}
+}
+.body-orders__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.body-orders__button {
+	font-size: rem(16);
+	line-height: math.div(22, 16);
+	color: rgba(18, 11, 141, 1);
+	white-space: nowrap;
+	&:not(:last-child){
+		margin-right: rem(20);
+	}
+	transition: $mainTransition;
+
+	@media (any-hover: hover) {
+	&:hover {
+		color: $mainColor;
+	}
+}
+}
+.body-orders__button_reset {
+}
+.body-orders__images {
+	display: flex;
+	align-items: center;
+}
+.body-orders__img {
+	display: flex;
+	// justify-content: center;
+	// align-items: center;
+	flex: 0 0 rem(72);
+	width: rem(72);
+	height: rem(64);
+	border-radius: rem(3);
+	overflow: hidden;
+	&:not(:last-child){
+		margin-right: rem(5);
+	}
+	img {
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: center;
+	}
+}
