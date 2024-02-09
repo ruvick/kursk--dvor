@@ -35,8 +35,6 @@
 }
 
 .catalog__filter {
-	position: sticky;
-    top: 10px;
 	@media (max-width: 768px){
 		position: fixed; 
 		top: 0%; 

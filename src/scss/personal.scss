@@ -1,0 +1,127 @@
+.personal {
+	.tabs__navigation {
+		@media (max-width: 768px){
+			 display: none; 
+		}
+	}
+	.template__tabs .tabs__content {
+		@media (max-width: 768px){
+			 padding-top: 0; 
+		}
+	}
+}
+
+.personal-content {
+}
+
+.personal-content__inner {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 1024px){
+		  flex-direction: column;
+	}
+}
+.personal-content__column {
+	flex: 0 1 48%;
+	@media (max-width: 1024px){
+		 flex: 0 1 100%;
+		 &:not(:last-child){
+			margin-bottom: rem(30);
+		 } 
+	}
+}
+.personal-content__item {
+	&:not(:last-child){
+		margin-bottom: rem(40);
+	}
+}
+.item-personal {
+}
+.item-personal__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&:not(:last-child){
+		margin-bottom: rem(15);
+	}
+}
+.item-personal__title {
+	font-size: rem(24);
+	font-weight: 500;
+	line-height: math.div(31, 24);
+	letter-spacing: 0em;
+	@media (max-width: 480px){
+	font-size: rem(18);
+	line-height: math.div(23, 18);
+	}
+}
+.item-personal__buttons {
+	display: flex;
+	align-items: center;
+}
+.item-personal__btn {
+	color: rgba(2, 0, 32, 0.3);
+	&:not(:last-child){
+		margin-right: rem(10);
+	}
+}
+._icon-edit {
+}
+.item-personal__body {
+}
+.item-personal__form {
+}
+.form-personal {
+	border-radius: 3px;
+	overflow: hidden;
+	.input {
+		background: rgba(240, 242, 248, 1);
+		border-radius: 0px;
+	}
+}
+.form__line {
+}
+.form-personal__input {
+}
+.input {
+}
+.input__label {
+}
+.header-personal {
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: rem(20);
+}
+.header-personal__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+		margin-top: rem(15);
+}
+.item-personal__subtitle {
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(22, 16);
+	letter-spacing: 0em;
+	@media (max-width: 480px){
+	font-size: rem(14);
+	}
+}
+._icon-baskcet {
+}
+.body-personal {
+}
+.body-personal__item {
+}
+.body-personal__btn {
+	width: 100%;
+}
+.__btn {
+}
+.btn {
+}
+.btn_light {
+}
+._icon-location {
+}

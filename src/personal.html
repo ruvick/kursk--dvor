@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Личный кабинет"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page page-template">
+
+			<div class="page__header">
+				<div class="page__container">
+
+					<div class="breadcrumbs">
+						<div class="breadcrumbs__inner">
+							<a href="home.html"> Главная </a> - <span class="breadcrumb_last" aria-current="page">Личный
+								кабинет</span>
+						</div>
+					</div>
+
+					<div class="page__title-block title-block">
+						<div class="title-block__title">
+							<h1>Личный кабинет</h1>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<section class="personal template">
+				<div class="__container">
+
+					<div class="template__tabs">
+
+						<div data-tabs class="tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _icon-arrow-big-right _tab-active">Личные
+									данные</button>
+								<button type="button" class="tabs__title _icon-arrow-big-right">Текущие заказы</button>
+								<button type="button" class="tabs__title _icon-arrow-big-right">История заказов</button>
+								<button type="button" class="tabs__title _icon-arrow-big-right">Сменить пароль</button>
+								<a href="" type="button" class="tabs__title tabs__title_link">Выйти</a>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+
+									<div class="personal-content">
+
+										<div class="personal-content__inner">
+
+											<div class="personal-content__column">
+
+												<div class="personal-content__item item-personal">
+													<div class="item-personal__header">
+														<div class="item-personal__title">Контактные данные</div>
+														<div class="item-personal__buttons">
+															<button type="button" data-popup="#personal-data"
+																class="item-personal__btn _icon-edit"></button>
+														</div>
+													</div>
+													<div class="item-personal__body">
+														<form action="#" class="item-personal__form form-personal">
+															<div class="form__line">
+																<div class="form-personal__input input">
+																	<label for="tel-inp" class="input__label">Номер телефона</label>
+																	<input id="tel-inp" type="text" name="phone" data-validate
+																		data-required="phone">
+																	<!-- <span class="search-form__check _icon-check"></span> -->
+																</div>
+																<div class="form-personal__input input">
+																	<label for="tel-inp" class="input__label">Email</label>
+																	<input id="tel-inp" data-validate data-required="email" type="text"
+																		name="form[]">
+																	<!-- <span class="search-form__check _icon-check"></span> -->
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+
+												<div class="personal-content__item item-personal">
+													<div class="item-personal__header">
+														<div class="item-personal__title">Личные данные</div>
+														<div class="item-personal__buttons">
+															<button type="button" data-popup="#personal-data"
+																class="item-personal__btn _icon-edit"></button>
+														</div>
+													</div>
+													<div class="item-personal__body">
+														<form action="#" class="item-personal__form form-personal">
+															<div class="form__line">
+																<div class="form-personal__input input">
+																	<label for="tel-inp" class="input__label">Фамилия</label>
+																	<input id="tel-inp" type="text" name="phone" data-validate
+																		data-required="phone">
+																	<!-- <span class="search-form__check _icon-check"></span> -->
+																</div>
+																<div class="form-personal__input input">
+																	<label for="tel-inp" class="input__label">Имя</label>
+																	<input id="tel-inp" type="text" name="phone" data-validate
+																		data-required="phone">
+																	<!-- <span class="search-form__check _icon-check"></span> -->
+																</div>
+																<div class="form-personal__input input">
+																	<label for="tel-inp" class="input__label">Отчество</label>
+																	<input id="tel-inp" type="text" name="phone" data-validate
+																		data-required="phone">
+																	<!-- <span class="search-form__check _icon-check"></span> -->
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+
+											</div>
+
+											<div class="personal-content__column">
+
+												<div class="personal-content__item item-personal">
+													<div class="item-personal__header header-personal">
+														<div class="item-personal__title">Адреса доставки</div>
+														<div class="header-personal__item header-personal__item_adress">
+															<div class="item-personal__subtitle">Барнаул, улица Ленина, 2</div>
+															<div class="item-personal__buttons">
+																<button type="button" data-popup="#personal-data"
+																	class="item-personal__btn _icon-edit"></button>
+																<button type="clear" class="item-personal__btn _icon-cart"></button>
+															</div>
+														</div>
+													</div>
+													<div class="item-personal__body body-personal">
+														<div class="body-personal__item">
+															<button type="button"
+																class="body-personal__btn btn btn_light _icon-location">Добавить
+																новый адрес</button>
+														</div>
+													</div>
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+								<div class="tabs__body">
+									2
+								</div>
+								<div class="tabs__body">
+									3
+								</div>
+								<div class="tabs__body">
+									4
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			@@include('html/components/_order-call.htm',{})
+
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('sprite.svg',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -25,6 +25,37 @@
 	</div>
 </div>
 
+<!-- Личные данные -->
+<div id="personal-data" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<div class="popup__body">
+				<div class="popup__header">
+					<div class="popup__title">Контактные данные</div>
+				</div>
+				<div class="popup__main">
+					<form action="#" class="popup__form form-popup">
+						<div class="form__line">
+							<div class="form-popup__input input">
+								<label for="tel-inp" class="input__label">Телефон</label>
+								<input id="tel-inp" type="text" name="phone" data-validate data-required="phone">
+								<!-- <span class="search-form__check _icon-check"></span> -->
+							</div>
+							<div class="form-popup__input input">
+								<label for="tel-inp" class="input__label">Email</label>
+								<input id="tel-inp" data-validate data-required="email" type="text" name="form[]">
+								<!-- <span class="search-form__check _icon-check"></span> -->
+							</div>
+							<button type="submit" class="form-popup__btn btn">Сохранить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <!-- Войти по паролю -->
 <div id="log-password" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">

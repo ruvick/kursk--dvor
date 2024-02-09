@@ -55,6 +55,13 @@
 //========================================================================================================================================================
 
 .template__tabs {
+	.tabs__navigation {
+		@media (min-width: 769px){
+			position: sticky;
+			top: 10px;
+		  height: 100%;
+		}
+  }
 	.tabs {
 		@media (max-width: 812px){
 			flex-direction: column;
@@ -271,4 +278,5 @@
 	// 		margin-bottom: 15px;
 	// 	  }
 	// }
+	
 }
