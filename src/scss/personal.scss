@@ -117,11 +117,32 @@
 .body-personal__btn {
 	width: 100%;
 }
-.__btn {
+
+.personal-content__form {
+	max-width: rem(503);
+	@media (max-width: 1024px){
+		  max-width: 100%;
+	}
 }
-.btn {
+.forn-personal {
+	width: 100%;
 }
-.btn_light {
+.form__line {
 }
-._icon-location {
+.forn-personal__input {
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
 }
+.input {
+}
+.input__label {
+}
+.input__viewpass {
+}
+._icon-hide {
+}
+.forn-personal__btn {
+	width: 100%;
+}
+

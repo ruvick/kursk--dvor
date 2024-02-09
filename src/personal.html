@@ -38,6 +38,7 @@
 								<button type="button" class="tabs__title _icon-arrow-big-right _tab-active">Личные
 									данные</button>
 								<button type="button" class="tabs__title _icon-arrow-big-right">Текущие заказы</button>
+								<button type="button" class="tabs__title _icon-arrow-big-right">Нет заказов</button>
 								<button type="button" class="tabs__title _icon-arrow-big-right">История заказов</button>
 								<button type="button" class="tabs__title _icon-arrow-big-right">Сменить пароль</button>
 								<a href="" type="button" class="tabs__title tabs__title_link">Выйти</a>
@@ -148,10 +149,53 @@
 									2
 								</div>
 								<div class="tabs__body">
-									3
+
+									<div class="template__empty empty-template">
+
+										<div class="empty-template__body">
+											<div class="empty-template__image">
+											</div>
+											<div class="empty-template__title">
+												<h2>У вас пока нет ни одного заказа</h2>
+											</div>
+											<div class="empty-template__subtitle">Самое время выбрать подходящие товары
+											</div>
+											<a href="catalog-main.html" class="empty-template__link btn">Перейти в каталог</a>
+										</div>
+
+									</div>
+
 								</div>
 								<div class="tabs__body">
 									4
+								</div>
+								<div class="tabs__body">
+
+									<div class="personal-content">
+
+										<form action="#" class="personal-content__form forn-personal">
+											<div class="form__line">
+												<div class="forn-personal__input input">
+													<label for="password-inp" class="input__label">Текущий пароль</label>
+													<input id="password-inp" type="password" name="form[]" value="">
+													<button class="input__viewpass _icon-hide" type="button"></button>
+												</div>
+												<div class="forn-personal__input input">
+													<label for="password-inp" class="input__label">Новый пароль</label>
+													<input id="password-inp" type="password" name="form[]" value="">
+													<button class="input__viewpass _icon-hide" type="button"></button>
+												</div>
+												<div class="forn-personal__input input">
+													<label for="password-inp" class="input__label">Подтвердите новый пароль</label>
+													<input id="password-inp" type="password" name="form[]" value="">
+													<button class="input__viewpass _icon-hide" type="button"></button>
+												</div>
+												<button type="submit" class="forn-personal__btn btn">Сохранить</button>
+											</div>
+										</form>
+
+									</div>
+
 								</div>
 							</div>
 						</div>
