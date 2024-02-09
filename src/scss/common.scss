@@ -866,6 +866,7 @@ color: rgba(2, 0, 32, 0.5);
 	font-weight: 500;
 	line-height: math.div(38, 30);
 	color: $mainColor;
+	white-space: nowrap;
 }
 .price-card-product__new-price {
 	margin-right: 10px;
