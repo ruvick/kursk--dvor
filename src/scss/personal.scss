@@ -323,3 +323,131 @@
 		height: rem(50); 
 	}
 }
+
+.order-detail__control {
+	&:not(:last-child){
+		margin-bottom: rem(20);
+	}
+}
+.order-detail__back-btn {
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(22, 16);
+	color: $blueColor;
+	transition: $mainTransition;
+
+	@media (any-hover: hover) {
+	&:hover {
+		color: $mainColor;
+	}
+	}
+}
+.order-detail__info {
+}
+.info-order-detail {
+}
+.order-detail__item {
+	&:not(:last-child){
+		margin-bottom: rem(20);
+	}
+	.item-orders__header {
+		background-color: transparent
+	}
+	.body-orders {
+		background: rgba(240, 242, 248, 1);
+	}
+}
+.item-orders {
+}
+
+.item-orders__body {
+}
+.body-orders {
+}
+.body-orders__information {
+}
+.information-orders {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.information-orders__title { 
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	&::before{
+		transition: $mainTransition;
+	}
+	&._spoller-active{
+		&::before{
+			transform: rotate(-180deg);
+		}
+	}
+}
+._icon-arrow-down {
+}
+.information-orders__body {
+}
+.body-information {
+	display: flex;
+	padding-top: rem(20);
+}
+.body-information__column {
+	flex: 0 1 50%;
+	&:not(:last-child){
+		margin-right: rem(25);
+	}
+}
+
+.body-information__title {
+	font-size: rem(16);
+	font-weight: 600;
+	line-height: math.div(20, 16);
+	&:not(:last-child){
+		margin-bottom: rem(15);
+	}
+}
+.body-information__input {
+	background-color: transparent;
+}
+
+.order-detail__cards {
+}
+.cards-order-detail {
+
+}
+.cards-order-detail__control {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
+}
+.cards-order-detail__number {
+	font-size: rem(20);
+	font-weight: 500;
+	line-height: math.div(25, 20);
+}
+.cards-order-detail__buttons {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.cards-order-detail__button {
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(22, 16);
+	color: rgba(18, 11, 141, 1);
+	&:not(:last-child){
+		margin-right: rem(20);
+	}
+	transition: $mainTransition;
+
+	@media (any-hover: hover) {
+	&:hover {
+		color: $mainColor;
+	}
+	}
+}
