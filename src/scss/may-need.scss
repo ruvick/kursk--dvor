@@ -1,0 +1,5 @@
+.may-need__navigation-panel {
+	&:not(:last-child){
+		margin-bottom: rem(42);
+	}
+}
