@@ -39,9 +39,11 @@ textarea {
 		// left: 20px;
 		// z-index: -1;
 	}
+	textarea,
 	input {
 		width: 100%;
 		padding: 0px rem(39) 0 rem(15);
+		background-color: transparent;
 	}
 	.input__viewpass {
 		position: absolute;
@@ -107,6 +109,7 @@ input {
 textarea.input {
 	resize: none;
 	padding: 5px 10px;
+	width: 100%;
 }
 
 // Описываем focus label, подписи поля или блок

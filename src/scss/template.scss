@@ -299,6 +299,12 @@
 	flex: 1 1 auto;
 }
 .main-template__sidebar {
+
+}
+.sidebar-template {
 	flex: 0 0 345px;
-	border: 1px solid #000;
+}
+.sidebar-template__body {
+	position: sticky;
+	top: rem(30);
 }

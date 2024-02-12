@@ -34,7 +34,7 @@
 	}
 }
 
-.making-order__title {
+.item-making-order__title {
 	font-size: rem(24);
 	font-weight: 500;
 	line-height: math.div(31, 24);
@@ -43,25 +43,33 @@
 	}
 }
 
-.buyer-making-order {
+.item-making-order {
 }
-.buyer-making-order__inputs {
-}
-.inputs-buyer {
+.item-making-order__inputs {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
+	.item-making-order__input {
+		margin-bottom: 10px;
+		&:first-child{
+			flex: 0 1 100%;
+		}
+		flex: 0 1 49.5%;
+	}
 }
-.inputs-buyer__input {
-	margin-bottom: 10px;
-	&:first-child{
+
+.item-making-order__inputs_col {
+	// flex-direction: column;
+	.item-making-order__input {
 		flex: 0 1 100%;
 	}
-	flex: 0 1 49.5%;
-}
-.input {
-}
-.input__label {
+	.input_textarea {
+		height: 133px;
+		.input__label {
+			top: 20px;
+		}
+	}
 }
 
 .making-order__delivery {
@@ -149,4 +157,82 @@
 	&:not(:last-child){
 		margin-bottom: rem(50);
 	}
+}
+
+.delivery-making-order_flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.delivery-making-order__item {
+		flex: 0 1 49.5%;
+	}
+}
+
+.item-delivery-making__icons {
+	display: flex;
+	align-items: center;
+	gap: rem(13);
+}
+.item-delivery-making__icon  {
+	flex: 0 0 rem(40);
+	width: rem(40);
+	height: rem(40);
+	overflow: hidden;
+	svg {
+		flex: 0 1 100%;
+		height: 100%;
+		width: 100%;
+	}
+} 
+
+.box-order {
+	display: flex;
+	flex-direction: column;
+}
+.box-order__value {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	color: rgba(2, 0, 32, 0.5);
+	&:not(:last-child){
+		margin-bottom: rem(5);
+	}
+}
+.box-order__prices {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
+}
+.box-order__price-new {
+	font-size: rem(30);
+	font-weight: 500;
+	line-height: math.div(38, 30);
+	&:not(:last-child){
+		margin-right: rem(10);
+	}
+}
+.new-price-card {
+}
+.box-order__price-old {
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(22, 16);
+}
+.old-price-card {
+}
+.box-order__buttons {
+	display: flex;
+	flex-direction: column;
+}
+.box-order__btn {
+	width: 100%;
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
+}
+.btn {
 }

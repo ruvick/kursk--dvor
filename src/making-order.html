@@ -115,20 +115,20 @@
 									</div>
 								</div>
 
-								<div class="making-order__item buyer-making-order">
-									<div class="making-order__title">Покупатель</div>
-									<div class="buyer-making-order__inputs inputs-buyer">
-										<div class="inputs-buyer__input input">
+								<div class="making-order__item item-making-order">
+									<div class="item-making-order__title">Покупатель</div>
+									<div class="item-making-order__inputs">
+										<div class="item-making-order__input input">
 											<label for="tel-inp" class="input__label">Имя<span>*</span></label>
 											<input id="tel-inp" type="text" name="phone" data-validate data-required="phone">
 											<!-- <span class="search-form__check _icon-check"></span> -->
 										</div>
-										<div class="inputs-buyer__input input">
+										<div class="item-making-order__input input">
 											<label for="tel-inp" class="input__label">Телефон<span>*</span></label>
 											<input id="tel-inp" type="text" name="phone" data-validate data-required="phone">
 											<!-- <span class="search-form__check _icon-check"></span> -->
 										</div>
-										<div class="inputs-buyer__input input">
+										<div class="item-making-order__input input">
 											<label for="tel-inp" class="input__label">Email<span>*</span></label>
 											<input id="tel-inp" type="text" name="phone" data-validate data-required="phone">
 											<!-- <span class="search-form__check _icon-check"></span> -->
@@ -191,26 +191,109 @@
 
 								</div>
 
-								<div class="making-order__item address-delivery">
-									<div class="making-order__title">Адрес доставки</div>
-									<div class="address-delivery__inputs">
-										<div class="inputs-buyer__input input">
+								<div class="making-order__item item-making-order">
+									<div class="item-making-order__title">Адрес доставки</div>
+									<div class="item-making-order__inputs item-making-order__inputs_col">
+										<div class="item-making-order__input input">
 											<label for="tel-inp" class="input__label">Адрес доставки</label>
 											<input id="tel-inp" type="text" name="phone" data-validate data-required="phone">
 										</div>
-										<div class="inputs-buyer__input input">
+										<div class="item-making-order__input input input_textarea">
 											<label for="tel-inp" class="input__label">Комментарий</label>
-											<input id="tel-inp" type="text" name="phone" data-validate data-required="phone">
+											<!-- <input id="tel-inp" type="text" name="phone" data-validate data-required="phone"> -->
+											<textarea id="tel-inp" type="text" name="phone"></textarea>
 										</div>
 									</div>
+								</div>
+
+								<div class="making-order__item delivery-making-order delivery-making-order_flex">
+
+									<label for="delivery-3" class="delivery-making-order__item item-delivery-making _active">
+										<div class="item-delivery-making__header">
+											<div class="item-delivery-making__title">Картой на сайте</div>
+											<!-- <div class="item-delivery-making__price">Бесплатно</div> -->
+										</div>
+										<div class="item-delivery-making__descp">
+											<div class="item-delivery-making__text">
+												<div class="item-delivery-making__icons">
+													<span class="item-delivery-making__icon">
+														<svg>
+															<use xlink:href="#mir"></use>
+														</svg>
+													</span>
+													<span class="item-delivery-making__icon">
+														<svg>
+															<use xlink:href="#visa"></use>
+														</svg>
+													</span>
+													<span class="item-delivery-making__icon">
+														<svg>
+															<use xlink:href="#master"></use>
+														</svg>
+													</span>
+													<span class="item-delivery-making__icon">
+														<svg>
+															<use xlink:href="#jcb"></use>
+														</svg>
+													</span>
+												</div>
+											</div>
+											<div class="item-delivery-making__chekbox">
+												<span for="check" class="checkbox">
+													<input id="delivery-3" data-error="Ошибка" checked class="checkbox__input"
+														type="radio" value="1" name="form[]">
+													<span class="checkbox__text">
+													</span>
+												</span>
+											</div>
+										</div>
+									</label>
+
+									<label for="delivery-4" class="delivery-making-order__item item-delivery-making">
+										<div class="item-delivery-making__header">
+											<div class="item-delivery-making__title">Система быстрых платежей</div>
+											<!-- <div class="item-delivery-making__price">от 550 р</div> -->
+										</div>
+										<div class="item-delivery-making__descp">
+											<div class="item-delivery-making__text">
+												<div class="item-delivery-making__icons">
+													<span class="item-delivery-making__icon">
+														<svg>
+															<use xlink:href="#just"></use>
+														</svg>
+													</span>
+												</div>
+											</div>
+											<div class="item-delivery-making__chekbox">
+												<span for="check" class="checkbox">
+													<input id="delivery-4" data-error="Ошибка" class="checkbox__input" type="radio"
+														value="1" name="form[]">
+													<span class="checkbox__text">
+													</span>
+												</span>
+											</div>
+										</div>
+									</label>
+
 								</div>
 
 							</form>
 
 						</div>
 
-						<sidebar class="main-template__sidebar">
-
+						<sidebar class="main-template__sidebar sidebar-template">
+							<div class="sidebar-template__body">
+								<div class="box-order">
+									<div class="box-order__value">2 товара на сумму</div>
+									<div class="box-order__prices">
+										<div class="box-order__price-new new-price-card">1 591 р</div>
+										<div class="box-order__price-old old-price-card">1 615 р</div>
+									</div>
+									<div class="box-order__buttons">
+										<button type="submit" class="box-order__btn btn">Оформить заказ</button>
+									</div>
+								</div>
+							</div>
 						</sidebar>
 
 					</div>
