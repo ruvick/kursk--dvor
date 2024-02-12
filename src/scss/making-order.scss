@@ -1,0 +1,152 @@
+.making-order {
+	.body-orders {
+		background: rgb(240, 242, 248);
+	}
+	.information-orders__title {
+	font-size: rem(24);
+	font-weight: 500;
+	line-height: math.div(31, 24);
+	&::before{
+		font-size: 16px;
+	}
+	}
+	.information-orders__body {
+		padding: rem(20) 0 0 0;
+	}
+	.item-card-order__total {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	.products-order__body {
+
+	}
+}
+
+.making-order__products-order {
+	&:not(:last-child){
+		margin-bottom: rem(50);
+	}
+}
+
+.making-order__buyer {
+	&:not(:last-child){
+		margin-bottom: rem(50);
+	}
+}
+
+.making-order__title {
+	font-size: rem(24);
+	font-weight: 500;
+	line-height: math.div(31, 24);
+	&:not(:last-child){
+		margin-bottom: rem(15);
+	}
+}
+
+.buyer-making-order {
+}
+.buyer-making-order__inputs {
+}
+.inputs-buyer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.inputs-buyer__input {
+	margin-bottom: 10px;
+	&:first-child{
+		flex: 0 1 100%;
+	}
+	flex: 0 1 49.5%;
+}
+.input {
+}
+.input__label {
+}
+
+.making-order__delivery {
+	&:not(:last-child){
+		margin-bottom: rem(50);
+	}
+}
+.delivery-making-order {
+	display: flex;
+	flex-direction: column;
+}
+.delivery-making-order__item {
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
+	background-color: #fff;
+}
+.item-delivery-making {
+	display: flex;
+	flex-direction: column;
+	padding: rem(20);
+	border-radius: rem(3);
+	cursor: pointer;
+	border: 1px solid #fff;
+	&._active{
+		background: rgb(240, 242, 248);
+		border: 1px solid rgba(18, 11, 141, 1);
+	}
+}
+.item-delivery-making__header {
+	display: flex;
+	justify-content: space-between;
+	flex: 1 1 auto;
+	&:not(:last-child){
+		margin-bottom: rem(20);
+	}
+}
+
+.item-delivery-making__title {
+	font-size: rem(20);
+	line-height: 25px;
+	line-height: math.div(25, 20);
+	flex: 1 1 auto;
+	&:not(:last-child){
+		margin-right: rem(15);
+	}
+}
+.item-delivery-making__price {
+	font-size: rem(16);
+	font-weight: 600;
+	line-height: math.div(20, 16);
+}
+.item-delivery-making__descp {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.item-delivery-making__text {
+
+	p {
+	font-size: rem(14);
+	font-weight: 400;
+	line-height: math.div(18, 14);
+	color: rgba(2, 0, 32, 0.5);
+
+		a {
+			transition: $mainTransition;
+
+			@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+			}
+		}
+
+		&:not(:last-child){
+			margin-bottom: rem(10);
+		}
+	}
+}
+.item-delivery-making__chekbox {
+}
+
+.making-order__item {
+	&:not(:last-child){
+		margin-bottom: rem(50);
+	}
+}

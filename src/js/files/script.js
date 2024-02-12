@@ -28,15 +28,40 @@ window.onload = function () {
 		}
 
 		// Активация поиска
-		if (targetElement.classList.contains('search-form__input')) {
-			document.querySelector('.search-form').classList.toggle('_active');
-			darkBody();
-			bodyLockToggle();
-		} else if (!targetElement.closest('.search-form') && document.querySelector('.search-form._active')) {
-			document.querySelector('.search-form').classList.remove('_active');
-			darkBody();
+		// if (targetElement.classList.contains('search-form__input')) {
+		// 	document.querySelector('.search-form').classList.toggle('_active');
+		// 	darkBody();
+		// 	bodyLockToggle();
+		// } else if (!targetElement.closest('.search-form') && document.querySelector('.search-form._active')) {
+		// 	document.querySelector('.search-form').classList.remove('_active');
+		// 	darkBody();
+		// }
+	}
+
+	// Активация поиска
+	function SeatchInit() {
+		const limit = 3;
+		const search = document.getElementById('search');
+		const searchClose = document.getElementById('searchClose');
+
+		search.addEventListener('input', function () {
+			if (this.value.length > limit) {
+				document.querySelector('.search-form').classList.add('_active');
+			} else {
+				document.querySelector('.search-form').classList.remove('_active');
+			}
+		});
+
+		if (searchClose) {
+			searchClose.addEventListener("click", function (e) {
+				document.querySelector('.search-form').classList.remove('_active');
+			});
 		}
 	}
+
+	SeatchInit();
+
+
 
 	if (window.innerWidth <= 768 && isMobile.any()) {
 
@@ -64,6 +89,9 @@ window.onload = function () {
 		mobFiltersOp();
 		mobFiltersCl();
 	}
+
+
+
 }
 
 // Input file

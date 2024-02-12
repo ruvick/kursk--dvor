@@ -17,11 +17,11 @@ if (document.documentElement.clientWidth > 1024) {
 				// form.reset();
 
 				// Сброс инпутов
-				Array.prototype.slice.call(
-					document.getElementsByTagName('input'))
-					.forEach(function (el) {
-						el.value = '';
-					});
+				// Array.prototype.slice.call(
+				// 	document.getElementsByTagName('input'))
+				// 	.forEach(function (el) {
+				// 		el.value = '';
+				// 	});
 
 				// Удалить все  перед использованием =========================
 				// if (showedWindow == "headerMenuCatalog") toggleCatalog()

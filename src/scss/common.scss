@@ -264,6 +264,9 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 ._grey {
 	background: rgba(2, 0, 32, 0.3);
 }
+._color-blue {
+	color: $blueColor;
+}
 // Dropdown-list =========================================================
 
 .dropdown-list {
@@ -778,7 +781,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-bottom: rem(10);
+	margin-bottom: rem(10); 
 	@media (max-width: 414px){
 		  flex-direction: column;
 		  align-items: flex-start;

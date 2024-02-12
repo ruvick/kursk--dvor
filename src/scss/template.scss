@@ -281,3 +281,24 @@
 	// }
 	
 }
+//========================================================================================================================================================
+
+.template {
+}
+.template__container {
+}
+.template__main {
+
+}
+.main-template {
+	display: flex;
+	justify-content: space-between;
+	gap: rem(30);
+}
+.main-template__body {
+	flex: 1 1 auto;
+}
+.main-template__sidebar {
+	flex: 0 0 345px;
+	border: 1px solid #000;
+}
