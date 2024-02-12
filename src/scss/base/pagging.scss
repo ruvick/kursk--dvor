@@ -2,6 +2,9 @@
 .breadcrumbs {
 	white-space: nowrap;
 	overflow: auto;
+	margin: 0 -15px;
+	padding: 0 15px;
+	display: flex;
 }
 
 .breadcrumbs::-webkit-scrollbar {
@@ -12,11 +15,29 @@
 	display: none;
 }
 
-.breadcrumbs__inner {
+.breadcrumbs__list {
 	display: flex;
 	align-items: center;
 
-	a {
+	.breadcrumbs__item {
+		display: flex;
+		align-items: center;
+		&::after{
+			content:''; 
+			width: 10px;
+			height: 1px;
+			margin: 0 10px;
+			background: rgba(2, 0, 32, 0.5);
+			opacity: 0.7;
+		}
+		&:last-child{
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	.breadcrumbs__link {
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 18px;
@@ -24,7 +45,7 @@
 		color: rgba(2, 0, 32, 0.5);
 		text-decoration: none;
 		white-space: nowrap;
-		margin: 0 5px;
+		// margin: 0 5px;
 		transition: $mainTransition;
 
 		&:first-child {
@@ -40,13 +61,13 @@
 		}
 	}
 
-	span {
+	.breadcrumbs__current {
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 18px;
 		letter-spacing: 0em;
 		color: $mainColor;
-		margin-left: 5px;
+		// margin-left: 5px;
 		white-space: nowrap;
 		@media (max-width: 480px){
 			font-size: 12px;

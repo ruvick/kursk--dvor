@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/_head.htm',{
-"title":"Каталог категория"
+"title":"Поиск"
 })
 
 <body>
@@ -12,12 +12,17 @@
 			<div class="page__header">
 				<div class="page__container">
 
-					<div class="breadcrumbs">
-						<div class="breadcrumbs__inner">
-							<a href="home.html"> Главная </a> - <span class="breadcrumb_last" aria-current="page">Результаты
-								поиска</span>
-						</div>
-					</div>
+					<nav class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home.html" class="breadcrumbs__link">Главная</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<span class="breadcrumbs__current">Результаты
+									поиска</span>
+							</li>
+						</ul>
+					</nav>
 
 				</div>
 			</div>
