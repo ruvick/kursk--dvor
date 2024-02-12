@@ -294,17 +294,29 @@
 	display: flex;
 	justify-content: space-between;
 	gap: rem(30);
+	@media (max-width: 991px){
+		 flex-wrap: wrap; 
+	}
 }
 .main-template__body {
 	flex: 1 1 auto;
+	@media (max-width: 991px){
+		 flex: 0 1 100%; 
+	}
 }
 .main-template__sidebar {
-
+	flex: 0 0 345px;
+	@media (max-width: 991px){
+		 flex: 0 1 100%; 
+	}
 }
 .sidebar-template {
-	flex: 0 0 345px;
+	
 }
 .sidebar-template__body {
 	position: sticky;
 	top: rem(30);
+	@media (max-width: 1024px){
+		  position: relative;
+	}
 }
