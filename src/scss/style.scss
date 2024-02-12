@@ -309,3 +309,13 @@ line-height: math.div(18, 14);
 .page__pagging {
 	margin-top: rem(32);
 }
+//========================================================================================================================================================
+.page__calculator {
+	padding: rem(0) 0 rem(50) 0;
+	@media (max-width: 768px){
+		padding: rem(0) 0 rem(30) 0;
+	}
+	@media (max-width: 480px){
+		padding: rem(5) 0 rem(20) 0;
+	}
+}
