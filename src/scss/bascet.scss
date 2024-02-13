@@ -104,6 +104,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	padding: 10px;
 }
 .item-card-order__icon {
 	&:not(:last-child){
@@ -116,9 +121,55 @@
 .item-card-order .quantity-item-card {
 	flex: 1 1 auto;
 	justify-content: center;
+	@media (max-width: 1200px){
+		 flex-wrap: wrap; 
+	}
+	@media (max-width: 1100px){
+		  margin-top: rem(20);
+	}
+	@media (max-width: 730px){
+		justify-content: start; 
+	}
+	@media (max-width: 480px){
+		 width: 100%; 
+		 margin-right: 0;
+		 flex-wrap: nowrap;
+	}
 }
 .item-card-order__descp {
 	max-width: 400px;
+}
+.item-card-order {
+	position: relative;
+	@media (max-width: 1100px){
+		  flex-wrap: wrap;
+	}
+	@media (max-width: 991px){
+		flex-wrap: nowrap;
+ }
+ @media (max-width: 730px){
+	flex-wrap: wrap;
+}
+}
+.item-card-order__total {
+	padding-right: rem(20);
+}
+.cards-order-detail__items .item-card-order__total {
+	@media (max-width: 540px){
+		 flex-direction: row; 
+		 justify-content: start;
+	}
+}
+.quantity-item-card__item {
+	@media (max-width: 480px){
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+.quantity {
+	@media (max-width: 480px){
+		 width: 100%; 
+	}
 }
 }
 
