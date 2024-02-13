@@ -324,14 +324,14 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			pagination: {
-				el: '.main-slider-small__dotts',
-				clickable: true,
-			},
+			// pagination: {
+			// 	el: '.main-slider-small__dotts',
+			// 	clickable: true,
+			// },
 			// Arrows
 			navigation: {
-				nextEl: '.main-slider-small .arrow-sl-btn_next',
-				prevEl: '.main-slider-small .arrow-sl-btn_prev',
+				nextEl: '.thumbs-images__arrow-block .arrow-sl-btn_next',
+				prevEl: '.thumbs-images__arrow-block .arrow-sl-btn_prev',
 			},
 			breakpoints: {
 				// 320: {
@@ -385,14 +385,14 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			pagination: {
-				el: '.main-slider-small__dotts',
-				clickable: true,
-			},
+			// pagination: {
+			// 	el: '.main-slider-small__dotts',
+			// 	clickable: true,
+			// },
 			// Arrows
 			navigation: {
-				nextEl: '.main-slider-small .arrow-sl-btn_next',
-				prevEl: '.main-slider-small .arrow-sl-btn_prev',
+				nextEl: '.images-product__arrow-block .arrow-sl-btn_next',
+				prevEl: '.images-product__arrow-block .arrow-sl-btn_prev',
 			},
 			breakpoints: {
 				// 320: {

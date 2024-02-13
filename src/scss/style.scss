@@ -369,11 +369,11 @@ line-height: math.div(18, 14);
 //========================================================================================================================================================
 
 .page__additionally {
-	padding: rem(0) 0 rem(50) 0;
+	padding: rem(50) 0 rem(50) 0;
 	@media (max-width: 768px){
-		padding: rem(0) 0 rem(30) 0;
+		padding: rem(40) 0 rem(20) 0;
 	}
 	@media (max-width: 480px){
-		padding: rem(5) 0 rem(20) 0;
+		padding: rem(25) 0 rem(20) 0;
 	}
 }
