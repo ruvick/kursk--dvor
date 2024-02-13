@@ -1,0 +1,39 @@
+
+//========================================================================================================================================================
+
+.additionally-product {
+	.item-card-order__img {
+		flex: 0 0 rem(269);
+		width: rem(269);
+		height: rem(174);
+		overflow: hidden;
+  }
+  .item-card-order {
+	padding: 0;
+  }
+  .item-card-order__descp {
+	padding: rem(32) 0;
+  }
+  .item-card-order__payment {
+	padding: rem(32) rem(10) rem(32) 0;
+  }
+}
+
+.additionally-product__row {
+
+}
+
+.additionally__title {
+	font-size: rem(32);
+	font-weight: 500;
+	line-height: math.div(41, 32);
+	&:not(:last-child){
+		margin-bottom: 40px;
+	}
+}
+
+.additionally-product__row {
+	&:not(:last-child){
+		margin-bottom: rem(100);
+	}
+}
