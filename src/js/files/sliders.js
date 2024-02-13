@@ -45,7 +45,7 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров   
-	if (document.querySelector('.swiper')) {
+	if (document.querySelector('.image-card-product')) {
 		new Swiper('.image-card-product', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -115,10 +115,10 @@ function initSliders() {
 				},
 			}
 		});
-
-		// var thumbs = document.querySelectorAll('.image-card-product .swiper-slide');
-		// for (var i = 0; i < thumbs.length; i++) thumbs[i].addEventListener('mouseover', function () { this.click() });
-
+	}
+	// var thumbs = document.querySelectorAll('.image-card-product .swiper-slide');
+	// for (var i = 0; i < thumbs.length; i++) thumbs[i].addEventListener('mouseover', function () { this.click() });
+	if (document.querySelector('.slider-cards-block')) {
 		new Swiper('.slider-cards-block', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -176,7 +176,9 @@ function initSliders() {
 
 			}
 		});
+	}
 
+	if (document.querySelector('.main-slider-big')) {
 		new Swiper('.main-slider-big', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -237,7 +239,9 @@ function initSliders() {
 
 			}
 		});
+	}
 
+	if (document.querySelector('.main-slider-big')) {
 		new Swiper('.main-slider-small', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -293,9 +297,130 @@ function initSliders() {
 
 			}
 		});
-
 	}
+
+	if (document.querySelector('.thumbs-images')) {
+		const thumbsSwiper = new Swiper('.thumbs-images', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Thumbs],
+			// effect: 'fade',
+			// autoplay: {
+			delay: 1500,
+			// 	disableOnInteraction: false,
+			// },
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 6,
+			slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
+			spaceBetween: 10,
+			// autoHeight: true,
+			// speed: 1500,
+			// parallax: true,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			direction: "vertical",
+			// loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			pagination: {
+				el: '.main-slider-small__dotts',
+				clickable: true,
+			},
+			// Arrows
+			navigation: {
+				nextEl: '.main-slider-small .arrow-sl-btn_next',
+				prevEl: '.main-slider-small .arrow-sl-btn_prev',
+			},
+			breakpoints: {
+				// 320: {
+				// 	slidesPerView: 1,
+				// 	spaceBetween: 0,
+				// 	autoHeight: true,
+				// },
+				// 768: {
+				// 	slidesPerView: 2,
+				// 	spaceBetween: 20,
+				// },
+				// 992: {
+				// 	slidesPerView: 1,
+				// 	// spaceBetween: 20,
+				// },
+				// 1268: {
+				// 	slidesPerView: 4,
+				// 	spaceBetween: 30,
+				// },
+			},
+			on: {
+
+			}
+		});
+		// }
+
+		// if (document.querySelector('.images-product__slider')) {
+		new Swiper('.images-product__slider', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination, Autoplay, Thumbs],
+			// effect: 'fade',
+			// autoplay: {
+			delay: 1500,
+			// 	disableOnInteraction: false,
+			// },
+			thumbs: {
+				swiper: thumbsSwiper
+			},
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
+			spaceBetween: 0,
+			// autoHeight: true,
+			// speed: 1500,
+			// parallax: true,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: true,
+			//preloadImages: false,
+			//lazy: true,
+			// Dotts
+			pagination: {
+				el: '.main-slider-small__dotts',
+				clickable: true,
+			},
+			// Arrows
+			navigation: {
+				nextEl: '.main-slider-small .arrow-sl-btn_next',
+				prevEl: '.main-slider-small .arrow-sl-btn_prev',
+			},
+			breakpoints: {
+				// 320: {
+				// 	slidesPerView: 1,
+				// 	spaceBetween: 0,
+				// 	autoHeight: true,
+				// },
+				// 768: {
+				// 	slidesPerView: 2,
+				// 	spaceBetween: 20,
+				// },
+				// 992: {
+				// 	slidesPerView: 1,
+				// 	// spaceBetween: 20,
+				// },
+				// 1268: {
+				// 	slidesPerView: 4,
+				// 	spaceBetween: 30,
+				// },
+			},
+			on: {
+
+			}
+		});
+	}
+
 }
+// }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
 	// Добавление классов слайдера
