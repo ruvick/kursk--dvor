@@ -466,6 +466,9 @@
 .cards-order-detail__items {
 	display: flex;
 	flex-direction: column;
+	.item-card-order__total {
+	flex-direction: column;
+  }
 }
 .cards-order-detail__item {
 	margin-bottom: rem(10);
@@ -608,4 +611,40 @@
 	}
 }
 .old-price-card {
+}
+
+.item-card-order {
+	.quantity-item-card {
+		display: flex;
+		gap: rem(10);
+	}
+}
+
+.quantity-item-card__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	.quantity {
+		&:not(:last-child){
+			margin-bottom: rem(5);
+		}
+	}
+}
+
+.quantity-item-card__name {
+	font-size: rem(14);
+	font-weight: 400;
+	line-height: math.div(18, 14);
+	color: rgba(2, 0, 32, 0.5);
+	}
+
+.item-card-order__out-stock {
+	font-size: rem(14);
+	font-weight: 400;
+	line-height: math.div(18, 14);
+}
+
+.item-card-order._grey {
+	background: rgba(2, 0, 32, 0.03);
 }
