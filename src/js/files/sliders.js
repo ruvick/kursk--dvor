@@ -299,8 +299,8 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.thumbs-images')) {
-		const thumbsSwiper = new Swiper('.thumbs-images', {
+	if (document.querySelector('.thumbs-images__slider')) {
+		const thumbsSwiper = new Swiper('.thumbs-images__slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation, Pagination, Thumbs],
@@ -311,8 +311,8 @@ function initSliders() {
 			// },
 			observer: true,
 			observeParents: true,
-			// slidesPerView: 6,
-			slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
+			slidesPerView: 6,
+			// slidesPerView: 'auto',
 			spaceBetween: 10,
 			// autoHeight: true,
 			// speed: 1500,
@@ -330,8 +330,8 @@ function initSliders() {
 			// },
 			// Arrows
 			navigation: {
-				nextEl: '.thumbs-images__arrow-block .arrow-sl-btn_next',
-				prevEl: '.thumbs-images__arrow-block .arrow-sl-btn_prev',
+				nextEl: '.thumbs-images .arrow-sl-btn_next',
+				prevEl: '.thumbs-images .arrow-sl-btn_prev',
 			},
 			breakpoints: {
 				// 320: {
@@ -391,8 +391,8 @@ function initSliders() {
 			// },
 			// Arrows
 			navigation: {
-				nextEl: '.images-product__arrow-block .arrow-sl-btn_next',
-				prevEl: '.images-product__arrow-block .arrow-sl-btn_prev',
+				nextEl: '.images-product__slider .arrow-sl-btn_next',
+				prevEl: '.images-product__slider .arrow-sl-btn_prev',
 			},
 			breakpoints: {
 				// 320: {
