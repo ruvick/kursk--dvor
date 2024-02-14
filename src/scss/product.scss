@@ -637,3 +637,19 @@
 	color: $mainColor;
 	background: rgba(240, 242, 248, 1);
 }
+
+.tabs--template {
+	flex-direction: column;
+	.tabs__navigation {
+		flex-direction: row;
+		flex: 1;
+		align-items: flex-start;
+	}
+	.tabs__title {
+		width: auto;
+		justify-content: center;
+	}
+	.tabs__content {
+		padding: rem(40) 0 0 0;
+	}
+}

@@ -762,6 +762,11 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 	display: flex;
 	justify-content: center;
 	padding-bottom: 127%;
+
+	img {
+		object-fit: contain !important;
+	}
+
 	@media (max-width: 414px){
 		padding-bottom: 120%;
 	}
