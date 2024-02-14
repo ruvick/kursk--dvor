@@ -16,6 +16,9 @@
 	gap: rem(30);
 	align-items: start;
 }
+.page-card--dveri .main-product {
+	grid-template-columns: percent(503, 1410) 1fr;
+}
 .main-product__images {
 	&:not(:last-child){
 		margin-bottom: rem(30);
@@ -93,6 +96,9 @@
 	padding-bottom: 68.3%;
 	cursor: pointer;
 	border: 1px solid #fff;
+	img {
+		object-fit: contain;
+	}
 }
 
 .thumbs-images__arrow-block {
@@ -143,6 +149,15 @@
 .images-product__slide-ibg {
 	padding-bottom: percent(501, 738);
 	cursor: pointer;
+	img {
+		object-fit: contain;
+	}
+}
+
+.page-card--dveri {
+	.images-product__slide-ibg {
+		padding-bottom: 100%;
+	}
 }
 
 .main-product__body {
@@ -230,6 +245,13 @@
 	}
 	.quantity {
 		width: 100%;
+	}
+}
+
+.body-product__summary-inner {
+	.summary-product__actions {
+		grid-template-columns: auto; 
+		grid-auto-flow: row;
 	}
 }
 
@@ -505,6 +527,7 @@
 .action-colors-product__line {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: rem(10);
 }
 .action-colors-product__checkbox {
@@ -538,7 +561,79 @@
 	height: 100%;
 	width: 100%;
 	padding-bottom: 100%;
+	img {
+		object-fit: contain;
+	}
 }
 .checkbox-color input[type=radio]:checked + .checkbox-color__btn {
 	border: 1px solid rgba(18, 11, 141, 1);
+}
+
+.body-product__wrapper {
+	display: grid; 
+	grid-template-columns: 1fr 345px; 
+	align-items: start;
+	gap: rem(30);
+}
+
+.inner-product__size {
+	&:not(:last-child){
+		margin-bottom: rem(30);
+	}
+}
+.size-product {
+}
+.size-product__title {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	color: rgba(2, 0, 32, 0.5);
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
+}
+.size-product__line {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.size-product__btn {
+}
+.btn-size {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	cursor: pointer;
+	transition: $mainTransition;
+
+	@media (any-hover: hover) {
+	&:hover {
+		.btn-size__btn {
+			color: $mainColor;
+			background: rgba(240, 242, 248, 1);
+		}
+	}
+	}
+}
+.btn-size__input {
+}
+.btn-size__btn {
+	position: relative;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: 0em;
+	padding: rem(15);
+	color: rgba(2, 0, 32, 0.5);
+	border-radius: rem(3);
+	overflow: hidden;
+	transition: $mainTransition;
+}
+.btn-size__name {
+
+}
+.btn-size input[type=radio]:checked + .btn-size__btn {
+	color: $mainColor;
+	background: rgba(240, 242, 248, 1);
 }
