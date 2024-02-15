@@ -181,6 +181,16 @@ h4 {
 	}
 }
 
+// Dotts ===========================================
+.dotts {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: rem(5);
+	border-radius: rem(3);
+	background-color: #fff; 
+	overflow: hidden;
+}
 
 // Cat-Nav-Btn ===========================================
 .cat-nav-btn {
@@ -898,6 +908,7 @@ font-size: rem(16);
 font-weight: 400;
 line-height: math.div(22, 16);
 color: rgba(2, 0, 32, 0.5);
+white-space: nowrap;
 text-decoration: line-through $redColor;
 }
 

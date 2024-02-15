@@ -385,10 +385,10 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			// Dotts
-			// pagination: {
-			// 	el: '.main-slider-small__dotts',
-			// 	clickable: true,
-			// },
+			pagination: {
+				el: '.images-product__dotts',
+				clickable: true,
+			},
 			// Arrows
 			navigation: {
 				nextEl: '.images-product__slider .arrow-sl-btn_next',

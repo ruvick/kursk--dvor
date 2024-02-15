@@ -312,6 +312,12 @@
 	}
 	.menu__sub-list {
 		min-width: rem(285);
+		@media (max-width: 1280px){
+			min-width: auto;
+		}
+		// @media (max-width: 1200px){
+		// 	min-width: rem(285);
+		// }
 		@media (max-width: 768px){
 			  margin: 0;
 			  padding: rem(10) rem(35);
