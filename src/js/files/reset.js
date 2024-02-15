@@ -12,6 +12,12 @@ if (document.documentElement.clientWidth > 1024) {
 			// console.log(showedWindow)
 			if (event.keyCode == 27) {
 
+				if (search) {
+					search.value = "";
+				}
+				document.querySelector('.search-form').classList.remove('_active');
+				document.querySelector('.header').classList.remove('_search');
+
 				// input.value = "";
 
 				// form.reset();

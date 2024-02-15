@@ -75,6 +75,8 @@ window.onload = function () {
 		}
 	}
 
+
+
 	SeatchInit();
 
 
