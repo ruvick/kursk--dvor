@@ -67,6 +67,7 @@ function initSliders() {
 			//simulateTouch: false,
 			// loop: true,
 			//preloadImages: false,
+			// watchOverflow: true,
 			//lazy: true,
 			// Dotts
 			pagination: {
@@ -135,6 +136,7 @@ function initSliders() {
 			spaceBetween: 10,
 			// autoHeight: true,
 			speed: 800,
+			// watchOverflow: true,
 			// parallax: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
