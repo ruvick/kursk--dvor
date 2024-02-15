@@ -194,10 +194,10 @@ function initSliders() {
 			slidesPerView: 1,
 			// freeMode: true,
 			// freeModeMomentum: false,
-			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
+			slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
 			// spaceBetween: 0,
 			// autoHeight: true,
-			speed: 1500,
+			// speed: 1500,
 			// parallax: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -241,7 +241,7 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.main-slider-big')) {
+	if (document.querySelector('.main-slider-small')) {
 		new Swiper('.main-slider-small', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -254,7 +254,7 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 2,
-			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
+			//	slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
 			spaceBetween: 10,
 			// autoHeight: true,
 			// speed: 1500,
