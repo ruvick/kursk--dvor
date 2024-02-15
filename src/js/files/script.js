@@ -43,18 +43,34 @@ window.onload = function () {
 		const limit = 3;
 		const search = document.getElementById('search');
 		const searchClose = document.getElementById('searchClose');
+		const searchMobClose = document.getElementById('searchMobClose');
 
 		search.addEventListener('input', function () {
 			if (this.value.length > limit) {
 				document.querySelector('.search-form').classList.add('_active');
+				if (window.innerWidth <= 768 && isMobile.any()) {
+					document.querySelector('.header').classList.add('_search');
+				}
 			} else {
 				document.querySelector('.search-form').classList.remove('_active');
+				if (window.innerWidth <= 768 && isMobile.any()) {
+					document.querySelector('.header').classList.remove('_search');
+				}
 			}
 		});
 
-		if (searchClose) {
+		if (searchClose && searchMobClose) {
 			searchClose.addEventListener("click", function (e) {
 				document.querySelector('.search-form').classList.remove('_active');
+				if (window.innerWidth <= 768 && isMobile.any()) {
+					document.querySelector('.header').classList.remove('_search');
+				}
+			});
+			searchMobClose.addEventListener("click", function (e) {
+				document.querySelector('.search-form').classList.remove('_active');
+				if (window.innerWidth <= 768 && isMobile.any()) {
+					document.querySelector('.header').classList.remove('_search');
+				}
 			});
 		}
 	}

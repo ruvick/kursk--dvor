@@ -509,5 +509,32 @@
 	}
 }
 
+.search-form__btn_mob-reset {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin-left: rem(15);
+	flex: 0 0 rem(24);
+	height: rem(24);
+	font-size: rem(25);
+	color: rgba(2, 0, 32, 0.3);
+	background: transparent;
+	&::before{
+		font-size: 20px;
+	}
+}
+
+// Mobile 
+.header._search {
+	.header__top {
+		display: none;
+	}
+	.catalog-btn {
+		display: none;
+	}
+	.search-form__btn_mob-reset {
+			display: flex;
+	}
+}
 
 
