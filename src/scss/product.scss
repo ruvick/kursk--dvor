@@ -21,6 +21,9 @@
 }
 .page-card--dveri .main-product {
 	grid-template-columns: percent(503, 1410) 1fr;
+	@media (max-width: 991px){
+		grid-template-columns: auto;  
+	}
 }
 
 .images-product {
@@ -186,6 +189,9 @@
 .page-card--dveri {
 	.images-product__slide-ibg {
 		padding-bottom: 100%;
+		@media (max-width: 991px){
+			padding-bottom: percent(501, 738);
+		}
 	}
 }
 
@@ -742,9 +748,13 @@
 
 .body-product__wrapper {
 	display: grid; 
-	grid-template-columns: 1fr 345px; 
+	// grid-template-columns: 1fr 345px;  
+	grid-template-columns: repeat(auto-fit, minmax(rem(345), 1fr)); 
 	align-items: start;
 	gap: rem(30);
+	@media (max-width: 768px){
+		grid-template-columns: auto;  
+	}
 }
 
 .inner-product__size {
@@ -815,6 +825,12 @@
 		flex-direction: row;
 		flex: 1;
 		align-items: flex-start;
+		overflow: auto;
+		white-space: nowrap;
+		@media (max-width: 1024px){
+		margin: 0 -15px;
+		padding: 0 10px;
+		}
 	}
 	.tabs__title {
 		width: auto;
