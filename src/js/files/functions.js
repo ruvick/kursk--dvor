@@ -458,6 +458,10 @@ export function menuInit() {
 	let iconMenu = document.querySelector(".catalog-btn");
 	if (iconMenu) {
 		iconMenu.addEventListener("click", function (e) {
+			if (window.innerWidth <= 768 && isMobile.any()) {
+				e.preventDefault();
+				e.stopPropagation();
+			}
 			if (bodyLockStatus) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");

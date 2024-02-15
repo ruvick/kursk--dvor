@@ -760,7 +760,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 	border-radius: rem(3);
 	overflow: hidden;
 	&::before{
-		color: rgba(2, 0, 32, 0.3);
+		color: rgba(2, 0, 32, 0.3); 
 	}
 }
 .favorite-icon {
@@ -782,9 +782,9 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 	justify-content: center;
 	padding-bottom: 127%;
 
-	img {
-		object-fit: contain !important;
-	}
+	// img {
+	// 	object-fit: contain !important;
+	// }
 
 	@media (max-width: 414px){
 		padding-bottom: 120%;
