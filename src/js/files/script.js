@@ -75,12 +75,9 @@ window.onload = function () {
 		}
 	}
 
-
-
 	SeatchInit();
 
-
-
+	// Активация модулей на мобилках 
 	if (window.innerWidth <= 768 && isMobile.any()) {
 
 		// Активация Мобильных фильтров
@@ -108,7 +105,21 @@ window.onload = function () {
 		mobFiltersCl();
 	}
 
-
+	// Активация личного кабинета на мобилке 
+	if (document.querySelector('._action-btn-profile')) {
+		document.querySelector('._action-btn-profile').addEventListener("click", function (e) {
+			document.querySelector('.personal-navigation').classList.toggle('_active');
+			bodyLockToggle();
+			darkBody();
+		});
+	}
+	if (document.querySelector('.header-personal-navigation__btn')) {
+		document.querySelector('.header-personal-navigation__btn').addEventListener("click", function (e) {
+			document.querySelector('.personal-navigation').classList.remove('_active');
+			bodyUnlock();
+			darkBody();
+		});
+	}
 
 }
 

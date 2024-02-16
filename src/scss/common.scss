@@ -1096,7 +1096,7 @@ text-decoration: line-through $redColor;
 		  position: fixed; 
 		  bottom: 0;
 		  left: 0%; 
-		  z-index: 5; 
+		  z-index: 100; 
 		  width: 100%; 
 		  background-color: #fff;
 	}
@@ -1109,14 +1109,14 @@ text-decoration: line-through $redColor;
 display: flex;
 align-items: center;
 justify-content: space-between;
-@media (max-width: 515px){
+@media (max-width: 345px){
 	  width: auto;
 	  overflow: auto;
 	  margin: 0 rem(-13);
 }
 }
 .bottom-icons-panel__item {
-	@media (max-width: 515px){
+	@media (max-width: 345px){
 		flex: 0 0 rem(100);
 	}
 	.action-btn {
