@@ -168,6 +168,7 @@ line-height: math.div(20, 16);
 letter-spacing: 0em;
 color: #fff;
 margin-bottom: rem(15);
+cursor: default;
 @media (max-width: 768px){
 	  margin-bottom: 0;
 }
