@@ -486,6 +486,12 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 		height: 0;
 		padding: 0;
 		transition: $mainTransition;
+		@media (max-width: 1050px){
+			width: 103%;  
+		}
+		@media (max-width: 768px){
+			top: rem(75);
+		}
 	}
 	.search-form._active {
 		.search-form__menu {
@@ -512,6 +518,9 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 		background: rgba(2, 0, 32, 0.06);
 		&:not(:last-child){
 			margin-bottom: rem(25);
+		}
+		@media (max-width: 820px){
+			  height: rem(50);
 		}
 	}
 	.menu-search__header {
