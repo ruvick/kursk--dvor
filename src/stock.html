@@ -35,16 +35,16 @@
 				</div>
 			</div>
 
-			<section class="template">
-				<div class="__container">
+			<section class="page__template template stock-detail">
+				<div class="template__container">
 
-					<div class="template__stock-detail stock-detail">
+					<div class="template__main main-template">
 
-						<div class="stock-detail__inner">
+						<div class="main-template__body">
 
-							<div class="stock-detail__descp">
+							<div class="stock-detail__content">
 
-								<div class="stock-detail__content content">
+								<div class="content">
 
 									<p>
 										Внимание! Только до конца декабря скидка на качественную керамическую плитку до 25%!
@@ -69,21 +69,23 @@
 
 							</div>
 
-							<div class="stock-detail__card">
-								<div class="image-card-stocks" style="background-image: url(../img/stocks/01.jpg);">
-									<div class="image-card-stocks__title">Скидки</div>
-									<div class="image-card-stocks__subtitle">на керамическую плитку</div>
-									<div class="card-stocks__sticker sticker-stock-slider"><span
-											class="sticker-stock-slider__body"><span>До</span>25%</span></div>
-								</div>
-							</div>
-
 						</div>
+
+						<sidebar class="main-template__sidebar sidebar-template">
+							<div class="sidebar-template__body">
+								<picture class="stock-detail__image image-stock-detail-ibg">
+									<source srcset="img/stocks/02.jpg" media="(min-width: 992px)" />
+									<img src="img/stocks/03.jpg" loading="lazy" alt="Картинка">
+								</picture>
+							</div>
+						</sidebar>
 
 					</div>
 
 				</div>
 			</section>
+
+
 
 			@@include('html/components/_order-call.htm',{})
 

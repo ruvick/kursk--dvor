@@ -119,6 +119,11 @@ transition: $mainTransition;
 .template__stock-detail {
 }
 .stock-detail {
+	@media (max-width: 991px){
+		.main-template {
+			flex-wrap: wrap-reverse;
+	  }
+	}
 	.image-card-stocks {
 		padding-top: 80px;
 		justify-content: start;
@@ -143,7 +148,7 @@ transition: $mainTransition;
 .stock-detail__link {
 	min-width: 343px;
 	margin-top: 50px;
-	@media (max-width: 414px){
+	@media (max-width: 480px){
 		  min-width: auto;
 		  width: 100%;
 		  margin-top: 40px;
@@ -187,4 +192,18 @@ transition: $mainTransition;
 .sticker-stock-slider {
 }
 .sticker-stock-slider__body {
+}
+
+
+.image-stock-detail-ibg {
+	display: block;
+	width: 100%;
+	padding-bottom: 100%;
+}
+
+.stock-detail__image {
+	padding-bottom: 139%;
+	@media (max-width: 992px){
+		padding-bottom: 60%;
+	}
 }
