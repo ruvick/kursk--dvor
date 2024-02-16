@@ -40,6 +40,7 @@
 	right: 0;
 	height: 100%;
 	width: 100%;
+	// max-width: 298px;
 	-ms-transform-origin: 0 0;
 	-webkit-transform-origin: 0 0;
 	-webkit-transform-style: preserve-3d;
@@ -86,16 +87,18 @@
 	width: rem(20);
 	height: rem(20);
 	right: rem(-17);
+	right: rem(-10);
 	top: rem(-10);
+	cursor: pointer;
 }
 .noUi-vertical {
 	width: 18px;
 }
 .noUi-vertical .noUi-handle {
-	width: 28px;
-	height: 34px;
-	right: -6px;
-	bottom: -17px;
+	width: rem(28);
+	height: rem(34);
+	right: rem(-6);
+	bottom: rem(-17);
 }
 .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
 	left: -17px;

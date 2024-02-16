@@ -163,7 +163,8 @@ letter-spacing: 0em;
 	flex-direction: column;
 }
 .price-filter__range {
-	margin: 15px 0;
+	padding: 0 rem(10);
+	margin: rem(15) 0;
 }
 .price-filter__inputs {
 	display: flex;
