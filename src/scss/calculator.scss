@@ -31,6 +31,9 @@
 		&:not(:last-child){
 			margin-right: rem(10);
 		}
+		.Input-text {
+			font-size: rem(12);
+		}
 	}
 
 		@media (max-width: 540px){
@@ -46,6 +49,9 @@
 .form-calculator__input {
 	label {
 		font-size: 13px;
+	}
+	.Input-text {
+		font-size: rem(12);
 	}
 }
 .input {

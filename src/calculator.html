@@ -42,17 +42,17 @@
 
 						<form action="#" class="main-calculator__form form-calculator">
 							<div class="form-calculator__row">
-								<div class="form-calculator__input input">
-									<label for="name-inp" class="input__label">Длина сайдинга</label>
-									<input id="name-inp" type="number" name="name" data-validate data-required="name">
+								<div class="form-calculator__input Input">
+									<input type="text" id="input" class="Input-text" placeholder="Длинна сайдинга">
+									<label for="input" class="Input-label">Длинна сайдинга</label>
 								</div>
-								<div class="form-calculator__input input">
-									<label for="name-inp" class="input__label">Высота сайдинга</label>
-									<input id="name-inp" type="number" name="name" data-validate data-required="name">
+								<div class="form-calculator__input Input">
+									<input type="text" id="input" class="Input-text" placeholder="Высота сайдинга">
+									<label for="input" class="Input-label">Высота сайдинга</label>
 								</div>
-								<div class="form-calculator__input input">
-									<label for="name-inp" class="input__label">Длина фурнитуры</label>
-									<input id="name-inp" type="number" name="name" data-validate data-required="name">
+								<div class="form-calculator__input Input">
+									<input type="text" id="input" class="Input-text" placeholder="Длинна фурнитуры">
+									<label for="input" class="Input-label">Длинна фурнитуры</label>
 								</div>
 							</div>
 							<div class="form-calculator__inner">
@@ -60,17 +60,18 @@
 								<div class="form-calculator__column">
 									<div class="form-calculator__title">Стены</div>
 									<div class="form-calculator__line">
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Площадь всех стен, м2</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text" placeholder="Площадь всех стен, м2">
+											<label for="input" class="Input-label">Площадь всех стен, м2</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Площадь всех фронтонов, м2</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text"
+												placeholder="Площадь всех фронтонов, м2">
+											<label for="input" class="Input-label">Площадь всех фронтонов, м2</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Периметр дома, м</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text" placeholder="Периметр дома, м">
+											<label for="input" class="Input-label">Периметр дома, м</label>
 										</div>
 									</div>
 								</div>
@@ -78,17 +79,17 @@
 								<div class="form-calculator__column">
 									<div class="form-calculator__title">Окна</div>
 									<div class="form-calculator__line">
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Количество окон, шт</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text" placeholder="Количество окон, шт">
+											<label for="input" class="Input-label">Количество окон, шт</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Ср. ширина окна, м</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text" placeholder="Ср. ширина окна, м">
+											<label for="input" class="Input-label">Ср. ширина окна, м</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Ср. высота окна, м</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text" placeholder="Ср. высота окна, м">
+											<label for="input" class="Input-label">Ср. высота окна, м</label>
 										</div>
 									</div>
 								</div>
@@ -96,25 +97,29 @@
 								<div class="form-calculator__column">
 									<div class="form-calculator__title">Углы</div>
 									<div class="form-calculator__line">
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Кол-во наружных углов, шт</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text"
+												placeholder="Кол-во наружных углов, шт">
+											<label for="input" class="Input-label">Кол-во наружных углов, шт</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Длина всех наружных углов, м</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text"
+												placeholder="Длина всех наружных углов, м">
+											<label for="input" class="Input-label">Длина всех наружных углов, м</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Кол-во внутренних углов, шт</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text"
+												placeholder="Кол-во внутренних углов, шт">
+											<label for="input" class="Input-label">Кол-во внутренних углов, шт</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Длина всех внутренних углов, м</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text"
+												placeholder="Длина всех внутренних углов, м">
+											<label for="input" class="Input-label">Длина всех внутренних углов, м</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Высота цоколя, м</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text" placeholder="Высота цоколя, м">
+											<label for="input" class="Input-label">Высота цоколя, м</label>
 										</div>
 									</div>
 								</div>
@@ -122,17 +127,20 @@
 								<div class="form-calculator__column">
 									<div class="form-calculator__title">Дверные проемы</div>
 									<div class="form-calculator__line">
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Кол-во дверных проемов, шт</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text"
+												placeholder="Кол-во дверных проемов, шт">
+											<label for="input" class="Input-label">Кол-во дверных проемов, шт</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Ср. ширина дверного проема, м</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text"
+												placeholder="Ср. ширина дверного проема, м">
+											<label for="input" class="Input-label">Ср. ширина дверного проема, м</label>
 										</div>
-										<div class="form-calculator__input input">
-											<label for="name-inp" class="input__label">Ср. высота дверного проема, м</label>
-											<input id="name-inp" type="number" name="name" data-validate data-required="name">
+										<div class="form-calculator__input Input">
+											<input type="text" id="input" class="Input-text"
+												placeholder="Ср. высота дверного проема, м">
+											<label for="input" class="Input-label">Ср. высота дверного проема, м/label>
 										</div>
 									</div>
 								</div>
