@@ -474,14 +474,13 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 		border-radius: rem(3);
 	}
 	.search-form__menu {
-		position: absolute; 
-		top: -10px;
+		position: absolute;
+		top: 52.5px;
 		left: 50%;
 		margin-right: -50%;
-		transform: translate(-50%, 0%);
-		z-index: 5; 
-		width: 102%; 
-		// max-height: rem(650);
+		transform: translate(-50%, -8%);
+		z-index: 5;
+		width: 102%;
 		height: 0;
 		padding: 0;
 		transition: $mainTransition;
@@ -491,6 +490,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 			opacity: 1;
 			height: rem(650);
 			padding: rem(10) rem(10) rem(10) rem(10);
+			padding-top: 0;
 			@media (max-width: 768px){
 					height: 100vh; 
 			}
@@ -507,6 +507,7 @@ linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 	}
 	.menu-search__die {
 		height: rem(50);
+		background: rgba(2, 0, 32, 0.06);
 		&:not(:last-child){
 			margin-bottom: rem(25);
 		}
