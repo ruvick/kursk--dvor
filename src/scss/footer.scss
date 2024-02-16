@@ -85,10 +85,13 @@ line-height: math.div(14, 20);
 	  text-align: center;
 }
 }
+
 .address-footer__list {
+
 }
-.address-footer__item {
-font-size: rem(16);
+.address-footer {
+	ul li {
+		font-size: rem(16);
 font-weight: 400;
 // line-height: 22px;
 letter-spacing: 0em;
@@ -104,7 +107,27 @@ color: rgba(255, 255, 255, 0.5);
 @media (max-width: 612px){
 	  text-align: center;
 }
+	}
 }
+// .address-footer__item {
+// font-size: rem(16);
+// font-weight: 400;
+// // line-height: 22px;
+// letter-spacing: 0em;
+// color: rgba(255, 255, 255, 0.5);
+// &:not(:last-child){
+// 	margin-bottom: rem(5);
+// }
+// @media (max-width: 768px){
+// 	font-size: rem(14);
+// 	font-weight: 400;
+// 	line-height: math.div(20, 14);
+// }
+// @media (max-width: 612px){
+// 	  text-align: center;
+// }
+// }
+
 .footer__contacts {
 	@media (max-width: 1250px){
 		display: flex;
