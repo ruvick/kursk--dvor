@@ -846,7 +846,15 @@ input[type='checkbox']:checked+.switch-block__label {
 	}
 }
 
-.icons-card-product {}
+.icons-card-product {
+	&._active {
+		._icon-favorite {
+			&::before {
+				content: "\e910";
+			}
+		}
+	}
+}
 
 .icons-card-product__icon {
 	&:not(:last-child) {
@@ -868,13 +876,6 @@ input[type='checkbox']:checked+.switch-block__label {
 
 	&::before {
 		color: rgba(2, 0, 32, 0.3);
-	}
-
-	&:focus,
-	&:active {
-		&::before {
-			color: red;
-		}
 	}
 }
 

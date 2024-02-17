@@ -27,6 +27,11 @@ window.onload = function () {
 			}
 		}
 
+		// Кнопка избранное 
+		if (targetElement.classList.contains('_icon-favorite')) {
+			targetElement.closest('.icons-card-product').classList.toggle('_active')
+		}
+
 		// Активация поиска
 		// if (targetElement.classList.contains('search-form__input')) {
 		// 	document.querySelector('.search-form').classList.toggle('_active');
@@ -127,6 +132,8 @@ window.onload = function () {
 			}
 		});
 	}
+
+
 
 }
 
