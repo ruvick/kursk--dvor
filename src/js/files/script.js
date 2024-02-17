@@ -50,6 +50,7 @@ window.onload = function () {
 				document.querySelector('.search-form').classList.add('_active');
 				if (window.innerWidth <= 768 && isMobile.any()) {
 					document.querySelector('.header').classList.add('_search');
+					document.documentElement.classList.remove("menu-open");
 				}
 			} else {
 				document.querySelector('.search-form').classList.remove('_active');
@@ -64,12 +65,14 @@ window.onload = function () {
 				document.querySelector('.search-form').classList.remove('_active');
 				if (window.innerWidth <= 768 && isMobile.any()) {
 					document.querySelector('.header').classList.remove('_search');
+					document.documentElement.classList.remove("menu-open");
 				}
 			});
 			searchMobClose.addEventListener("click", function (e) {
 				document.querySelector('.search-form').classList.remove('_active');
 				if (window.innerWidth <= 768 && isMobile.any()) {
 					document.querySelector('.header').classList.remove('_search');
+					document.documentElement.classList.remove("menu-open");
 				}
 			});
 		}
