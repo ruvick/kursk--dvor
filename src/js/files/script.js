@@ -34,6 +34,16 @@ window.onload = function () {
 			search.value = "";
 		}
 
+		if (window.innerWidth <= 768) {
+			if (!targetElement.closest('.bottom-icons-panel') && !targetElement.closest('.personal-navigation__header')
+				&& document.querySelectorAll('.personal-navigation._active').length > 0) {
+				// Отдаем нашей функции _removeClasses() коллекцию обьектов, и указываем какой кдасс нужно убрать.
+				removeClasses(document.querySelectorAll('.personal-navigation._active'), "_active");
+				bodyUnlock();
+				darkBody();
+			}
+		}
+
 		// Кнопка избранное 
 		if (targetElement.classList.contains('_icon-favorite')) {
 			targetElement.closest('.icons-card-product').classList.toggle('_active')
