@@ -27,24 +27,22 @@ window.onload = function () {
 			}
 		}
 
+		// Закрываем Поиска при клике на пустое пространство
+		if (!targetElement.closest('.header__search') && document.querySelectorAll('.search-form._active').length > 0) {
+			// Отдаем нашей функции _removeClasses() коллекцию обьектов, и указываем какой кдасс нужно убрать.
+			removeClasses(document.querySelectorAll('.search-form._active'), "_active");
+			search.value = "";
+		}
+
 		// Кнопка избранное 
 		if (targetElement.classList.contains('_icon-favorite')) {
 			targetElement.closest('.icons-card-product').classList.toggle('_active')
 		}
 
-		// Активация поиска
-		// if (targetElement.classList.contains('search-form__input')) {
-		// 	document.querySelector('.search-form').classList.toggle('_active');
-		// 	darkBody();
-		// 	bodyLockToggle();
-		// } else if (!targetElement.closest('.search-form') && document.querySelector('.search-form._active')) {
-		// 	document.querySelector('.search-form').classList.remove('_active');
-		// 	darkBody();
-		// }
 	}
 
 	// Активация поиска
-	function SeatchInit() {
+	function searchInit() {
 		const limit = 3;
 		const search = document.getElementById('search');
 		const searchClose = document.getElementById('searchClose');
@@ -83,7 +81,9 @@ window.onload = function () {
 		}
 	}
 
-	SeatchInit();
+
+
+	searchInit();
 
 	// Активация модулей на мобилках 
 	if (window.innerWidth <= 768 && isMobile.any()) {
