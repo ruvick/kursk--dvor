@@ -82,34 +82,68 @@
 
 // // Карта Яндекс с одной меткой
 // // YA
+// function init() {
+// 	// Создание карты.
+// 	var myMap = new ymaps.Map("map", {
+// 		// Координаты центра карты.
+// 		// Порядок по умолчанию: «широта, долгота».
+// 		// Чтобы не определять координаты центра карты вручную,
+// 		// воспользуйтесь инструментом Определение координат.
+// 		controls: [],
+// 		center: [51.652578, 36.129944],
+// 		// Уровень масштабирования. Допустимые значения: 
+// 		// от 0 (весь мир) до 19.
+// 		zoom: 15
+// 	});
+
+// 	let myPlacemark = new ymaps.Placemark([51.652578, 36.129944], { 
+// 	}, {
+// 		// Опции
+// 		balloonContentHeader: 'Курский двор',
+// 		balloonContentBody: 'Курск ул. Магистральная 1',
+// 		balloonContentFooter: '+7 (4712) 39 07 37', 
+// 		hasBalloon: true,
+// 		hideIconOnBalloonOpen: true,
+
+// 		hasBalloon: true,
+// 		hideIconOnBalloonOpen: true,
+// 		// Необходимо указать данный тип макета.
+// 		iconLayout: 'default#imageWithContent',
+// 		// Своё изображение иконки метки.
+// 		iconImageHref: 'img/icons/map.svg',
+// 		// Размеры метки.
+// 		iconImageSize: [50.4, 70],
+// 		// Смещение левого верхнего угла иконки относительно
+// 		// её "ножки" (точки привязки).
+// 		iconImageOffset: [-30, -55],
+// 		// Смещение слоя с содержимым относительно слоя с картинкой.
+// 		iconContentOffset: [0, 0],
+// 	});
+// 	myMap.geoObjects.add(myPlacemark);
+
+// 	// myMap.behaviors.disable('scrollZoom');
+// 	// myMap.behaviors.disable('drag');
+// }
+
 function init() {
-	// Создание карты.
 	var myMap = new ymaps.Map("map", {
-		// Координаты центра карты.
-		// Порядок по умолчанию: «широта, долгота».
-		// Чтобы не определять координаты центра карты вручную,
-		// воспользуйтесь инструментом Определение координат.
-		controls: [],
+		// Координаты центра карты
 		center: [51.652578, 36.129944],
-		// Уровень масштабирования. Допустимые значения: 
-		// от 0 (весь мир) до 19.
-		zoom: 15
+		// Масштаб карты
+		zoom: 15,
+		// Выключаем все управление картой
+		controls: []
 	});
 
-	let myPlacemark = new ymaps.Placemark([51.652578, 36.129944], {
-	}, {
-		// Опции
-		balloonContentHeader: 'Курский двор',
-		balloonContentBody: 'Курск ул. Магистральная 1',
-		balloonContentFooter: '+7 (4712) 39 07 37',
-		hasBalloon: true,
-		hideIconOnBalloonOpen: true,
+	var myGeoObjects = [];
 
-		hasBalloon: true,
-		hideIconOnBalloonOpen: true,
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#imageWithContent',
-		// Своё изображение иконки метки.
+	// Указываем координаты метки
+	myGeoObjects = new ymaps.Placemark([51.652578, 36.129944], {
+		// hintContent: '<div class="map-hint">Авто профи, Курск, ул.Комарова, 16</div>',
+		balloonContent: '<div class="map-hint">Магистральная улица, 1',
+	}, {
+		iconLayout: 'default#image',
+		// Путь до нашей картинки
 		iconImageHref: 'img/icons/map.svg',
 		// Размеры метки.
 		iconImageSize: [50.4, 70],
@@ -119,10 +153,16 @@ function init() {
 		// Смещение слоя с содержимым относительно слоя с картинкой.
 		iconContentOffset: [0, 0],
 	});
-	myMap.geoObjects.add(myPlacemark);
 
-	// myMap.behaviors.disable('scrollZoom');
-	// myMap.behaviors.disable('drag');
+	var clusterer = new ymaps.Clusterer({
+		clusterDisableClickZoom: false,
+		clusterOpenBalloonOnClick: false,
+	});
+
+	clusterer.add(myGeoObjects);
+	myMap.geoObjects.add(clusterer);
+	// Отключим zoom
+	myMap.behaviors.disable('scrollZoom');
 }
 
 if (document.querySelector('#map')) {

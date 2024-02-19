@@ -1918,6 +1918,31 @@ body.ie {
 		display: none;
 	}
 }
-
-
+//========================================================================================================================================================
+.ymaps-2-1-79-balloon {
+	box-shadow: none !important;
+}
+.ymaps-2-1-79-balloon__layout {
+	display: flex;
+	flex-direction: row-reverse;
+	border-radius: rem(6) !important;
+}
+.ymaps-2-1-79-balloon__close {
+	float: none;
+	display: none;
+}
+.ymaps-2-1-79-balloon__content {
+	padding: 3px 6px !important;
+	overflow: hidden;
+	margin: 0 !important;
+}
+.map-hint {
+	font-family: 'Onest' !important;
+	font-size: rem(14) !important;
+	font-weight: 400;
+	line-height: math.div(16, 14) !important;
+}
+.ymaps-2-1-79-balloon__content>ymaps {
+	height: auto !important;
+}
 //</ГОТОВЫЕ КЛАССЫ>=======================================================================================================================================
