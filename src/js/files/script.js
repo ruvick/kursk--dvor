@@ -16,6 +16,7 @@ window.onload = function () {
 		// Добавим проверку. Если экран шире 768, а так же добавим функцию на проверку мобильных устройств isMobile.any(). 
 		// Функция вернет true, если сайт открыт на устройствах с тачскрин
 		if (window.innerWidth > 768 && isMobile.any()) {
+
 			if (targetElement.classList.contains('menu__arrow')) {
 				targetElement.closest('.menu__item').classList.toggle('_hover')
 			}
@@ -25,6 +26,7 @@ window.onload = function () {
 				// Отдаем нашей функции _removeClasses() коллекцию обьектов, и указываем какой кдасс нужно убрать.
 				removeClasses(document.querySelectorAll('.menu__item._hover'), "_hover");
 			}
+
 		}
 
 		// Закрываем Поиска при клике на пустое пространство
