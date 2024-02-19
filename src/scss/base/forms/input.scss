@@ -213,9 +213,9 @@ input[type=radio] {
 	display: block;
 	position: absolute;
 	bottom: 50%;
-	left: 1rem;
+	left: rem(16);
 	font-family: inherit;
-	font-size: 10px;
+	font-size: rem(10);
 	font-weight: 400;
 	opacity: 0;
 	transform: 
@@ -243,7 +243,7 @@ input[type=radio] {
 	// transform:
 	//   translate3d(0, var(--labelTransformedPosY), 0)
 	//   scale(var(--labelScaleFactor));
-	transform: translateY(-8px);
+	transform: translateY(-10px);
 	// transition:
 	//   transform var(--inputTransitionDuration),
 	//   visibility 0ms,

@@ -272,15 +272,22 @@ letter-spacing: 0em;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: rem(5);
 	&:not(:last-child){
-		margin-bottom: rem(10);
+		margin-bottom: rem(15); 
+	}
+	.form-popup__input {
+		&:not(:last-child){
+			margin-bottom: 0;
+		}
 	}
 	.input {
 		flex: 0 1 33.333%;
 		margin-bottom: 0;
-		&:not(:last-child){
-			margin-right: rem(10);
-		}
+		// &:not(:last-child){
+		// 	// margin-right: rem(10);
+		// 	margin-bottom: 0;
+		// }
 	}
 }
 

@@ -32,4 +32,12 @@ $(document).ready(function () {
 	var inputmask_phone = { "mask": "+9(999)999-99-99" };
 	$("input[type=tel]").inputmask(inputmask_phone);
 
+	// $('._icon-search-plus').on('click', function () {
+	// 	$('.slider-card-product__slide').trigger('click');
+	// });
+
+
+
 });
+
+// lightGallery(document.getElementById('lightgallery'));
