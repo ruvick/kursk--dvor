@@ -12,7 +12,7 @@ export class Popup {
 			attributeCloseButton: 'data-close', // Атрибут для кнопки, которая закрывает попап
 			fixElementSelector: '[data-lp]', // Атрибут для элементов с левым паддингом (которые fixed)
 
-			youtubeAttribute: 'data-youtube', //Атрибут для кода youtube
+			youtubeAttribute: 'data-youtube', //Атрибут для кода youtube 
 			setAutoplayYoutube: true,
 
 			// Изменение классов
