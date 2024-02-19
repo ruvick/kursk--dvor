@@ -410,7 +410,9 @@
 	}
 }
 .body-information__input {
-	background-color: transparent;
+	.Input-text {
+		background: rgb(240, 242, 248);
+	}
 }
 
 .order-detail__cards {
