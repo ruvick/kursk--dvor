@@ -800,7 +800,7 @@ input[type='checkbox']:checked+.switch-block__label {
 	overflow: visible !important;
 }
 
-.image-card-product {
+.image-card-product { 
 	.swiper-pagination-bullets {
 		margin-top: rem(10);
 
@@ -837,7 +837,7 @@ input[type='checkbox']:checked+.switch-block__label {
 	position: absolute;
 	top: rem(6);
 	right: rem(6);
-	z-index: 2;
+	z-index: 50;
 	transition: $mainTransition;
 
 	@media (any-hover: hover) {
@@ -1658,7 +1658,7 @@ body.ie {
 
 // Swiper-Slider
 ._swiper {
-	overflow: hidden;
+	overflow: hidden; 
 	// min-width: 0;
 
 	//.swiper-wrapper
@@ -1751,6 +1751,7 @@ body.ie {
 }
 
 .swiper-pagination-bullet {
+	position: relative;
 	flex: 0 0 8px;
 	width: 8px;
 	height: 8px;
@@ -1771,6 +1772,53 @@ body.ie {
 	height: 8px;
 	background: $blueColor;
 	opacity: 1;
+}
+.swiper-pagination-lock {
+	display: none;
+}
+
+.image-card-product {
+	.swiper-pagination-bullets {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		bottom: 0;
+		z-index: 5;
+		display: flex;
+		gap: rem(5);
+	}
+	.swiper-pagination-bullet {
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+		height: 100%;
+		flex: 1 1 auto;
+		// position: relative;
+		// flex: 0 1 100%;
+		// width: 100%;
+		// height: 100%;
+		// margin-right: 5px;
+		border-radius: 0;
+		background: transparent;
+	
+		// &:last-child {
+		// 	margin: 0px 0px 0px 0px;
+		// }
+	}
+	.swiper-pagination-bullet:before {
+		content: '';
+		width: 100%;
+		height: 3px;
+		flex: 1 1 auto;
+		background: rgba(2, 0, 32, 0.3);
+	}
+	.swiper-pagination-bullet-active:before {
+		background: $blueColor;
+	}
+	.swiper-pagination-lock {
+		display: none;
+	}
 }
 
 //====================================================================================================

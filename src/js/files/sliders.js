@@ -46,22 +46,22 @@ function initSliders() {
 
 	// Перечень слайдеров   
 	if (document.querySelector('.image-card-product')) {
-		new Swiper('.image-card-product', {
+		const swiper1 = new Swiper('.image-card-product', {
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Pagination, Autoplay],
+			modules: [Pagination],
 			// effect: 'fade',
 			// autoplay: {
-			delay: 1000,
-			// 	disableOnInteraction: false,
-			// },
+			delay: 2000,
+			// // 	disableOnInteraction: false,
+			// // },
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
+			// slidesPerView: 1,
 			// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
-			spaceBetween: 0,
+			// spaceBetween: 0,
 			// autoHeight: true,
-			speed: 800,
+			// speed: 800,
 			// parallax: true,
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -116,9 +116,38 @@ function initSliders() {
 				},
 			}
 		});
+		$(document).ready(function () {
+			$('.swiper-pagination-bullet').hover(function () {
+				$(this).trigger("click");
+			});
+		});
+		// function sliderMouseSlideInit() {
+		// 	document.addEventListener("mousemove", function (e) {
+		// 		const targetElement = e.target;
+		// 		if (targetElement.closest('[data-mousemove-swipe]')) {
+		// 			const sliderElement = targetElement.closest('[data-mousemove-swipe]');
+		// 			const sliderItem = swiper1[getIndex(sliderElement)];
+		// 			const sliderLength = sliderItem.slides.length;
+		// 			if (sliderLength > 1) {
+		// 				const sliderWidth = sliderItem.width;
+		// 				const sliderPath = Math.round(sliderWidth / sliderLength);
+		// 				const sliderMousePos = e.clientX - sliderElement.offsetLeft;
+		// 				const sliderSlide = Math.floor(sliderMousePos / sliderPath);
+		// 				sliderItem.slideTo(sliderSlide);
+		// 			}
+		// 		}
+		// 	})
+
+		// 	function getIndex(el) {
+		// 		return Array.from(el.parentNode.children).indexOf(el);
+		// 	}
+		// }
+		// if (document.querySelector("[data-mousemove-swipe]")) {
+		// 	sliderMouseSlideInit();
+		// }
+
 	}
-	// var thumbs = document.querySelectorAll('.image-card-product .swiper-slide');
-	// for (var i = 0; i < thumbs.length; i++) thumbs[i].addEventListener('mouseover', function () { this.click() });
+
 	if (document.querySelector('.slider-cards-block')) {
 		new Swiper('.slider-cards-block', {
 			// Подключаем модули слайдера
