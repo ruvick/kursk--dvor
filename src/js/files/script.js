@@ -149,8 +149,6 @@ window.onload = function () {
 		});
 	}
 
-
-
 }
 
 // Input file
