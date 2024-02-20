@@ -124,8 +124,19 @@
 	align-items: center;
 	white-space: nowrap;
 	padding: rem(3) 0;
-	&::before{
+	transition: $mainTransition;
+	&::before{ 
 		margin-right: rem(10);
+	}
+}
+
+.header__col:nth-child(2) {
+	.header__item {
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blueColor;
+			}
+			}
 	}
 }
 
