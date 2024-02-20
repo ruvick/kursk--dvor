@@ -152,24 +152,29 @@ window.onload = function () {
 		});
 	}
 
-	const bodyOrdersBtn = document.querySelectorAll('.body-orders__button');
-	const personalContentOrders = document.querySelector('.personal-content__orders');
-	const orderdetailBackBtn = document.querySelectorAll('.order-detail__back-btn');
-	const personalContentOrderDetail = document.querySelector('.personal-content__order-detail');
+	// Заказ подробно 
+	function orderInit() {
+		const bodyOrdersBtn = document.querySelectorAll('.body-orders__button');
+		const personalContentOrders = document.querySelector('.personal-content__orders');
+		const orderdetailBackBtn = document.querySelectorAll('.order-detail__back-btn');
+		const personalContentOrderDetail = document.querySelector('.personal-content__order-detail');
 
-	bodyOrdersBtn.forEach(btn => {
-		btn.addEventListener("click", function (e) {
-			personalContentOrders.classList.add('_none');
-			personalContentOrderDetail.classList.add('_active')
+		bodyOrdersBtn.forEach(btn => {
+			btn.addEventListener("click", function (e) {
+				personalContentOrders.classList.add('_none');
+				personalContentOrderDetail.classList.add('_active')
+			});
 		});
-	});
 
-	orderdetailBackBtn.forEach(btn => {
-		btn.addEventListener("click", function (e) {
-			personalContentOrders.classList.remove('_none');
-			personalContentOrderDetail.classList.remove('_active')
+		orderdetailBackBtn.forEach(btn => {
+			btn.addEventListener("click", function (e) {
+				personalContentOrders.classList.remove('_none');
+				personalContentOrderDetail.classList.remove('_active')
+			});
 		});
-	});
+	}
+	orderInit();
+	// ========================================================
 
 }
 
