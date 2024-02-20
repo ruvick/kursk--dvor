@@ -173,7 +173,7 @@
 	// margin: 0 rem(-10); 
 	display: grid;
 	gap: rem(10);
-	grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr)); 
 	margin: 0;
 	&:not(:last-child){
 		margin-bottom: rem(50);
@@ -182,7 +182,7 @@
 		grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
 	}
 	@media (max-width: 445px){
-		grid-template-columns: repeat(auto-fit, minmax(rem(160), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(rem(180), 1fr));
 	}
 }
 .products__column {

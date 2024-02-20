@@ -132,7 +132,7 @@
 
 .header__col:nth-child(2) {
 	.header__item {
-		@media (any-hover: hover) {
+		@media (any-hover: hover) { 
 			&:hover {
 				color: $blueColor;
 			}

@@ -42,7 +42,7 @@ h4 {
 
 .sticky {
 	position: sticky;
-	top: 10px;
+	top: rem(10);
 }
 
 //========================================================================================================================================================
@@ -79,8 +79,7 @@ h4 {
 	&:not(:last-child) {
 		margin-right: rem(10);
 	}
-
-	margin-bottom: 10px;
+	margin-bottom: rem(10);
 }
 
 .link-selection {
@@ -513,7 +512,7 @@ input[type='checkbox']:checked+.switch-block__label {
 
 .search-form__menu {
 	position: absolute;
-	top: 52.5px;
+	top: rem(52.5);
 	left: 50%;
 	margin-right: -50%;
 	transform: translate(-50%, -8%);
@@ -546,7 +545,7 @@ input[type='checkbox']:checked+.switch-block__label {
 			top: 0;
 			transform: translate(0px, 0px);
 			left: 0;
-			padding-top: 80px;
+			padding-top: rem(80);
 		}
 	}
 
@@ -609,7 +608,7 @@ input[type='checkbox']:checked+.switch-block__label {
 
 .menu-search__body::-webkit-scrollbar {
 	overflow-y: scroll;
-	width: 3px;
+	width: rem(3);
 	background-color: #f9f9fd;
 }
 
@@ -799,6 +798,11 @@ input[type='checkbox']:checked+.switch-block__label {
 			}
 		}
 	}
+		.icons-card-product__icon._icon-search-plus {
+			@media (max-width: 1024px){
+				  display: none;
+			}
+		}
 }
 
 .card-product__image {
@@ -1044,7 +1048,7 @@ input[type='checkbox']:checked+.switch-block__label {
 }
 
 .price-card-product__new-price {
-	margin-right: 10px;
+	margin-right: rem(10);
 
 	@media (max-width: 1024px) {
 		font-size: rem(23);
@@ -1716,9 +1720,9 @@ body.ie {
 	position: absolute;
 	top: 28%;
 	z-index: 5000;
-	width: 43px;
-	height: 43px;
-	border: 2px solid #fff;
+	width: rem(43);
+	height: rem(43);
+	border: rem(2) solid #fff;
 	border-radius: 50%;
 	cursor: pointer;
 	display: flex;
@@ -1728,8 +1732,8 @@ body.ie {
 	&:before {
 		content: '';
 		float: left;
-		flex: 0 0 8px;
-		height: 12px;
+		flex: 0 0 rem(8);
+		height: rem(12);
 		background-size: 100%;
 		background-position: 0 0;
 		background-repeat: no-repeat;
@@ -1761,14 +1765,14 @@ body.ie {
 
 .swiper-pagination-bullet {
 	position: relative;
-	flex: 0 0 8px;
-	width: 8px;
-	height: 8px;
+	flex: 0 0 rem(8);
+	width: rem(8);
+	height: rem(8);
 	background: rgba(2, 0, 32, 0.3);
 	border-radius: 50%;
 	opacity: 0.6;
 	cursor: pointer;
-	margin-right: 5px;
+	margin-right: rem(5);
 
 	&:last-child {
 		margin: 0px 0px 0px 0px;
@@ -1776,9 +1780,9 @@ body.ie {
 }
 
 .swiper-pagination-bullet-active {
-	flex: 0 0 8px;
-	width: 8px;
-	height: 8px;
+	flex: 0 0 rem(8);
+	width: rem(8);
+	height: rem(8);
 	background: $blueColor;
 	opacity: 1;
 }
@@ -1819,7 +1823,7 @@ body.ie {
 	.swiper-pagination-bullet:before {
 		content: '';
 		width: 100%;
-		height: 3px;
+		height: rem(2);
 		flex: 1 1 auto;
 		background: rgba(2, 0, 32, 0.3);
 	}

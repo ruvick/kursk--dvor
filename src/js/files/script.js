@@ -164,43 +164,15 @@ window.onload = function () {
 // 	file = file.replace(/\\/g, '/').split('/').pop();
 // 	document.getElementById('file-names').innerHTML = '' + file;
 // }
-
-// document.querySelector("._icon-search-plus").addEventListener('click', function () {
-// 	var startGalleryEvent = new CustomEvent('click', { bubbles: true, cancelable: true });
-// 	document.querySelector(".slider-card-product__slide").dispatchEvent(startGalleryEvent);
-// })
+//========================================================================================================================================================
 
 
 
-// document.querySelector("._icon-search-plus").addEventListener('click', function () {
-
-// 	var startGalleryEvent = new CustomEvent('click', { bubbles: true, cancelable: true });
-
-// 	document.querySelector(".slider-card-product__slide").dispatchEvent(startGalleryEvent);
-
-// })
-// let galItem = document.querySelectorAll('[data-gallery]');
-// let galBtn = document.querySelectorAll('._icon-search-plus');
-// let gal = document.querySelectorAll('.slider-card-product__slide');
-
-// // galItem.forEach(galItem => {
-// // 	if (galItem) {
 
 
-// galBtn.forEach(button => {
-// 	button.addEventListener('click', function () {
 
-// 		var startGalleryEvent = new CustomEvent('click', { bubbles: true, cancelable: true });
 
-// 		// document.querySelectorAll(".slider-card-product__slide").dispatchEvent(startGalleryEvent);
 
-// 		gal.forEach(gal => {
-// 			gal.dispatchEvent(startGalleryEvent);
-// 		})
 
-// 	});
-// })
-// 	}
-// })
 
 
