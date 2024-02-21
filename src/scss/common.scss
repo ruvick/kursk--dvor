@@ -1874,7 +1874,7 @@ body.ie {
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: 3px;
+	width: rem(3);
 	height: 100%;
 	z-index: 1000;
 
@@ -1899,34 +1899,34 @@ body.ie {
 .slick-arrow {
 	position: absolute;
 	top: 45%;
-	width: 43px;
-	height: 43px;
+	width: rem(43);
+	height: rem(43);
 	font-size: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
 	background: #fff;
-	border: 1px solid #D2D1D1;
+	border: rem(1) solid #D2D1D1;
 	z-index: 50;
 }
 
 .slick-arrow:before {
 	content: '';
 	float: left;
-	width: 7px;
-	height: 15px;
+	width: rem(7);
+	height: rem(15);
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .slick-next {
-	left: -20px;
+	left: rem(-20);
 }
 
 .slick-prev {
-	right: -20px;
+	right: rem(-20);
 }
 
 .slick-next:before {
@@ -1965,7 +1965,7 @@ body.ie {
 // Стилизация скролла сайта ==============================================================================================================================
 ::-webkit-scrollbar {
 	overflow-y: scroll;
-	width: 7px;
+	width: rem(7);
 	background-color: #f9f9fd;
 
 	@media (max-width: 1024px) {
@@ -1994,7 +1994,7 @@ body.ie {
 	display: none;
 }
 .ymaps-2-1-79-balloon__content {
-	padding: 3px 6px !important;
+	padding: rem(3) rem(6) !important;
 	overflow: hidden;
 	margin: 0 !important;
 }

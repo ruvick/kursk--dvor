@@ -11,7 +11,7 @@
 
 		&:checked+.checkbox__text:before {
 			content: '\e90c';
-			font-size: 8px;
+			font-size: rem(8);
     		display: flex;
     		justify-content: center;
     		align-items: center;
@@ -47,18 +47,18 @@
 			content: "";
 			align-self: flex-start;
 			margin: 0px;
-			flex: 0 0 20px;
+			flex: 0 0 rem(20);
 			left: 0;
 			top: 0;
-			width: 20px;
-			height: 20px;
+			width: rem(20);
+			height: rem(20);
 			background: transparent;
-			border: 1px solid rgba(2, 0, 32, 0.3);
-			border-radius: 3px;
+			border: rem(1) solid rgba(2, 0, 32, 0.3);
+			border-radius: rem(3);
 			// transition: all 0.3s;
 		}
 		span {
-			margin-left: 10px;
+			margin-left: rem(10);
 		}
 	}
 
@@ -76,7 +76,7 @@
 	&._error {
 		.checkbox__text {
 			&:before {
-				border: 1px solid #ee1212;
+				border: rem(1) solid #ee1212;
 			}
 		}
 	}
@@ -94,10 +94,10 @@
 	&::before {
 		content: '';
 		float: left;
-		flex: 0 0 17px;
-		width: 17px;
-		height: 17px;
-		margin-right: 5px;
+		flex: 0 0 rem(17);
+		width: rem(17);
+		height: rem(17);
+		margin-right: rem(5);
 		background-size: 100%;
 		background-position: center;
 		background-repeat: no-repeat;

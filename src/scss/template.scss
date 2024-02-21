@@ -45,7 +45,7 @@
 }
 .title-block__sticker {
 	@media (max-width: 480px){
-		  font-size: 12px;
+		  font-size: rem(12);
 	}
 	&._grey {
 		font-weight: 400;
@@ -59,8 +59,8 @@
 	.tabs__navigation {
 		@media (min-width: 813px){
 			position: sticky;
-			top: 10px;
-		  height: 100%;
+			top: rem(10);
+		  	height: 100%;
 		}
   }
 	.tabs {

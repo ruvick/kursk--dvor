@@ -41,29 +41,29 @@
     justify-content: space-between;
 		align-items: center;
 		position: relative;
-		font-size: 16px;
+		font-size: rem(16);
 		line-height: calc(22 / 16);
 
 		&:before {
 			content: "";
 			align-self: flex-start;
 			// margin: 0px 14px 0px 0px;
-			flex: 0 0 20px;
+			flex: 0 0 rem(20);
 			left: 0;
 			top: 0;
 			border-radius: 50%;
-			width: 20px;
-			height: 20px;
+			width: rem(20);
+			height: rem(20);
 			background: transparent;
-			border: 1px solid #0200204D;
+			border: rem(1) solid #0200204D;
 		}
 
 		&:after {
 			content: "";
 			transition: all 0.3s ease 0s;
 			transform: scale(0);
-			width: 12px;
-			height: 12px;
+			width: rem(12);
+			height: rem(12);
 			border-radius: 50%;
 			background-color: #161615;
 			position: absolute;

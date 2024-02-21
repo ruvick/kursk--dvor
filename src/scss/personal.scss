@@ -85,7 +85,7 @@
 .item-personal__form {}
 
 .form-personal {
-	border-radius: 3px;
+	border-radius: rem(3);
 	overflow: hidden;
 
 	.input {
@@ -235,7 +235,7 @@
 	color: rgba(2, 0, 32, 0.5);
 
 	@media (max-width: 480px) {
-		font-size: 14px;
+		font-size: rem(14);
 	}
 }
 
@@ -346,7 +346,7 @@
 	}
 
 	@media (max-width: 480px) {
-		font-size: 14px;
+		font-size: rem(14);
 	}
 }
 
@@ -816,7 +816,7 @@
 		padding: rem(15);
 		z-index: 100;
 		background-color: #fff;
-		border-radius: 3px 3px 0 0;
+		border-radius: rem(3) rem(3) 0 0;
 		transform: translateY(100%);
 		transition: $mainTransition;
 
@@ -849,13 +849,13 @@
 
 	.header-personal-navigation__btn {
 		&::before {
-			font-size: 25px;
+			font-size: rem(25);
 		}
 	}
 
 	.tabs__title {
 		@media (max-width: 768px) {
-			font-size: 14px;
+			font-size: rem(14);
 			padding-right: 0;
 		}
 	}

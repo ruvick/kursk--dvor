@@ -22,7 +22,7 @@ body.popup-show::after {
 	bottom: 0;
 	right: 0;
 	z-index: 100;
-	padding: 30px 10px;
+	padding: rem(30) rem(10);
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
 }
@@ -65,7 +65,7 @@ body.popup-show::after {
 		top: rem(30);
 		right: rem(30);
 		z-index: 2;
-		font-size: 20px;
+		font-size: rem(20);
 		background: transparent;
 	}
 	.popup__body {

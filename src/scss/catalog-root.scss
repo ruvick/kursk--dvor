@@ -8,7 +8,7 @@
 	&__inner {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0 -10px;
+		margin: 0 rem(-10);
 		@media (max-width: 414px){
 			justify-content: space-around;
 			margin: 0;
@@ -18,7 +18,7 @@
 	&__column {
 		display: flex;
 		// flex: 0 1 11%;
-		flex: 0 1 148px;
+		flex: 0 1 rem(148);
 		padding: 0px 5px 10px 5px;
 		@media (max-width: 768px){
 			flex: 0 1 20%;
@@ -27,7 +27,7 @@
 			  flex: 0 1 33.333%;
 		}
 		@media (max-width: 414px){
-			flex: 0 1 108px;
+			flex: 0 1 rem(108);
 		}
 	}
 
@@ -46,23 +46,23 @@
 		width: 100%;
 		// flex: 1 1 auto;
 		padding-bottom: 100%;
-		border-radius: 3px;
+		border-radius: rem(3);
 		overflow: hidden;
 		transition: $mainTransition;
 		background: rgba(240, 242, 248, 1);
 		&:not(:last-child){
-			margin-bottom: 10px;
+			margin-bottom: rem(10);
 		}
 	}
 
 	&__descp {
-		font-size: 16px;
+		font-size: rem(16);
 		font-weight: 400;
-		line-height: 22px;
+		line-height: math.div(22, 16);
 		text-align: center;
 		transition: $mainTransition;
 		@media (max-width: 414px){
-			  font-size: 12px;
+			  font-size: rem(12);
 		}
 	}
 }

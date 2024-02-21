@@ -546,7 +546,7 @@
 	color: rgba(2, 0, 32, 0.3);
 	background: transparent;
 	&::before{
-		font-size: 20px;
+		font-size: rem(20);
 	}
 }
 

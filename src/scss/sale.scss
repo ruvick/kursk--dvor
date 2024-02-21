@@ -35,7 +35,7 @@
 	display: flex;
 	align-items: center;
 	&:not(:last-child){
-		margin-right: 15px;
+		margin-right: rem(15);
 		margin-bottom: rem(3); 
 	}
 	@media (max-width: 768px){
@@ -129,7 +129,7 @@
 		background-color: $mainBgColor;
 	}
 	.select__option {
-		padding: 5px;
+		padding: rem(5);
 		font-size: rem(14);
   }
 }
@@ -142,7 +142,7 @@
 		display: flex;
 		@media (max-width: 480px){
 			.clear-btn {
-				font-size: 14px;
+				font-size: rem(14);
 				// &::before{
 				// 	margin-top: rem(-1);
 				// 	margin-right: rem(10);
@@ -246,7 +246,7 @@
 	}
 	.link-selection {
 		@media (max-width: 540px){
-			font-size: 14px;
+			font-size: rem(14);
 			min-width: rem(110);
 		}
   }

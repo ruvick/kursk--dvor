@@ -80,7 +80,7 @@ body {
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
-		padding-bottom: 50px;
+		padding-bottom: rem(50);
 	}
 	// Фикс для слайдеров
 	> * {
@@ -264,7 +264,6 @@ body {
 }
   .card-catalog__descp {
 	font-size: rem(12);
-	line-height: 22px;
 	line-height: math.div(15.6, 12);
 }
 	.catalog-root__link {

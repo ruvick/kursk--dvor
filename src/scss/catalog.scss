@@ -65,7 +65,6 @@
 
 }
 
-
 .header-filter {
 	align-items: center;
 	justify-content: space-between;
@@ -91,10 +90,10 @@
 	}
 }
 .header-filter__title {
-font-size: rem(24);
-font-weight: 500;
-line-height: math.div(31, 24);
-letter-spacing: 0em;
+	font-size: rem(24);
+	font-weight: 500;
+	line-height: math.div(31, 24);
+	letter-spacing: 0em;
 }
 .header-filter__btn {
 	&::before{
@@ -109,7 +108,7 @@ letter-spacing: 0em;
 	padding-bottom: rem(25);
 	@media (max-width: 768px){
 		  flex: 1 1 auto;
-		  padding-top: 50px;
+		  padding-top: rem(50);
 	}
 	@media (max-width: 480px){
 		  

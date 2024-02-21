@@ -65,7 +65,7 @@
 	justify-content: space-between;
 
 	.item-making-order__input {
-		margin-bottom: 10px;
+		margin-bottom: rem(10);
 		&:first-child{
 			flex: 0 1 100%;
 		}
@@ -82,9 +82,9 @@
 		flex: 0 1 100%;
 	}
 	.input_textarea {
-		height: 133px;
+		height: rem(133);
 		.input__label {
-			top: 20px;
+			top: rem(20);
 		}
 	}
 }
