@@ -768,6 +768,7 @@ color: rgba(2, 0, 32, 0.7);
 	flex-direction: column;
 	.form__line {
 		display: flex;
+		align-items: start;
 		@media (max-width: 768px){
 			  flex-wrap: wrap;
 			  justify-content: space-between;

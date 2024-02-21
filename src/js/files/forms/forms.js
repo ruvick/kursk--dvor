@@ -25,17 +25,18 @@ data-required="email" - вадидация E-mail
 Чтобы поле валидировалось при потере фокуса, 
 к атрибуту data-required добавляем атрибут data-validate
 
-Чтобы вывести текст ошибки, нужно указать его в атрибуте data-error
+Чтобы вывести текст ошибки, нужно указать его в атрибуте data-error 
 */
 
 // Работа с полями формы. Добавление классов, работа с placeholder
 export function formFieldsInit() {
 	const formFields = document.querySelectorAll('input[placeholder],textarea[placeholder]');
-	if (formFields.length) {
-		formFields.forEach(formField => {
-			formField.dataset.placeholder = formField.placeholder;
-		});
-	}
+	// if (formFields.length) {
+	// 	formFields.forEach(formField => {
+	// 		formField.dataset.placeholder = formField.placeholder;
+	// 	});
+	// }
+
 	document.body.addEventListener("focusin", function (e) {
 		const targetElement = e.target;
 		if ((targetElement.tagName === 'INPUT' || targetElement.tagName === 'TEXTAREA')) {
@@ -44,7 +45,6 @@ export function formFieldsInit() {
 			}
 			targetElement.classList.add('_form-focus');
 			targetElement.parentElement.classList.add('_form-focus');
-
 			formValidate.removeError(targetElement);
 		}
 	});
@@ -56,6 +56,7 @@ export function formFieldsInit() {
 			}
 			targetElement.classList.remove('_form-focus');
 			targetElement.parentElement.classList.remove('_form-focus');
+			targetElement.parentElement.classList.add('_check-focus');
 
 			// Моментальная валидация
 			if (targetElement.hasAttribute('data-validate')) {
@@ -104,10 +105,11 @@ export let formValidate = {
 	addError(formRequiredItem) {
 		formRequiredItem.classList.add('_form-error');
 		formRequiredItem.parentElement.classList.add('_form-error');
+		formRequiredItem.parentElement.classList.remove('_check-focus');
 		let inputError = formRequiredItem.parentElement.querySelector('.form__error');
 		if (inputError) formRequiredItem.parentElement.removeChild(inputError);
 		if (formRequiredItem.dataset.error) {
-			formRequiredItem.parentElement.insertAdjacentHTML('beforeend', `<div class="form__error">${formRequiredItem.dataset.error}</div>`);
+			formRequiredItem.parentElement.insertAdjacentHTML('beforeend', `<span class="form__error">${formRequiredItem.dataset.error}</span>`);
 		}
 	},
 	removeError(formRequiredItem) {
@@ -355,3 +357,4 @@ export function formRating() {
 		}
 	}
 }
+

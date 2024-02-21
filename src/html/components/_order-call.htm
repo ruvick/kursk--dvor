@@ -11,12 +11,18 @@
 			<form action="#" class="order-call__form form-order-call">
 				<div class="form__line">
 					<div class="form-order-call__input Input">
-						<input type="text" id="input" class="Input-text" placeholder="Имя">
+						<input name="form[]" autocomplete="off" type="text" id="input" class="Input-text" placeholder=" "
+							data-error="Заполните поле" data-required data-validate>
+						<div class="cut"></div>
 						<label for="input" class="Input-label">Имя</label>
+						<span class="Input__check _icon-check"></span>
 					</div>
 					<div class="form-order-call__input Input">
-						<input type="tel" id="input" class="Input-text" placeholder="Телефон">
+						<input name="form[]" autocomplete="off" type="text" id="input" class="Input-text tel" placeholder=" "
+							data-error="Заполните поле" data-required data-validate>
+						<div class="cut"></div>
 						<label for="input" class="Input-label">Телефон</label>
+						<span class="Input__check _icon-check"></span>
 					</div>
 					<button type="submit" class="form-order-call__btn btn">Заказать</button>
 				</div>

@@ -29,8 +29,8 @@ $(document).ready(function () {
 	//========================================================================================================================================================
 
 	// Маска телефона
-	var inputmask_phone = { "mask": "+9(999)999-99-99" };
-	$("input[type=tel]").inputmask(inputmask_phone);
+	// var inputmask_phone = { "mask": "+9(999)999-99-99" };
+	// $("input[type=tel]").inputmask(inputmask_phone);
 
 
 	// $('._icon-search-plus').click(function () {

@@ -11,11 +11,12 @@
 					<form action="#" class="popup__form form-popup">
 						<div class="form__line">
 							<div class="form-popup__input Input">
-								<input type="tel" id="input" class="Input-text" placeholder="Телефон">
+								<input autocomplete="off" data-error="Заполните поле" data-required data-validate type="text"
+									id="input" placeholder="Телефон" class="Input-text tel" name="form[]">
 								<label for="input" class="Input-label">Телефон</label>
-								<!-- <span class="search-form__check _icon-check"></span> -->
+								<span class="Input__check _icon-check"></span>
 							</div>
-							<button type="button" class="form-popup__btn btn">Получить код</button>
+							<button type="submit" class="form-popup__btn btn">Получить код</button>
 							<a href="" class="form-popup__btn btn btn_light">Войти по паролю</a>
 						</div>
 					</form>
