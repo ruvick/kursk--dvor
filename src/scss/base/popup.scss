@@ -21,7 +21,7 @@ body.popup-show::after {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	z-index: 100;
+	z-index: 150;
 	padding: rem(30) rem(10);
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
@@ -271,7 +271,7 @@ letter-spacing: 0em;
 .form-popup__technical {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: start;
 	gap: rem(5);
 	&:not(:last-child){
 		margin-bottom: rem(15); 
