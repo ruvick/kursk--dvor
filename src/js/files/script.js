@@ -178,17 +178,7 @@ window.onload = function () {
 
 }
 
-// Input file
-// function getFileName() {
-// 	var file = document.getElementById('myfile').value;
-// 	file = file.replace(/\\/g, '/').split('/').pop();
-// 	document.getElementById('file-name').innerHTML = '' + file;
 
-// 	var file = document.getElementById('myfiles').value;
-// 	file = file.replace(/\\/g, '/').split('/').pop();
-// 	document.getElementById('file-names').innerHTML = '' + file;
-// }
-//========================================================================================================================================================
 
 
 

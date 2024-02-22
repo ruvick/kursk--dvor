@@ -176,7 +176,7 @@ import "./files/map.js";
 import "./files/pincode-input.js";
 
 // Jquerry
-import "./files/jquerry-script.js";
+// import "./files/jquerry-script.js";
 import "./libs/jquery.inputmask.bundle.js";
 import "./libs/jquery.fancybox.min.js";
 //============================================================================================================================================================================================================================================
