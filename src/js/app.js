@@ -172,6 +172,9 @@ import "./files/reset.js";
 // Map
 import "./files/map.js";
 
+// Pincode
+import "./files/pincode-input.js";
+
 // Jquerry
 import "./files/jquerry-script.js";
 import "./libs/jquery.inputmask.bundle.js";
