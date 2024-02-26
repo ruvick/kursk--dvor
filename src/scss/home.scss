@@ -573,7 +573,7 @@ overflow: hidden;
 		margin-bottom: rem(10);
 	  }
 }
-@media (max-width: 480px){
+@media (max-width: 480px){ 
 	  height: rem(250);
 }
 }
@@ -878,14 +878,6 @@ color: rgba(2, 0, 32, 0.5);
 	&:not(:last-child){
 		margin-bottom: rem(40);
 	}
-	@media (max-width: 991px){
-		.arrow-block-navigation {
-			display: none;
-		}
-		.navigation-panel-product__link {
-			margin-right: 0;
-		}
-	}
 	@media (max-width: 768px){
 		  &:not(:last-child){
 			margin-bottom: rem(20);
@@ -894,6 +886,14 @@ color: rgba(2, 0, 32, 0.5);
 	}
 	@media (max-width: 730px){
 		  padding: 0 rem(15);
+	}
+		@media (max-width: 991px){
+		.arrow-block-navigation {
+			display: none;
+		}
+		.navigation-panel-product__link {
+			margin-right: 0;
+		}
 	}
 	@media (max-width: 480px){
 		.navigation-panel-product__title {
@@ -1002,3 +1002,8 @@ letter-spacing: 0em;
 }
 //====================================================================================================
  
+.ymaps-2-1-79-gototech {
+@media (max-width: 375px){
+	  margin-top: rem(-8);
+}
+}
