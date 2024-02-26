@@ -260,6 +260,9 @@ input[type=radio] {
 	transform-origin: 0 50%;
 	transition: transform 200ms, color 200ms;
 	top: rem(20);
+	span {
+		color: $redColor;
+	}
  }
  
  .Input-text:focus ~ .cut,

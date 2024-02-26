@@ -278,8 +278,7 @@ h4 {
 	span {
 		font-weight: 400;
 		margin-left: rem(3);
-		color: linear-gradient(0deg, #FFFFFF, #FFFFFF),
-			linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+		color: #FFFFFF80;
 	}
 }
 
@@ -871,6 +870,19 @@ input[type='checkbox']:checked+.switch-block__label {
 	}
 }
 
+.page-products--favorites {
+	.icons-card-product {
+		&._active {
+			._icon-favorite {
+				&::before {
+					content: "\e910";
+					color: $redColor;
+				}
+			}
+		}
+	}
+}
+
 .icons-card-product__icon {
 	&:not(:last-child) {
 		margin-bottom: rem(10);
@@ -1112,7 +1124,9 @@ input[type='checkbox']:checked+.switch-block__label {
 		}
 	}
 
-
+	@media (max-width: 375px){
+		padding: 0;
+	}
 
 	.actions-card-product__quantity {
 		@media (max-width: 540px) {

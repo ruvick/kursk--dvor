@@ -406,6 +406,9 @@
 	@media (max-width: 991px){
 		  padding-left: rem(20);
 	}
+	@media (max-width: 480px){
+		padding: rem(10);
+	}
   }
   .item-card-order__payment {
 	padding: rem(32) rem(10) rem(32) 0;
@@ -510,6 +513,11 @@
 	line-height: math.div(41, 32);
 	&:not(:last-child){
 		margin-bottom: rem(40);
+	}
+	@media (max-width: 480px){
+		&:not(:last-child){
+			margin-bottom: rem(5);
+		}
 	}
 }
 
@@ -777,8 +785,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 }
-.size-product__btn {
-}
+
 .btn-size {
 	display: flex;
 	justify-content: center;
@@ -818,6 +825,14 @@
 	background: rgba(240, 242, 248, 1);
 }
 
+.size-product__btn {
+	.btn-size__btn {
+		@media (max-width: 414px){
+			  font-size: rem(14);
+		}
+	}
+}
+
 .tabs--template {
 	flex-direction: column;
 	.tabs__navigation {
@@ -837,5 +852,37 @@
 	}
 	.tabs__content {
 		padding: rem(40) 0 0 0;
+	}
+}
+
+.header-summary__old-price {
+	align-self: flex-end;
+}
+
+.page-card--dveri .main-product {
+	.inner-product__descp {
+		@media (min-width: 992px){
+			max-height: rem(140);
+		}
+	}
+}
+
+
+.page-card--dveri {
+	.summary-product__actions {
+		grid-template-columns: repeat(auto-fit, minmax(10.125rem, 1fr));
+		gap: 0.625rem;
+		@media (max-width: 1024px){
+			grid-template-columns: repeat(auto-fit, minmax(10.125rem, 1fr));
+		}
+		@media (max-width: 414px){
+			grid-template-columns: repeat(auto-fit, minmax(rem(150), 1fr));  
+		}
+		.btn {
+			font-size: rem(12);
+		}
+	}
+	.summary-product {
+		padding: rem(15);
 	}
 }

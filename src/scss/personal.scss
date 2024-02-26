@@ -873,3 +873,19 @@
 		}
 	}
 }
+
+.page-personal {
+	.main-template {
+		@media (max-width: 768px){
+			gap: 0;
+		}
+	}
+}
+
+.personal-content__orders {
+	.body-orders {
+		@media (max-width: 414px){
+			padding: rem(12);
+		}
+	}
+}
