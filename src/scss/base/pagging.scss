@@ -94,10 +94,23 @@
 	&::before{
 		font-size: rem(8);
 	}
+	@media (max-width: 414px){
+		flex: 0 0 rem(30);
+		width: rem(30);
+		height: rem(30);
+	}
 }
 .pagging__list {
 	display: flex;
 	align-items: center;
+	@media (max-width: 414px){
+		  li:nth-child(2),
+		  li:nth-child(3),
+		  li:nth-child(4),
+		  li:nth-child(5) {
+			display: none;
+		  }
+	}
 }
 .pagging__item {
 	display: flex;
@@ -117,6 +130,12 @@
 	@media (max-width: 540px){
 		font-size: rem(14);
 		margin: 0 rem(3) 0 rem(3);
+	}
+
+	@media (max-width: 414px){
+		flex: 0 0 rem(30);
+		width: rem(30);
+		height: rem(30);
 	}
 
 	@media (any-hover: hover) {

@@ -158,6 +158,9 @@
 	display: none;
 	@media (max-width: 768px){
 		  display: flex;
+		  .control-products-group__select .select__title {
+			color: $mainColor;
+		  }
 	}
 	.control-products-group__select {
 		&:not(:last-child){
