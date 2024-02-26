@@ -1112,16 +1112,11 @@ input[type='checkbox']:checked+.switch-block__label {
 		}
 	}
 
-	.actions-card-product__quantity {
 
-		// &:not(:last-child){
-		// 	margin-right: rem(5);
-		// 	margin-bottom: rem(5);
-		// }
-		@media (max-width: 1366px) {
-			//   &:not(:last-child){
-			// 	margin-right: 0;
-			//   }
+
+	.actions-card-product__quantity {
+		@media (max-width: 540px) {
+			display: none;
 		}
 	}
 }
@@ -1234,7 +1229,6 @@ input[type='checkbox']:checked+.switch-block__label {
 	}
 }
 
-.navigation-panel-product__arrow-block {}
 
 .arrow-block-navigation {
 	display: flex;
@@ -1247,6 +1241,13 @@ input[type='checkbox']:checked+.switch-block__label {
 		height: rem(45);
 	}
 }
+
+.navigation-panel-product__arrow-block {
+	@media (max-width: 540px){
+		  display: none;
+	}
+}
+
 
 .arrow-sl-btn {}
 

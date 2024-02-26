@@ -743,6 +743,7 @@ color: rgba(2, 0, 32, 0.5);
 	@media (max-width: 1150px){
 		  flex: 0 1 100%;
 		  &:not(:last-child){
+			margin-right: 0;
 			margin-bottom: rem(20);
 		  }
 	}
