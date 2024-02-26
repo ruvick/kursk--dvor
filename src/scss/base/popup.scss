@@ -56,6 +56,20 @@ body.popup-show::after {
 	border-radius: rem(3);
 	&.popup__content_small{
 		max-width: rem(385);
+		@media (max-width: 540px){
+			max-width: 100%;
+			position: fixed;
+			bottom: 0;
+			.popup__content .popup__title {
+				font-size: rem(26);
+			}
+		}
+		@media (max-width: 414px){
+			padding: rem(15);
+			.popup__main {
+				padding-top: rem(25);
+			}
+		}
 	}
 	.lock & {
 		visibility: visible;
@@ -260,6 +274,10 @@ letter-spacing: 0em;
 		background: rgba(2, 0, 32, 0.03);
 		&:not(:last-child){
 			margin-right: rem(5);
+		}
+		@media (max-width: 345px){
+			width: rem(40);
+			height: rem(40);  
 		}
 	}
 } 
