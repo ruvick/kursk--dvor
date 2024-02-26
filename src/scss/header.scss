@@ -110,7 +110,7 @@
 	}
 
 	&__logo {
-		margin-right: rem(40);
+		margin-right: rem(35); 
 	}
 
 	&__menu {
@@ -212,7 +212,7 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-between; 
 		flex-wrap: wrap;
 		margin: 0px rem(3);
 		padding: rem(5) 0px;
@@ -263,6 +263,9 @@
 	}
 
 	&__link {
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(18, 14);
     	color: rgba(2, 0, 32, 0.7);
     	transition: $mainTransition;
 	}
