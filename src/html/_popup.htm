@@ -17,8 +17,12 @@
 								<label for="input" class="Input-label">Телефон</label>
 								<span class="Input__check _icon-check"></span>
 							</div>
-							<button type="submit" class="form-popup__btn btn">Получить код</button>
-							<a href="" class="form-popup__btn btn btn_light">Войти по паролю</a>
+
+							<div class="form-popup__buttons">
+								<button type="submit" class="form-popup__btn btn">Получить код</button>
+								<a href="" class="form-popup__btn btn btn_light">Войти по паролю</a>
+							</div>
+
 						</div>
 					</form>
 				</div>
@@ -53,7 +57,9 @@
 								<label for="input" class="Input-label">Email</label>
 								<span class="Input__check _icon-check"></span>
 							</div>
-							<button type="submit" class="form-popup__btn btn">Сохранить</button>
+							<div class="form-popup__buttons">
+								<button type="submit" class="form-popup__btn btn">Сохранить</button>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -89,15 +95,17 @@
 								<button class="input__viewpass _icon-hide" type="button"></button>
 								<!-- <span class="Input__check _icon-check"></span> -->
 							</div>
-							<div class="form-popup__action">
-								<label for="check" class="checkbox">
-									<input id="check" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-										name="form[]">
-									<span class="checkbox__text"><span>Запомнить меня</span></span>
-								</label>
-								<a href="" class="form-popup__link-reg">Забыли пароль?</a>
+							<div class="form-popup__buttons">
+								<div class="form-popup__action">
+									<label for="check" class="checkbox">
+										<input id="check" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+											name="form[]">
+										<span class="checkbox__text"><span>Запомнить меня</span></span>
+									</label>
+									<a href="" class="form-popup__link-reg">Забыли пароль?</a>
+								</div>
+								<button type="button" class="form-popup__btn btn">Войти</button>
 							</div>
-							<button type="button" class="form-popup__btn btn">Войти</button>
 						</div>
 					</form>
 				</div>
@@ -127,7 +135,9 @@
 							</div>
 							<div class="form-popup__notification">Информация по восстановлению пароля будет выслана Вам по
 								Email</div>
-							<button type="submit" class="form-popup__btn btn">Восстановить</button>
+							<div class="form-popup__buttons">
+								<button type="submit" class="form-popup__btn btn">Восстановить</button>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -188,12 +198,13 @@
 										<a href="">персональных данных</a></span></span>
 							</label>
 
-							<div class="form-popup__action">
-								<div class="form-popup__question">Уже зарегистрированы?</div>
-								<a href="" class="form-popup__link-reg">Войти</a>
+							<div class="form-popup__buttons">
+								<div class="form-popup__action">
+									<div class="form-popup__question">Уже зарегистрированы?</div>
+									<a href="" class="form-popup__link-reg">Войти</a>
+								</div>
+								<button type="submit" class="form-popup__btn btn">Зарегистрироваться</button>
 							</div>
-
-							<button type="submit" class="form-popup__btn btn">Зарегистрироваться</button>
 						</div>
 					</form>
 				</div>
@@ -269,8 +280,9 @@
 											<a href="">персональных данных</a></span></span>
 								</label>
 							</div>
-
-							<button type="submit" class="form-popup__btn btn">Отправить</button>
+							<div class="form-popup__buttons">
+								<button type="submit" class="form-popup__btn btn">Отправить</button>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -327,8 +339,9 @@
 											<a href="">персональных данных</a></span></span>
 								</label>
 							</div>
-
-							<button type="submit" class="form-popup__btn btn">Отправить</button>
+							<div class="form-popup__buttons">
+								<button type="submit" class="form-popup__btn btn">Отправить</button>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -461,8 +474,9 @@
 											<a href="">персональных данных</a></span></span>
 								</label>
 							</div>
-
-							<button type="submit" class="form-popup__btn btn">Отправить</button>
+							<div class="form-popup__buttons">
+								<button type="submit" class="form-popup__btn btn">Отправить</button>
+							</div>
 						</div>
 					</form>
 				</div>

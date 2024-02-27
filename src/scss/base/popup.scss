@@ -25,6 +25,9 @@ body.popup-show::after {
 	padding: rem(30) rem(10);
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
+	@media (max-width: 540px){
+		 padding: 0; 
+	}
 }
 .popup_show {
 	visibility: visible;
@@ -44,6 +47,9 @@ body.popup-show::after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: 540px){
+		 height: 100%; 
+	}
 }
 .popup__content {
 	visibility: hidden;
@@ -54,14 +60,31 @@ body.popup-show::after {
 	width: 100%;
 	max-width: rem(432);
 	border-radius: rem(3);
+
+	@media (max-width: 540px){
+		max-width: 100%;
+		  height: 100%;
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
+		//   align-items: center;
+	}
+	@media (max-width: 480px){
+		 padding: rem(15); 
+	}
+
 	&.popup__content_small{
 		max-width: rem(385);
 		@media (max-width: 540px){
 			max-width: 100%;
 			position: fixed;
 			bottom: 0;
+			height: auto;
 			.popup__content .popup__title {
 				font-size: rem(26);
+			}
+			.popup__body {
+				padding-bottom: 0;
 			}
 		}
 		@media (max-width: 414px){
@@ -84,6 +107,11 @@ body.popup-show::after {
 	}
 	.popup__body {
 		// padding: rem(30);
+		@media (max-width: 540px){
+			overflow: auto;
+			// height: 100%;
+			padding-bottom: 100px; 
+		}
 	}
 	.popup__header {
 
@@ -95,6 +123,9 @@ body.popup-show::after {
 		letter-spacing: 0em;
 		&:not(:last-child){
 			margin-bottom: rem(20);
+		}
+		@media (max-width: 480px){
+			  font-size: rem(26);
 		}
 	}
 	.popup__subtitle {
@@ -116,6 +147,9 @@ line-height: math.div(18, 14);
 	}
 	.popup__main {
 		padding-top: rem(40);
+		// @media (max-width: 540px){
+		// 	 height: 100%; 
+		// }
 	}
 }
 
@@ -134,9 +168,15 @@ line-height: math.div(18, 14);
 .form-popup {
 	display: flex;
 	flex-direction: column;
+	// @media (max-width: 540px){
+	// 	height: 100%; 
+	// }
 	.checkbox {
 		padding: rem(41) 0;
 		display: block;
+		@media (max-width: 480px){
+			 padding: 0; 
+		}
 	}
 	.checkbox__input {
 	}
@@ -164,6 +204,15 @@ transition: $mainTransition;
 &::before{
 	margin-right: rem(10);
 }
+	}
+	@media (max-width: 480px){
+		 font-size: rem(12); 
+	}
+	.checkbox__text span {
+		@media (max-width: 480px){
+			 margin-left: 0; 
+			 font-size: rem(12);
+		}
 	}
 }
 
@@ -197,10 +246,16 @@ color: rgba(2, 0, 32, 0.5);
 	&:not(:last-child){
 		margin-bottom: rem(15);
 	}
+	@media (max-width: 540px){
+		  height: 100%;
+	}
 }
 
 .form-popup__btn {
 	width: 100%;
+	@media (max-width: 480px){
+		 font-size: rem(14); 
+	}
 	&.btn_light {
 		color: $blueColor;
 		font-weight: 400;
@@ -285,6 +340,9 @@ letter-spacing: 0em;
 
 .form-popup__action {
 	padding: rem(40) 0;
+	@media (max-width: 480px){
+		 padding: 0; 
+	}
 	.checkbox {
 		padding: 0;
 	}
@@ -297,6 +355,9 @@ letter-spacing: 0em;
 	gap: rem(5);
 	&:not(:last-child){
 		margin-bottom: rem(15); 
+	}
+	@media (max-width: 480px){
+		 flex-direction: column; 
 	}
 	.form-popup__input {
 		&:not(:last-child){
@@ -313,3 +374,28 @@ letter-spacing: 0em;
 	}
 }
 
+.form-popup__buttons {
+	@media (max-width: 540px){
+		position: fixed;
+		bottom: 10px;
+		width: 100%;
+		left: 0;
+		padding: 0 rem(15);
+		background-color: #fff;
+		padding-top: rem(5);
+	}
+}
+
+.popup__content_success {
+	@media (max-width: 540px){
+		max-width: 100%;
+		position: fixed;
+		bottom: 0;
+		height: auto;	  
+	}
+	.popup__body {
+		@media (max-width: 540px){
+			 padding-bottom: rem(25); 
+		}
+}
+}
