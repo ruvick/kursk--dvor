@@ -285,6 +285,9 @@
 	justify-content: space-between;
 	padding: rem(20);
 	background-color: #fff;
+	@media (max-width: 480px){
+		 padding: rem(15); 
+	}
 }
 
 .body-orders__actions {
@@ -467,6 +470,9 @@
 .body-information {
 	display: flex;
 	padding-top: rem(20);
+	@media (max-width: 540px){
+		 flex-direction: column; 
+	}
 }
 
 .body-information__column {
@@ -474,6 +480,14 @@
 
 	&:not(:last-child) {
 		margin-right: rem(25);
+	}
+	@media (max-width: 540px){
+		 	&:not(:last-child) {
+		margin-right: rem(0);
+	} 
+	&:not(:last-child){
+		margin-bottom: rem(15);
+	}
 	}
 }
 
@@ -485,11 +499,20 @@
 	&:not(:last-child) {
 		margin-bottom: rem(15);
 	}
+	@media (max-width: 480px){
+		&:not(:last-child) {
+			margin-bottom: rem(5);
+		}
+	}
 }
 
 .body-information__input {
 	.Input-text {
+		padding-left: 0;
 		background: rgb(240, 242, 248);
+	}
+	.Input-label {
+		left: 5px;
 	}
 }
 
@@ -557,6 +580,9 @@
 
 	.item-card-order__total {
 		flex-direction: column;
+		@media (max-width: 540px){
+			 flex-direction: row; 
+		}
 	}
 }
 

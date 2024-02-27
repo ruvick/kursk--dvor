@@ -47,8 +47,13 @@ window.onload = function () {
 		}
 
 		// Кнопка избранное 
-		if (targetElement.classList.contains('_icon-favorite')) {
+		if (targetElement.classList.contains('icons-card-product__icon')) {
 			targetElement.closest('.icons-card-product').classList.toggle('_active');
+		}
+
+		// Кнопка избранное 
+		if (targetElement.classList.contains('item-card-order__icon')) {
+			targetElement.closest('.item-card-order__icons').classList.toggle('_active');
 		}
 	}
 

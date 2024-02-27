@@ -107,7 +107,7 @@
 		margin-right: rem(25);
 	}
   }
-  .item-card-order__icons {
+  .item-card-order__icons { 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -116,6 +116,13 @@
 	right: 0;
 	height: 100%;
 	padding: rem(10);
+	&._active{
+		._icon-favorite {
+			&::before {
+				content: "\e910";
+			}
+		}
+	}
 }
 .item-card-order__icon {
 	&:not(:last-child){
