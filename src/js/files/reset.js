@@ -53,13 +53,13 @@ if (document.documentElement.clientWidth > 1024) {
 	})
 }
 
-window.addEventListener('click', e => { // при клике в любом месте окна браузера
-	const target = e.target // находим элемент, на котором был клик
-	if (!target.closest('.catalog-btn') && !target.closest('.bottom-header-menu') && !target.closest('.header__main')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
-		// menuBody.classList.remove('active')
-		// body.classList.remove('_lock')
-		// headsearch.classList.remove('_active')
-		menuClose()
-		bodyUnlock()
-	}
-})
+// window.addEventListener('click', e => { // при клике в любом месте окна браузера
+// 	const target = e.target // находим элемент, на котором был клик
+// 	if (!target.closest('.catalog-btn') && !target.closest('.bottom-header-menu') && !target.closest('.header__main')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+// 		// menuBody.classList.remove('active')
+// 		// body.classList.remove('_lock')
+// 		// headsearch.classList.remove('_active')
+// 		menuClose()
+// 		bodyUnlock()
+// 	}
+// })

@@ -1,7 +1,7 @@
 // (c) Фрилансер по жизни, Хмурый Кот
 // Документация: 
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile, bodyLockStatus, bodyLockToggle } from "../files/functions.js";
+import { isMobile, bodyLockStatus, bodyLockToggle, bodyLock, bodyUnlock } from "../files/functions.js";
 
 export class Popup {
 	constructor(options) {
@@ -243,6 +243,7 @@ export class Popup {
 		if (!this._reopen) {
 			document.body.classList.remove(this.options.classes.bodyActive);
 			bodyLockToggle();
+			// bodyUnlock();
 			this.isOpen = false;
 		}
 		// Очищение адресной строки
