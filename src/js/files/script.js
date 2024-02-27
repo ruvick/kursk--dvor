@@ -121,6 +121,7 @@ window.onload = function () {
 				btnFilter.addEventListener("click", function (e) {
 					filterCatalog.classList.add('_active');
 					bodyLock();
+					darkBody();
 				});
 			}
 		}
@@ -129,6 +130,7 @@ window.onload = function () {
 				mobFiltercl.addEventListener("click", function (e) {
 					filterCatalog.classList.remove('_active');
 					bodyUnlock();
+					darkBody();
 				});
 			}
 		}
