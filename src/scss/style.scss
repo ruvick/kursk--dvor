@@ -222,7 +222,7 @@ body {
 		  padding: rem(40) 0;
 	}
 	.__container {
-		@media (max-width: 730px){
+		@media (max-width: 1024px){
 			 padding: 0; 
 		}
 	  }
@@ -357,6 +357,11 @@ line-height: math.div(18, 14);
 	@media (max-width: 480px){
 		padding: rem(20) 0;
 	}
+	.may-need__container {
+		@media (max-width: 1024px){
+			 padding: 0; 
+		}
+	  }
 }
 //========================================================================================================================================================
 

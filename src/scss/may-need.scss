@@ -2,4 +2,7 @@
 	&:not(:last-child){
 		margin-bottom: rem(42);
 	}
+	@media (max-width: 1024px){
+		 padding: 0 rem(15);
+	}
 }

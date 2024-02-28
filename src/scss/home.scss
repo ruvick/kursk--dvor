@@ -462,7 +462,7 @@ transform: rotate(8deg);
 		margin: 0;
 		overflow: auto;
 		width: auto;
-		margin: 0 rem(-10);
+		margin: 0 rem(-15);
 		padding: 0 rem(10);
 	}
 }
@@ -879,6 +879,9 @@ color: rgba(2, 0, 32, 0.5);
 	&:not(:last-child){
 		margin-bottom: rem(40);
 	}
+	@media (max-width: 1024px){
+		 padding: 0 rem(15); 
+	}
 	@media (max-width: 768px){
 		  &:not(:last-child){
 			margin-bottom: rem(20);
@@ -943,9 +946,11 @@ padding: rem(10);
 }
 .navigation-panel-cat {
 }
+
+.slider-cards-block,
 .great-deals__slider {
-	@media (max-width: 730px){
-		padding: 0 rem(10);
+	@media (max-width: 1024px){
+		padding: 0 rem(10) !important;
 	}
 }
 .navigation-panel-cat__form {
