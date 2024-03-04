@@ -30,6 +30,7 @@ import { images } from "./config/gulp-tasks/images.js";
 import { ftp } from "./config/gulp-tasks/ftp.js";
 import { zip } from "./config/gulp-tasks/zip.js";
 import { sprite } from "./config/gulp-tasks/sprite.js";
+// import { json } from "./config/gulp-tasks/json.js";
 import { gitignore } from "./config/gulp-tasks/gitignore.js";
 import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
 
@@ -49,6 +50,7 @@ export { js }
 export { images }
 export { fonts }
 export { sprite }
+// export { json }
 export { ftp }
 export { zip }
 

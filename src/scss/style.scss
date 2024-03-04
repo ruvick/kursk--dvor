@@ -10,7 +10,7 @@
 
 // Подключение иконочных шрифтов ==============================================================================================================================================================================================================================================================================
 // Подключить если есть файл иконочного шрифта
-@import "fonts/icons"; 
+@import "fonts/icons";
 
 // Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
 $fontFamily: "Onest";
@@ -20,7 +20,7 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 // Основные цвета
 $mainBgColor: #fbfbfb;
 $mainColor: #020020; // Цвет шрифта по умолчанию   
-$blueColor: #120B8D; 
+$blueColor: #120B8D;
 $redColor: #FF2E00;
 $greenColor: #00BF36;
 $darkColor: #02002080;
@@ -62,36 +62,42 @@ $mobileSmall: em(479.98); // Телефоны S
 body {
 	font-weight: 400;
 	background-color: $mainBgColor;
+
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
 		touch-action: none;
 	}
 }
+
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+
 	// overflow: hidden;
 	// Сайт загружен
-	.loaded & {
-	}
+	.loaded & {}
+
 	// Прижимаем footer
-	> main {
+	>main {
 		flex: 1 1 auto;
 		padding-bottom: rem(50);
 	}
+
 	// Фикс для слайдеров
-	> * {
+	>* {
 		min-width: 0;
 	}
 }
+
 .page {
-	@media (min-width: 1025px){
+	@media (min-width: 1025px) {
 		padding-top: rem(185);
 	}
 }
+
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
 
 /*
@@ -101,6 +107,7 @@ body {
 Снипет (HTML): cnt
 */
 @if ($responsiveType==1) {
+
 	// Отзывчивая
 	[class*="__container"] {
 		@if ($maxWidthContainer>0) {
@@ -108,30 +115,41 @@ body {
 			box-sizing: content-box;
 			margin: 0 auto;
 		}
+
 		@if ($containerPadding>0) {
 			padding: 0 rem(math.div($containerPadding, 2));
 		}
 	}
-} @else {
+}
+
+@else {
+
 	// По брейк-поинтам
 	[class*="__container"] {
 		margin: 0 auto;
+
 		@if ($maxWidthContainer>0) {
 			max-width: rem($maxWidthContainer);
 			box-sizing: content-box;
-		} @else {
+		}
+
+		@else {
 			@if ($containerPadding>0) {
 				padding: 0 rem(math.div($containerPadding, 2));
 			}
 		}
+
 		@media (max-width: $pc) {
 			max-width: rem(970);
 		}
+
 		@media (max-width: $tablet) {
 			max-width: rem(750);
 		}
+
 		@media (max-width: $mobile) {
 			max-width: none;
+
 			@if ($containerPadding>0 and $maxWidthContainer>0) {
 				padding: 0 rem(math.div($containerPadding, 2));
 			}
@@ -156,232 +174,294 @@ body {
 // Подключение стилей отдельных страниц
 @import "ui-kit";
 @import "template";
-@import "catalog-root"; 
-@import "stocks"; 
+@import "catalog-root";
+@import "stocks";
 @import "bascet";
 @import "modal";
 @import "sale";
 @import "catalog";
 @import "personal";
-@import "calculator"; 
-@import "making-order";  
-@import "may-need"; 
-@import "product"; 
+@import "calculator";
+@import "making-order";
+@import "may-need";
+@import "product";
 //========================================================================================================================================================
 
 .page__main-sliders {
 	padding: rem(30) 0 rem(50) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(30) 0 rem(40) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(30) 0 rem(40) 0;
 	}
-	@media (max-width: 375px){
-		padding: rem(25) 0 rem(30) 0; 
+
+	@media (max-width: 375px) {
+		padding: rem(25) 0 rem(30) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page__advantages {
 	padding: rem(50) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(40) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(30) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page__contacts {
 	padding: rem(50) 0;
-	@media (max-width: 860px){
-		  padding: rem(40) 0;
+
+	@media (max-width: 860px) {
+		padding: rem(40) 0;
 	}
-	@media (max-width: 480px){
-		  padding: rem(30) 0;
+
+	@media (max-width: 480px) {
+		padding: rem(30) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page__order-call {
 	padding: rem(50) 0 0 0;
-	@media (max-width: 768px){
-		  padding: rem(40) 0;
+
+	@media (max-width: 768px) {
+		padding: rem(40) 0;
 	}
-	@media (max-width: 480px){
-		  padding: rem(30) 0;
+
+	@media (max-width: 480px) {
+		padding: rem(30) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page__great-deals {
 	padding: rem(50) 0;
-	@media (max-width: 768px){
-		  padding: rem(40) 0;
+
+	@media (max-width: 768px) {
+		padding: rem(40) 0;
 	}
+
 	.__container {
-		@media (max-width: 1024px){
-			 padding: 0; 
+		@media (max-width: 1024px) {
+			padding: 0;
 		}
-	  }
-	@media (max-width: 480px){
-		  padding: rem(30) 0;
+	}
+
+	@media (max-width: 480px) {
+		padding: rem(30) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page-template__modal {
 	padding: rem(50) 0;
 }
+
 //========================================================================================================================================================
 
 .page__catalog-root {
 	display: none;
 	padding: rem(25) 0 rem(15) 0;
-	@media (max-width: 540px){
-		 display: block; 
+
+	@media (max-width: 540px) {
+		display: block;
 	}
+
 	.catalog-root__inner {
-		@media (max-width: 445px){
+		@media (max-width: 445px) {
 			justify-content: space-between;
 		}
-  }
-  .catalog-root__column {
-	@media (max-width: 350px){
-		 flex: 0 1 50%; 
 	}
-}
+
+	.catalog-root__column {
+		@media (max-width: 350px) {
+			flex: 0 1 50%;
+		}
+	}
+
 	.card-catalog {
 		padding: rem(19);
-		@media (max-width: 445px){
-			  padding: rem(5);
+
+		@media (max-width: 445px) {
+			padding: rem(5);
 		}
-		@media (max-width: 375px){
-			  padding: 0;
+
+		@media (max-width: 375px) {
+			padding: 0;
 		}
-  }
-  .card-catalog__img {
-	width: 75%;
-	padding-bottom: 75%;
-}
-  .card-catalog__descp {
-	font-size: rem(12);
-	line-height: math.div(15.6, 12);
-}
+	}
+
+	.card-catalog__img {
+		width: 75%;
+		padding-bottom: 75%;
+	}
+
+	.card-catalog__descp {
+		font-size: rem(12);
+		line-height: math.div(15.6, 12);
+	}
+
 	.catalog-root__link {
-font-size: rem(14);
-font-weight: 600;
-line-height: math.div(18, 14);
+		font-size: rem(14);
+		font-weight: 600;
+		line-height: math.div(18, 14);
 		width: 100%;
 		margin-top: rem(10);
 		padding: rem(11) rem(20);
 	}
 }
+
 //========================================================================================================================================================
 
 .page__header {
 	padding: rem(50) 0 rem(25) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(40) 0 rem(20) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(25) 0 rem(20) 0;
 	}
+
 	.breadcrumbs {
-		&:not(:last-child){
+		&:not(:last-child) {
 			margin-bottom: rem(25);
 		}
-		@media (max-width: 480px){
-			  &:not(:last-child){
+
+		@media (max-width: 480px) {
+			&:not(:last-child) {
 				margin-bottom: rem(20);
-			  }
+			}
 		}
 	}
 }
+
 //========================================================================================================================================================
 
-.page-template {
+.page-template {}
 
-}
 //========================================================================================================================================================
 
 .page-products__catalog-root {
 	padding: 0 0 rem(20) 0;
 }
+
 //========================================================================================================================================================
 
 .page__pagging {
 	margin-top: rem(32);
 }
+
 //========================================================================================================================================================
 .page__calculator {
 	padding: rem(0) 0 rem(50) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(0) 0 rem(30) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(5) 0 rem(20) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page__template {
 	padding: rem(0) 0 rem(50) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(0) 0 rem(30) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(5) 0 rem(20) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page__bascet {
 	padding: rem(0) 0 rem(50) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(0) 0 rem(30) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(5) 0 rem(20) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page__may-need {
 	padding: rem(50) 0 rem(50) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(30) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(20) 0;
 	}
+
 	.may-need__container {
-		@media (max-width: 1024px){
-			 padding: 0; 
+		@media (max-width: 1024px) {
+			padding: 0;
 		}
-	  }
+	}
 }
+
 //========================================================================================================================================================
 
 .page__product {
 	padding: rem(0) 0 rem(50) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(0) 0 rem(30) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(5) 0 rem(20) 0;
 	}
 }
+
 //========================================================================================================================================================
 
 .page__additionally {
 	padding: rem(50) 0 rem(50) 0;
-	@media (max-width: 768px){
+
+	@media (max-width: 768px) {
 		padding: rem(40) 0 rem(20) 0;
 	}
-	@media (max-width: 480px){
+
+	@media (max-width: 480px) {
 		padding: rem(25) 0 rem(20) 0;
 	}
+}
+
+//========================================================================================================================================================
+
+// Cart 
+._flyImage._ibg {
+	opacity: 1;
+	position: fixed;
+	z-index: 100;
+	transition: all 1s ease 0s;
 }
