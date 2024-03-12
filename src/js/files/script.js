@@ -63,8 +63,8 @@ window.onload = function () {
 		}
 
 		// Кнопка В корзину
-		if (targetElement.classList.contains('actions-card-product__btn-bascket')) {
-			const productId = targetElement.closest('.card-product').dataset.pid;
+		if (targetElement.classList.contains('btnAddBascet')) {
+			const productId = targetElement.closest('.productAddBascet').dataset.pid;
 			addToCart(targetElement, productId);
 			e.preventDefault();
 		}
@@ -75,9 +75,24 @@ window.onload = function () {
 				document.querySelector('.cart-header').classList.toggle('_active');
 			}
 			e.preventDefault();
-		} else if (!targetElement.closest('.cart-header') && !targetElement.classList.contains('actions-card-product__btn-bascket')) {
+		} else if (!targetElement.closest('.cart-header') && !targetElement.classList.contains('btnAddBascet')) {
 			document.querySelector('.cart-header').classList.remove('_active');
 		}
+		// if (targetElement.classList.contains('actions-card-product__btn-bascket')) { 
+		// 	const productId = targetElement.closest('.card-product').dataset.pid;
+		// 	addToCart(targetElement, productId);
+		// 	e.preventDefault();
+		// }
+
+		// // Открытие корзины-товаров 
+		// if (targetElement.classList.contains('cart-header__icon') || targetElement.closest('.cart-header__icon')) {
+		// 	if (document.querySelector('.cart-list').children.length > 0) {
+		// 		document.querySelector('.cart-header').classList.toggle('_active');
+		// 	}
+		// 	e.preventDefault();
+		// } else if (!targetElement.closest('.cart-header') && !targetElement.classList.contains('actions-card-product__btn-bascket')) {
+		// 	document.querySelector('.cart-header').classList.remove('_active');
+		// }
 
 		// Удаление товара
 		if (targetElement.classList.contains('cart-list__delete')) {
@@ -250,7 +265,7 @@ window.onload = function () {
 			const stickerQuantity = item.stickerQuantity;
 
 			let productsTemplate = `
-			<div data-pid="${productId}" class="card-product">
+			<div data-pid="${productId}" class="card-product productAddBascet">
 			<div class="card-product__image image-card-product swiper">
 				<div class="image-card-product__stikcers-block sticker-block">
 					<span class="sticker _red">${sticker} <span>${stickerQuantity} шт</span></span>
@@ -262,7 +277,7 @@ window.onload = function () {
 				</div>
 				<div class="swiper-wrapper">
 					<a data-fancybox="${productTrigger}" data-src="img/card-product/${productImage}"
-						class="fancybox slider-card-product__slide swiper-slide _ibg">
+						class="fancybox slider-card-product__slide swiper-slide imageAddBascet _ibg">
 						<img src="img/card-product/${productImage}" loading="lazy" alt="Картинка">
 					</a>
 				</div>
@@ -274,7 +289,7 @@ window.onload = function () {
 					</div>
 					<div class="body-card-product__item article-card">Арт: ${vendorCode}</div>
 				</div>
-				<a href="${productUrl}" class="body-card-product__title">
+				<a href="${productUrl}" class="body-card-product__title titleAddBascet">
 					${productTitle}
 				</a>
 				<div class="body-card-product__size size-product-card"><span>${productSize} мм</span></div>
@@ -295,7 +310,7 @@ window.onload = function () {
 						</div>
 						<div class="quantity__button quantity__button_plus"></div>
 					</div>
-					<button type="button" class="actions-card-product__btn-bascket btn _icon-baskcet">В
+					<button type="button" class="actions-card-product__btn-bascket btn btnAddBascet _icon-baskcet">В
 						корзину</button>
 				</div>
 				<!-- <div class="actions-card-product__btn">Сообщить о поступлении</div> -->
@@ -317,7 +332,7 @@ window.onload = function () {
 
 			const cart = document.querySelector('.cart-header__icon');
 			const product = document.querySelector(`[data-pid="${productId}"]`);
-			const productImage = product.querySelector('.slider-card-product__slide');
+			const productImage = product.querySelector('.imageAddBascet');
 
 			const productImageFly = productImage.cloneNode(true);
 
@@ -377,8 +392,8 @@ window.onload = function () {
 			}
 			if (!cartProduct) {
 				const product = document.querySelector(`[data-pid="${productId}"]`);
-				const cartProductImage = product.querySelector('.slider-card-product__slide').innerHTML;
-				const cartProductTitle = product.querySelector('.body-card-product__title').innerHTML;
+				const cartProductImage = product.querySelector('.imageAddBascet').innerHTML;
+				const cartProductTitle = product.querySelector('.titleAddBascet').innerHTML;
 				const cartProductContent =
 					`
 				<a href="card-detail.html" class="cart-list__image _ibg">${cartProductImage}</a>
