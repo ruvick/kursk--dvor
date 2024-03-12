@@ -302,6 +302,9 @@ color: $mainColor;
 	display: none;
 	@media (max-width: 768px){ 
 		 display: block; 
+		 &::before{
+			font-size: 20px;
+		 }
 	}
 }
 

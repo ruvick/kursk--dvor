@@ -275,7 +275,7 @@
 }
 .cart-summary__btn {
 	width: 100%;
-	background: rgba(18, 11, 141, 0.2);
+	// background: rgba(18, 11, 141, 0.2);
 	color: #fff;
 	&:not(:last-child){ 
 		margin-bottom: rem(10); 
@@ -284,7 +284,7 @@
 
 	@media (any-hover: hover) {
 	&:hover {
-		color: $mainColor;
+		// color: $mainColor;
 	}
 	}
 }

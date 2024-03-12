@@ -16,7 +16,8 @@
 
 	@media (any-hover: hover) {
 	&:hover {
-		background: $mediumGrey;
+		// background: $mediumGrey;
+		background: rgba(18, 11, 141, 0.5);
 	}
 	}
 	
@@ -56,6 +57,10 @@
 .btn_light {
 	color: $mainColor;
 	background: $lightGrey;
+	&:hover{
+		color: #fff;
+		background: $blueColor;
+	}
 }
 
 

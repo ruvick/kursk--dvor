@@ -16,6 +16,9 @@
 	grid-template-columns: 1fr rem(230);
 	column-gap: rem(65);
 	padding-bottom: rem(10);
+	@media (max-width: 1500px){
+		grid-template-columns: 1fr rem(250);
+	}
 	@media (max-width: 1366px){
 		column-gap: rem(35);
 	}

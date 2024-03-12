@@ -208,6 +208,10 @@ body {
 .page__advantages {
 	padding: rem(50) 0;
 
+	@media (min-width: 541px){
+		  display: block;
+	}
+
 	@media (max-width: 768px) {
 		padding: rem(40) 0;
 	}
@@ -215,6 +219,14 @@ body {
 	@media (max-width: 480px) {
 		padding: rem(30) 0;
 	}
+	display: none;
+}
+
+.page__advantages--mob {
+	@media (min-width: 541px){
+		  display: none;
+	}
+	display: block;
 }
 
 //========================================================================================================================================================

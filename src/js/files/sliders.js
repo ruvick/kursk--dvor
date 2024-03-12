@@ -422,8 +422,8 @@ function initSliders() {
 			},
 			// Arrows
 			navigation: {
-				nextEl: '.images-product__slider .arrow-sl-btn_next',
-				prevEl: '.images-product__slider .arrow-sl-btn_prev',
+				nextEl: '.images-product__slider .arrow-sl-btn_prev ',
+				prevEl: '.images-product__slider .arrow-sl-btn_next',
 			},
 			breakpoints: {
 				// 320: {
