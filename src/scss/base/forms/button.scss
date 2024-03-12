@@ -57,9 +57,11 @@
 .btn_light {
 	color: $mainColor;
 	background: $lightGrey;
-	&:hover{
-		color: #fff;
-		background: $blueColor;
+	@media (any-hover: hover){
+		 &:hover { 
+			color: #fff;
+			background: $blueColor;
+	  } 
 	}
 }
 

@@ -74,6 +74,13 @@ function initSliders() {
 				el: '.image-card-product__dotts',
 				clickable: true,
 			},
+			// pagination: {
+			// 	el: '.image-card-product__dotts',
+			// 	clickable: true,
+			// 	renderBullet: function (index, className) {
+			// 		return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// 	},
+			// },
 			// Arrows
 			// navigation: {
 			// 	nextEl: '.slider-rooms .slider-arrow_next',

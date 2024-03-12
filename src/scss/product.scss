@@ -184,6 +184,9 @@
 	}
 	display: flex;
 	margin-top: rem(20);
+	&.swiper-pagination-lock {
+		display: none;
+  }
 }
 
 .page-card--dveri {
@@ -308,9 +311,16 @@
 	line-height: math.div(20, 16);
 }
 
-.body-product__btn {
+.body-product__btn { 
 	width: 100%;
+	.inner-product__row._active & {
+		&::before{
+			content: "\e910";
+		}
+	}
 }
+
+
 
 .body-product__inner {
 	&:not(:last-child){

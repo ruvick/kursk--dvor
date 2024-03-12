@@ -293,21 +293,23 @@ color: $redColor;
 	background-position: center !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important; 
-	@media (max-width: 768px){
-		  min-height: rem(217);
-		  background: url('../img/main-sliders/02-mob.jpg') 0 0 no-repeat !important;
-		  	background-position: center !important;
-	background-size: cover !important;
-	background-repeat: no-repeat !important; 
-	border-radius: rem(3);
+
+	@media (max-width: 768px) {
+		min-height: rem(217);
+		background: url('../img/main-sliders/02-mob.jpg') 0 0 no-repeat !important;
+		background-position: center !important;
+		background-size: cover !important;
+		background-repeat: no-repeat !important; 
+		border-radius: rem(3);
 	}
+
 	@media (max-width: 540px){
 		 min-height: rem(150); 
 	}
 	@media (max-width: 480px){
 		  min-height: rem(120);  
 	}
-		@media (max-width: 375px){
+		@media (max-width: 445px){
 		  min-height: rem(104);  
 	}
 }
@@ -352,7 +354,7 @@ letter-spacing: 0em;
 @media (max-width: 540px){
 	  	  font-size: rem(28);
 }
-@media (max-width: 414px){
+@media (max-width: 445px){
 	font-size: rem(26);
 }
 @media (max-width: 375px){
@@ -374,7 +376,7 @@ color: rgba(2, 0, 32, 0.7);
 @media (max-width: 768px){
 	  font-size: rem(14);
 }
-@media (max-width: 375px){
+@media (max-width: 445px){
 	  font-size: rem(12);
 	  &:not(:last-child){
 	margin-bottom: rem(0);

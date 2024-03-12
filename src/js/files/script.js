@@ -46,14 +46,17 @@ window.onload = function () {
 			}
 		}
 
-		// Кнопка избранное 
+		// Кнопки избранное 
 		if (targetElement.classList.contains('_icon-favorite')) {
-			targetElement.closest('.icons-card-product').classList.toggle('_active');
-		}
-
-		// Кнопка избранное 
-		if (targetElement.classList.contains('item-card-order__icon')) {
-			targetElement.closest('.item-card-order__icons').classList.toggle('_active');
+			if (targetElement.closest('.icons-card-product')) {
+				targetElement.closest('.icons-card-product').classList.toggle('_active');
+			}
+			if (targetElement.closest('.inner-product__row')) {
+				targetElement.closest('.inner-product__row').classList.toggle('_active');
+			}
+			if (targetElement.closest('.item-card-order__icons')) {
+				targetElement.closest('.item-card-order__icons').classList.toggle('_active');
+			}
 		}
 
 		// Кнопка Показать еще 
