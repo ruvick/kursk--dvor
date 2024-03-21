@@ -350,9 +350,11 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 6,
+			// slidesPerGroup: 1,
 			// slidesPerView: 'auto',
 			spaceBetween: 10,
-			// autoHeight: true,
+			slideToClickedSlide: true,
+			autoHeight: true,
 			// speed: 1500,
 			// parallax: true,
 			//touchRatio: 0,
@@ -368,8 +370,8 @@ function initSliders() {
 			// },
 			// Arrows
 			navigation: {
-				nextEl: '.thumbs-images .arrow-sl-btn_next',
-				prevEl: '.thumbs-images .arrow-sl-btn_prev',
+				nextEl: '.thumbs-images .arrow-sl-btn_prev',
+				prevEl: '.thumbs-images .arrow-sl-btn_next',
 			},
 			breakpoints: {
 				// 320: {
