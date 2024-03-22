@@ -70,6 +70,7 @@ function initSliders() {
 			// watchOverflow: true,
 			//lazy: true,
 			// Dotts
+			// hashNavigation: true,
 			pagination: {
 				el: '.image-card-product__dotts',
 				clickable: true,
@@ -123,11 +124,13 @@ function initSliders() {
 				},
 			}
 		});
+
 		$(document).ready(function () {
 			$('.swiper-pagination-bullet').hover(function () {
 				$(this).trigger("click");
 			});
 		});
+
 		// function sliderMouseSlideInit() {
 		// 	document.addEventListener("mousemove", function (e) {
 		// 		const targetElement = e.target;
@@ -186,8 +189,8 @@ function initSliders() {
 			// },
 			// Arrows
 			navigation: {
-				nextEl: '.navigation-panel-product .arrow-sl-btn_next',
-				prevEl: '.navigation-panel-product .arrow-sl-btn_prev',
+				nextEl: '.navigation-panel-product .arrow-sl-btn_prev',
+				prevEl: '.navigation-panel-product .arrow-sl-btn_next',
 			},
 			breakpoints: {
 				345: {
@@ -249,8 +252,8 @@ function initSliders() {
 			},
 			// Arrows
 			navigation: {
-				nextEl: '.main-slider-big .arrow-sl-btn_next',
-				prevEl: '.main-slider-big .arrow-sl-btn_prev',
+				nextEl: '.main-slider-big .arrow-sl-btn_prev',
+				prevEl: '.main-slider-big .arrow-sl-btn_next',
 			},
 			/*
 			breakpoints: {
@@ -309,8 +312,8 @@ function initSliders() {
 			},
 			// Arrows
 			navigation: {
-				nextEl: '.main-slider-small .arrow-sl-btn_next',
-				prevEl: '.main-slider-small .arrow-sl-btn_prev',
+				nextEl: '.main-slider-small .arrow-sl-btn_prev',
+				prevEl: '.main-slider-small .arrow-sl-btn_next',
 			},
 			breakpoints: {
 				// 320: {

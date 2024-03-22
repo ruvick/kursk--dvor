@@ -51,9 +51,27 @@ window.onload = function () {
 			if (targetElement.closest('.icons-card-product')) {
 				targetElement.closest('.icons-card-product').classList.toggle('_active');
 			}
+
 			if (targetElement.closest('.inner-product__row')) {
 				targetElement.closest('.inner-product__row').classList.toggle('_active');
+				// Добавление текста в кнопку
+				if (document.querySelectorAll('.inner-product__row._active').length > 0) {
+					targetElement.closest('.body-product__btn._icon-favorite').innerText = 'В избранном';
+				} else {
+					targetElement.closest('.body-product__btn._icon-favorite').innerText = 'В избранное';
+				}
 			}
+
+			if (targetElement.closest('.inner-product__buttons')) {
+				targetElement.closest('.inner-product__buttons').classList.toggle('_active');
+				// Добавление текста в кнопку
+				if (document.querySelectorAll('.inner-product__buttons._active').length > 0) {
+					targetElement.closest('.btn._icon-favorite').innerText = 'В избранном';
+				} else {
+					targetElement.closest('.btn._icon-favorite').innerText = 'В избранное';
+				}
+			}
+
 			if (targetElement.closest('.item-card-order__icons')) {
 				targetElement.closest('.item-card-order__icons').classList.toggle('_active');
 			}

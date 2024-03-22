@@ -368,6 +368,13 @@
 	}
 }
 
+.inner-product__buttons._active {
+	._icon-favorite {
+		&::before {
+			content: "\e910";
+		}
+	}
+}
 
 
 .body-product__inner {

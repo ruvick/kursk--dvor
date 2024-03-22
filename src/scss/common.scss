@@ -456,7 +456,7 @@ input[type='checkbox']:checked+.switch-block__label {
 		line-height: math.div(22, 16);
 		// color: $darkGrayColor;
 		width: 100%;
-		padding: rem(16) rem(10) rem(16) rem(20);
+		padding: rem(14) rem(10) rem(14) rem(20);
 		background: transparent;
 		transition: $mainTransition;
 	}
