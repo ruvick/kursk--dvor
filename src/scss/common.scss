@@ -788,6 +788,7 @@ input[type='checkbox']:checked+.switch-block__label {
 	flex: 0 1 100%;
 	// padding: 10px;
 	overflow: hidden;
+	padding-bottom: rem(10);
 	transition: $mainTransition;
 
 	@media (any-hover: hover) {

@@ -3467,6 +3467,7 @@ input[type=checkbox]:checked + .switch-block__label {
   border-radius: 0.1875rem;
   flex: 0 1 100%;
   overflow: hidden;
+  padding-bottom: 0.625rem;
   transition: all 0.4s ease 0s;
 }
 @media (any-hover: hover) {
