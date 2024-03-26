@@ -176,6 +176,26 @@ function initSliders() {
 						})
 					});
 
+					// ======================================================================
+					// var swiperContainers = document.querySelectorAll('.image-card-product');
+
+					// swiperContainers.forEach(function (container) {
+					// 	var swiper = new Swiper(container, {
+					// 		pagination: {
+					// 			el: container.querySelector('.swiper-pagination'),
+					// 			clickable: true,
+					// 		},
+					// 	});
+
+					// 	var paginationBullets = container.querySelectorAll('.swiper-pagination-bullet');
+
+					// 	paginationBullets.forEach(function (bullet, index) {
+					// 		bullet.addEventListener('mouseenter', function () {
+					// 			swiper.slideTo(index);
+					// 		});
+					// 	});
+					// });
+					// ================================================================
 					var slides = this.slides.length;
 					var activeBlock = container.nextElementSibling;
 

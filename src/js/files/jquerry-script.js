@@ -39,21 +39,36 @@ $(document).ready(function () {
 	// 	]);
 	// });
 
-	// $('.open-fancybox').click(function () {
+	// $('#openGalleryButton').click(function () {
 	// 	$.fancybox.open({
-	// 		src: '#fancybox-content',
+	// 		src: '#gallery',
 	// 		type: 'inline',
 	// 		// Дополнительные опции FancyBox
 	// 	});
 	// });
 
 	// $('body').on('click', '.card-product__image', function () {
-	// 	$('.image-card-product__dotts').css({ 'pointer-events': 'none' });
+	// 	// $('.image-card-product__dotts').css({ 'pointer-events': 'none' });
+	// 	$('.image-card-product__dotts').addClass('pointer-events');
 	// });
 
-	// $(".image-card-product__dotts").click(function () {
-	// 	$('.image-card-product__dotts').css({ 'pointer-events': 'none' });
-	// });
+	$("._icon-search-plus").click(function (e) {
+		if ($('.card-product__image')) {
+			e.preventDefault();
+		}
+	});
+	$("._icon-favorite").click(function (e) {
+		if ($('.card-product__image')) {
+			e.preventDefault();
+		}
+	});
+	$(".card-product__image").click(function (e) {
+		// const link = document.querySelector('div[data-fancybox]');
+		// $('.image-card-product__dotts').css({ 'pointer-events': 'none' });
+		// link.removeAttribute('data-fancybox');
+		// link.removeAttribute('data-src');
+		console.log('Клик');
+	});
 
 });
 
