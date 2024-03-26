@@ -39,5 +39,21 @@ $(document).ready(function () {
 	// 	]);
 	// });
 
+	// $('.open-fancybox').click(function () {
+	// 	$.fancybox.open({
+	// 		src: '#fancybox-content',
+	// 		type: 'inline',
+	// 		// Дополнительные опции FancyBox
+	// 	});
+	// });
+
+	// $('body').on('click', '.card-product__image', function () {
+	// 	$('.image-card-product__dotts').css({ 'pointer-events': 'none' });
+	// });
+
+	// $(".image-card-product__dotts").click(function () {
+	// 	$('.image-card-product__dotts').css({ 'pointer-events': 'none' });
+	// });
+
 });
 

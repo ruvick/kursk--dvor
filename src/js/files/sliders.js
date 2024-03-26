@@ -209,6 +209,7 @@ function initSliders() {
 		});
 	});
 
+
 	// var paginationBottom = mySwiper.pagination.el.cloneNode(true);
 	// paginationBottom.classList.add('pagination-bottom');
 	// document.querySelector('.image-card-product').appendChild(paginationBottom);
