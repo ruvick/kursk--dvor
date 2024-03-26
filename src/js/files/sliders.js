@@ -46,85 +46,172 @@ function initSliders() {
 
 	// Перечень слайдеров   
 	// if (document.querySelector('.image-card-product')) {
-	const swiper = new Swiper('.image-card-product', {
-		// Подключаем модули слайдера
-		// для конкретного случая
-		modules: [Pagination],
-		// effect: 'fade',
-		// autoplay: {
-		// delay: 2000,
-		// // 	disableOnInteraction: false,
-		// // },
-		observer: true,
-		observeParents: true,
-		// slidesPerView: 1,
-		// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
-		// spaceBetween: 0,
-		// autoHeight: true,
-		// speed: 800,
-		// parallax: true,
-		//touchRatio: 0,
-		//simulateTouch: false,
-		// loop: true,
-		//preloadImages: false,
-		// watchOverflow: true,
-		//lazy: true,
-		// Dotts
-		// hashNavigation: true,
-		pagination: {
-			el: '.image-card-product__dotts',
-			clickable: true,
-		},
-		// pagination: {
-		// 	el: '.image-card-product__dotts',
-		// 	clickable: true,
-		// 	renderBullet: function (index, className) {
-		// 		return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// 	},
-		// },
-		// Arrows
-		// navigation: {
-		// 	nextEl: '.slider-rooms .slider-arrow_next',
-		// 	prevEl: '.slider-rooms .slider-arrow_prev',
-		// },
-		/*
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-				spaceBetween: 0,
-				autoHeight: true,
+
+	// const swiper = new Swiper('.image-card-product', {
+	// 	// Подключаем модули слайдера
+	// 	// для конкретного случая
+	// 	modules: [Pagination],
+	// 	// effect: 'fade',
+	// 	// autoplay: {
+	// 	// delay: 2000,
+	// 	// // 	disableOnInteraction: false,
+	// 	// // },
+	// 	observer: true,
+	// 	observeParents: true,
+	// 	// slidesPerView: 1,
+	// 	// slidesPerView: 'auto', // Чтобы слайдер сам не указывал ширину слайдам. Будем управлять в стилях.
+	// 	// spaceBetween: 0,
+	// 	// autoHeight: true,
+	// 	// speed: 800,
+	// 	// parallax: true,
+	// 	//touchRatio: 0,
+	// 	//simulateTouch: false,
+	// 	// loop: true,
+	// 	//preloadImages: false,
+	// 	// watchOverflow: true,
+	// 	//lazy: true,
+	// 	// Dotts
+	// 	// hashNavigation: true,
+	// 	pagination: {
+	// 		el: ".image-card-product__dotts",
+	// 		clickable: true,
+	// 	},
+	// 	// pagination: {
+	// 	// 	el: '.swiper-pagination',
+	// 	// 	clickable: true,
+	// 	// 	renderBullet: function (index, className) {
+	// 	// 		return '<span class="' + className + '">' + (index + 1) + '</span>';
+	// 	// 	},
+	// 	// },
+	// 	// Arrows
+	// 	// navigation: {
+	// 	// 	nextEl: '.slider-rooms .slider-arrow_next',
+	// 	// 	prevEl: '.slider-rooms .slider-arrow_prev',
+	// 	// },
+	// 	/*
+	// 	breakpoints: {
+	// 		320: {
+	// 			slidesPerView: 1,
+	// 			spaceBetween: 0,
+	// 			autoHeight: true,
+	// 		},
+	// 		768: {
+	// 			slidesPerView: 2,
+	// 			spaceBetween: 20,
+	// 		},
+	// 		992: {
+	// 			slidesPerView: 3,
+	// 			spaceBetween: 20, swiper.disable()
+	// 		},
+	// 		1268: {
+	// 			slidesPerView: 4,
+	// 			spaceBetween: 30,
+	// 		},
+	// 		1268: {
+	// 			slidesPerView: 4,
+	// 			spaceBetween: 30,
+	// 		},
+	// 	},
+	// 	*/
+	// 	on: {
+	// 		resize: function enableOnlyMobile(swiper) {
+	// 			if (1024 >= window.innerWidth) {
+	// 				swiper.disable()
+	// 				swiper.el.classList.add('-non-slider')
+	// 			} else {
+	// 				swiper.enable()
+	// 				swiper.el.classList.remove('-non-slider')
+	// 			}
+	// 		},
+	// 		init: function () {
+	// 			var slides = this.slides.length;
+	// 			var activeBlock = document.querySelector('.paggination-img-card');
+
+	// 			// activeBlock.forEach(activeBlock => {
+
+	// 			// });
+
+	// 			for (var i = 0; i < slides; i++) {
+	// 				var element = document.createElement('div');
+	// 				element.classList.add('paggination-img-card__item');
+	// 				// element.textContent = 'Element ' + (i + 1);
+	// 				activeBlock.appendChild(element);
+	// 			}
+	// 		},
+	// 		slideChange: function () {
+	// 			var activeIndex = this.activeIndex;
+	// 			var elements = document.querySelectorAll('.paggination-img-card__item');
+
+	// 			elements.forEach(function (element) {
+	// 				element.classList.remove('_active');
+	// 			});
+
+	// 			elements[activeIndex].classList.add('_active');
+	// 		},
+	// 	}
+	// });
+
+	let swiperContainers = document.querySelectorAll('.image-card-product');
+	swiperContainers.forEach(function (container) {
+		var swiper = new Swiper(container, {
+			modules: [Pagination],
+			// effect: 'fade',
+			// autoplay: {
+			// delay: 2000,
+			// // 	disableOnInteraction: false,
+			// // },
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: ".image-card-product__dotts",
+				clickable: true,
 			},
-			768: {
-				slidesPerView: 2,
-				spaceBetween: 20,
-			},
-			992: {
-				slidesPerView: 3,
-				spaceBetween: 20, swiper.disable()
-			},
-			1268: {
-				slidesPerView: 4,
-				spaceBetween: 30,
-			},
-			1268: {
-				slidesPerView: 4,
-				spaceBetween: 30,
-			},
-		},
-		*/
-		on: {
-			resize: function enableOnlyMobile(swiper) {
-				if (1024 >= window.innerWidth) {
-					swiper.disable()
-					swiper.el.classList.add('-non-slider')
-				} else {
-					swiper.enable()
-					swiper.el.classList.remove('-non-slider')
+			on: {
+				init: function () {
+
+					const sliderBullets = document.querySelectorAll('.swiper-pagination-bullet');
+					sliderBullets.forEach(bullet => {
+						bullet.addEventListener("mousemove", function () {
+							bullet.click();
+						})
+					});
+
+					var slides = this.slides.length;
+					var activeBlock = container.nextElementSibling;
+
+					if (slides > 1) {
+
+						for (var i = 0; i < slides; i++) {
+							var element = document.createElement('div');
+							element.classList.add('paggination-img-card__item');
+							// element.textContent = 'Element ' + (i + 1);
+							activeBlock.appendChild(element);
+						}
+
+
+						var activeIndex = this.activeIndex;
+						var elements = activeBlock.querySelectorAll('.paggination-img-card__item');
+						elements[activeIndex].classList.add('_active');
+					}
+				},
+				slideChange: function () {
+					var activeIndex = this.activeIndex;
+					var activeBlock = this.el.nextElementSibling;
+					var elements = activeBlock.querySelectorAll('.paggination-img-card__item');
+
+					elements.forEach(function (element) {
+						element.classList.remove('_active');
+					});
+
+					elements[activeIndex].classList.add('_active');
 				}
-			},
-		}
+			}
+		});
 	});
 
+	// var paginationBottom = mySwiper.pagination.el.cloneNode(true);
+	// paginationBottom.classList.add('pagination-bottom');
+	// document.querySelector('.image-card-product').appendChild(paginationBottom);
 	// $(document).ready(function () {
 	// 	$('.swiper-pagination-bullet').hover(function () {
 	// 		$(this).trigger("click");
@@ -132,61 +219,17 @@ function initSliders() {
 	// });
 	// const cardImageitem = document.querySelector('.card-product__image');
 	// const itema = document.querySelector('.image-card-product__dotts');
-	const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+
 	// const imgDots = document.querySelector('.img-dots');
 	// let clone = itema.cloneNode(true);
 	// cardImageitem.appendChild(clone);
 
+	// $('.swiper-pagination.pagination-top').clone().appendTo('.swiper-paginations.pagination-bottom');
+	// $(".pagination-bottom").html($(".pagination-top").html());
 
-	bullets.forEach(bullet => {
-		// bullet.length = imgDots;
-		// imgDots.textContent = '123';
-		// console.log(imgDots.length);
-		bullet.addEventListener("mousemove", function () {
-			bullet.click();
-			// document.querySelectorAll('[data-index]').forEach($div => {
-			bullet.length;
-			console.log(bullet.length);
 
-			// })
-		})
-	});
 
-	// let mySliderAllSlides = document.querySelector('.image-slider__total');
-	// let mySliderCurrentSlide = document.querySelector('.image-slider__current');
-
-	// mySliderAllSlides.innerHTML = myImageSlider.slides.length;
-
-	// myImageSlider.on('slideChange', function () {
-	// 	let currentSlide = ++myImageSlider.reallIndex;
-	// 	mySliderCurrentSlide.innerHTML = currentSlide;
-	// });
-	// function sliderMouseSlideInit() {
-	// 	document.addEventListener("mousemove", function (e) {
-	// 		const targetElement = e.target;
-	// 		if (targetElement.closest('[data-mousemove-swipe]')) {
-	// 			const sliderElement = targetElement.closest('[data-mousemove-swipe]');
-	// 			const sliderItem = swiper[getIndex(sliderElement)];
-	// 			const sliderLength = sliderItem.slides.length;
-	// 			if (sliderLength > 1) {
-	// 				const sliderWidth = sliderItem.width;
-	// 				const sliderPath = Math.round(sliderWidth / sliderLength);
-	// 				const sliderMousePos = e.clientX - sliderElement.offsetLeft;
-	// 				const sliderSlide = Math.floor(sliderMousePos / sliderPath);
-	// 				sliderItem.slideTo(sliderSlide);
-	// 			}
-	// 		}
-	// 	})
-
-	// 	function getIndex(el) {
-	// 		return Array.from(el.parentNode.children).indexOf(el);
-	// 	}
-	// }
-	// if (document.querySelector('[data-mousemove-swipe]')) {
-	// 	sliderMouseSlideInit();
-	// }
-
-	// }
+	//========================================================================================================================================================
 
 	if (document.querySelector('.slider-cards-block')) {
 		new Swiper('.slider-cards-block', {

@@ -65,6 +65,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"brazzers-carousel": "^1.0.1",
 		"pincode-input": "^0.4.3",
 		"simplebar": "latest"
 	}
