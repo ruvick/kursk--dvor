@@ -461,7 +461,7 @@ window.onload = function () {
 const quantityInput = document.querySelectorAll('.quantity__input input');
 quantityInput.forEach(input => {
 	input.addEventListener('input', function () {
-		var maxLength = 3;
+		let maxLength = 3;
 		if (this.value.length > maxLength) {
 			this.value = this.value.substring(0, maxLength);
 		}

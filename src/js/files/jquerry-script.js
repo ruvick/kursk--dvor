@@ -32,24 +32,13 @@ $(document).ready(function () {
 	// var inputmask_phone = { "mask": "+9(999)999-99-99" };
 	// $("input[type=tel]").inputmask(inputmask_phone);
 
-
-	// $('._icon-search-plus').click(function () {
-	// 	$.fancybox([
-	// 		{ href: '.slider-card-product__slide' }
-	// 	]);
-	// });
-
 	// $('#openGalleryButton').click(function () {
 	// 	$.fancybox.open({
 	// 		src: '#gallery',
 	// 		type: 'inline',
+	// 		loop: true,
 	// 		// Дополнительные опции FancyBox
 	// 	});
-	// });
-
-	// $('body').on('click', '.card-product__image', function () {
-	// 	// $('.image-card-product__dotts').css({ 'pointer-events': 'none' });
-	// 	$('.image-card-product__dotts').addClass('pointer-events');
 	// });
 
 	$("._icon-search-plus").click(function (e) {
@@ -62,13 +51,22 @@ $(document).ready(function () {
 			e.preventDefault();
 		}
 	});
-	$(".card-product__image").click(function (e) {
-		// const link = document.querySelector('div[data-fancybox]');
-		// $('.image-card-product__dotts').css({ 'pointer-events': 'none' });
-		// link.removeAttribute('data-fancybox');
-		// link.removeAttribute('data-src');
-		console.log('Клик');
+
+	$('.image-card-product__dotts').on('click', function () {
+		$('.card-product__image').each(function () {
+			$(this).find('.slider-card-product__slide').removeAttr('data-fancybox');
+			$(this).find('.image-card-product__dotts').css({ 'pointer-events': 'none' });
+			window.location.href = $('.card-product__image').attr('href');
+		});
 	});
+
+	$('.slider-card-product__slide').on('click', function () {
+		$(this).removeAttr('data-fancybox');
+	});
+
+	if (1024 >= window.innerWidth) {
+		$('.slider-card-product__slide').removeAttr('data-fancybox');
+	}
 
 });
 

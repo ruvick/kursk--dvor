@@ -153,7 +153,7 @@ function initSliders() {
 
 	let swiperContainers = document.querySelectorAll('.image-card-product');
 	swiperContainers.forEach(function (container) {
-		var swiper = new Swiper(container, {
+		let swiper = new Swiper(container, {
 			modules: [Pagination],
 			// effect: 'fade',
 			// autoplay: {
@@ -168,13 +168,20 @@ function initSliders() {
 			},
 			on: {
 				init: function () {
+					let paginationBullets = container.querySelectorAll('.swiper-pagination-bullet');
 
-					const sliderBullets = document.querySelectorAll('.swiper-pagination-bullet');
-					sliderBullets.forEach(bullet => {
-						bullet.addEventListener("mousemove", function () {
-							bullet.click();
-						})
+					paginationBullets.forEach(function (bullet, index) {
+						bullet.addEventListener('mouseenter', function () {
+							swiper.slideTo(index);
+						});
 					});
+
+					// const sliderBullets = document.querySelectorAll('.swiper-pagination-bullet');
+					// sliderBullets.forEach(bullet => {
+					// 	bullet.addEventListener("mousemove", function () {
+					// 		bullet.click();
+					// 	})
+					// });
 
 					// ======================================================================
 					// var swiperContainers = document.querySelectorAll('.image-card-product');
@@ -196,28 +203,36 @@ function initSliders() {
 					// 	});
 					// });
 					// ================================================================
-					var slides = this.slides.length;
-					var activeBlock = container.nextElementSibling;
+					let slides = this.slides.length;
+					let activeBlock = container.nextElementSibling;
 
 					if (slides > 1) {
 
-						for (var i = 0; i < slides; i++) {
-							var element = document.createElement('div');
+						for (let i = 0; i < slides; i++) {
+							let element = document.createElement('div');
 							element.classList.add('paggination-img-card__item');
 							// element.textContent = 'Element ' + (i + 1);
 							activeBlock.appendChild(element);
 						}
 
-
-						var activeIndex = this.activeIndex;
-						var elements = activeBlock.querySelectorAll('.paggination-img-card__item');
+						let activeIndex = this.activeIndex;
+						let elements = activeBlock.querySelectorAll('.paggination-img-card__item');
 						elements[activeIndex].classList.add('_active');
 					}
 				},
 				slideChange: function () {
-					var activeIndex = this.activeIndex;
-					var activeBlock = this.el.nextElementSibling;
-					var elements = activeBlock.querySelectorAll('.paggination-img-card__item');
+					// var activeIndex = this.activeIndex;
+					// var activeBlock = this.el.nextElementSibling;
+					// var elements = activeBlock.querySelectorAll('.paggination-img-card__item');
+
+					// elements.forEach(function (element) {
+					// 	element.classList.remove('_active');
+					// });
+
+					// elements[activeIndex].classList.add('_active');
+					let activeIndex = this.activeIndex;
+					let activeBlock = container.nextElementSibling;
+					let elements = activeBlock.querySelectorAll('.paggination-img-card__item');
 
 					elements.forEach(function (element) {
 						element.classList.remove('_active');
@@ -228,28 +243,6 @@ function initSliders() {
 			}
 		});
 	});
-
-
-	// var paginationBottom = mySwiper.pagination.el.cloneNode(true);
-	// paginationBottom.classList.add('pagination-bottom');
-	// document.querySelector('.image-card-product').appendChild(paginationBottom);
-	// $(document).ready(function () {
-	// 	$('.swiper-pagination-bullet').hover(function () {
-	// 		$(this).trigger("click");
-	// 	});
-	// });
-	// const cardImageitem = document.querySelector('.card-product__image');
-	// const itema = document.querySelector('.image-card-product__dotts');
-
-	// const imgDots = document.querySelector('.img-dots');
-	// let clone = itema.cloneNode(true);
-	// cardImageitem.appendChild(clone);
-
-	// $('.swiper-pagination.pagination-top').clone().appendTo('.swiper-paginations.pagination-bottom');
-	// $(".pagination-bottom").html($(".pagination-top").html());
-
-
-
 	//========================================================================================================================================================
 
 	if (document.querySelector('.slider-cards-block')) {

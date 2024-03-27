@@ -1838,6 +1838,10 @@ body.ie {
 		z-index: 5;
 		display: flex;
 		gap: rem(5);
+
+		@media (max-width: 1024px) {
+			height: auto;
+		}
 	}
 
 	.swiper-pagination-bullet {
@@ -1858,6 +1862,9 @@ body.ie {
 		// &:last-child {
 		// 	margin: 0px 0px 0px 0px;
 		// }
+		@media (max-width: 1024px) {
+			height: auto;
+		}
 	}
 
 	.swiper-pagination-bullet:before {
