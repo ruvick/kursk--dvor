@@ -287,7 +287,7 @@ window.onload = function () {
 
 			let productsTemplate = `
 			<div data-pid="${productId}" class="card-product productAddBascet">
-			<div class="card-product__image image-card-product swiper">
+			<a href="${productUrl}" class="card-product__image image-card-product swiper">
 				<div class="image-card-product__stikcers-block sticker-block">
 					<span class="sticker _red">${sticker} <span>${stickerQuantity} шт</span></span>
 				</div>
@@ -297,13 +297,14 @@ window.onload = function () {
 						class="icons-card-product__icon icon-card-product _icon-search-plus"></button>
 				</div>
 				<div class="swiper-wrapper">
-					<a data-fancybox="${productTrigger}" data-src="img/card-product/${productImage}"
+					<div data-fancybox="${productTrigger}" data-src="img/card-product/${productImage}"
 						class="fancybox slider-card-product__slide swiper-slide imageAddBascet _ibg">
 						<img src="img/card-product/${productImage}" loading="lazy" alt="Картинка">
-					</a>
+					</div>
 				</div>
 				<div class="image-card-product__dotts"></div>
-			</div>
+			</a>
+			<div class="image-card-product__paggination paggination-img-card"></div>
 			<div class="card-product__body body-card-product">
 				<div class="body-card-product__row">
 					<div class="body-card-product__item availability-card _color-green">· В наличии
