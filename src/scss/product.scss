@@ -364,6 +364,7 @@
 	.inner-product__row._active & {
 		&::before {
 			content: "\e910";
+			color: #FF2E00;
 		}
 	}
 }
@@ -372,6 +373,7 @@
 	._icon-favorite {
 		&::before {
 			content: "\e910";
+			color: #FF2E00;
 		}
 	}
 }

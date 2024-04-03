@@ -885,6 +885,7 @@ input[type='checkbox']:checked+.switch-block__label {
 
 			&::before {
 				content: "\e910";
+				color: #FF2E00;
 			}
 		}
 	}
