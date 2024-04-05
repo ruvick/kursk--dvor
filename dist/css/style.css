@@ -10351,6 +10351,13 @@ body.ie ._ibg img {
 .paggination-img-card__item._active {
   background-color: #120B8D;
 }
+
+@media (any-hover: hover) {
+  .actions-card-product__btn._btn_white:hover {
+    color: #020020 !important;
+    background-color: #fff !important;
+  }
+}
 /**
  * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions

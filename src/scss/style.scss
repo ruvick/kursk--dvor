@@ -505,3 +505,13 @@ body {
 		background-color: #120B8D;
 	}
 }
+//========================================================================================================================================================
+
+.actions-card-product__btn._btn_white {
+	@media (any-hover: hover){
+		 &:hover { 
+			color: #020020 !important;
+			background-color: #fff !important;
+	  } 
+	}
+}
