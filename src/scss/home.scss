@@ -38,28 +38,33 @@
 .main-slider-big__slide {   
 	display: flex;
 	align-items: center;
-	padding: rem(111) rem(60);
+	padding: rem(111) rem(53);
+	@include adaptiveValue("padding-top", 86, 14);
+	@include adaptiveValue("padding-bottom", 86, 14);
+	@include adaptiveValue("padding-left", 53, 14);
+	@include adaptiveValue("padding-right", 53, 14);
+	@include adaptiveValue("min-height", 480, 150);
 	// background-color: rgba(240, 242, 248, 1);
 	width: 100%;
 	height: 100%;
 	background-position: center !important;
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
-	@media (max-width: 1024px){
-		  padding: rem(80) rem(60);
-	}
-	@media (max-width: 991px){
-		  padding: rem(50) rem(60);
-	}
-	@media (max-width: 768px){
-		padding: rem(71) rem(40);
-	}
-	@media (max-width: 540px){
-		padding: rem(16) rem(15);
-	}
-	@media (max-width: 375px){
-		padding: rem(14) rem(15);
-	}
+	// @media (max-width: 1024px){
+	// 	  padding: rem(80) rem(60);
+	// }
+	// @media (max-width: 991px){
+	// 	  padding: rem(50) rem(60);
+	// }
+	// @media (max-width: 768px){
+	// 	padding: rem(71) rem(40);
+	// }
+	// @media (max-width: 540px){
+	// 	padding: rem(16) rem(15);
+	// }
+	// @media (max-width: 375px){
+	// 	padding: rem(14) rem(15);
+	// }
 }
 .swiper-slide {
 }
@@ -184,6 +189,10 @@ color: rgba(2, 0, 32, 0.7);
 
 .main-sliders__small-slider {
 	position: relative;
+	@media (max-width: em(991)){
+		@include adaptiveValue("min-height", 390, 90);
+
+ }
 	.nuar_blk {
 		display: none;
 		background-color: #00000025;
@@ -264,11 +273,11 @@ color: rgba(2, 0, 32, 0.7);
 	z-index: 2;
 	display: flex;
 	align-items: center;
-font-size: rem(20);
-font-weight: 400;
-line-height: math.div(21, 20);
-letter-spacing: 0em;
-color: $redColor;
+	font-size: rem(20);
+	font-weight: 400;
+	line-height: math.div(21, 20);
+	letter-spacing: 0em;
+	color: $redColor;
 	svg {
 		width: rem(45);
 		height: rem(45);
@@ -290,28 +299,35 @@ color: $redColor;
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-position: center !important;
-	background-size: cover !important;
-	background-repeat: no-repeat !important; 
+	background: url('../img/stocks/02.jpg');
+	background-position: 0 0;
+	background-size: cover;
+	background-repeat: no-repeat; 
+	height: 100%;
+	@media (max-width: em(991)){
+		background: url('../img/stocks/03.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	// @media (max-width: 768px) {
+	// 	min-height: rem(217);
+	// 	background: url('../img/main-sliders/02-mob.jpg') 0 0 no-repeat !important;
+	// 	background-position: center !important;
+	// 	background-size: cover !important;
+	// 	background-repeat: no-repeat !important; 
+	// 	border-radius: rem(3);
+	// }
 
-	@media (max-width: 768px) {
-		min-height: rem(217);
-		background: url('../img/main-sliders/02-mob.jpg') 0 0 no-repeat !important;
-		background-position: center !important;
-		background-size: cover !important;
-		background-repeat: no-repeat !important; 
-		border-radius: rem(3);
-	}
-
-	@media (max-width: 540px){
-		 min-height: rem(150); 
-	}
-	@media (max-width: 480px){
-		  min-height: rem(120);  
-	}
-		@media (max-width: 445px){
-		  min-height: rem(104);  
-	}
+	// @media (max-width: 540px){
+	// 	 min-height: rem(150); 
+	// }
+	// @media (max-width: 480px){
+	// 	  min-height: rem(120);  
+	// }
+	// 	@media (max-width: 445px){
+	// 	  min-height: rem(104);  
+	// }
 }
 .swiper-slide {
 }
