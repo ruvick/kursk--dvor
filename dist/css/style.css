@@ -10358,6 +10358,10 @@ body.ie ._ibg img {
     background-color: #fff !important;
   }
 }
+
+.swiper-button-lock {
+  display: none !important;
+}
 /**
  * Swiper 9.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
