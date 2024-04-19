@@ -141,6 +141,7 @@
 	&__bottom {}
 }
 
+.fancybox-active.compensate-for-scrollbar .header,
 .lock .header {
 	@media (min-width: 1025px) {
 		left: auto;
