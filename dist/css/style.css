@@ -6905,7 +6905,7 @@ body.ie ._ibg img {
 .catalog-root__inner {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -0.625rem;
+  margin: 0 -0.3125rem;
 }
 @media (max-width: 414px) {
   .catalog-root__inner {
@@ -6915,8 +6915,13 @@ body.ie ._ibg img {
 }
 .catalog-root__column {
   display: flex;
-  flex: 0 1 9.25rem;
+  flex: 0 1 11.1%;
   padding: 0px 5px 10px 5px;
+}
+@media (max-width: 1100px) {
+  .catalog-root__column {
+    flex: 0 1 16.555%;
+  }
 }
 @media (max-width: 768px) {
   .catalog-root__column {
