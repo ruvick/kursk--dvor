@@ -170,13 +170,11 @@
 }
 //========================================================================================================================================================
 
-.products {
-	// display: flex;
-	// flex-wrap: wrap;
-	// margin: 0 rem(-10); 
+.products { 
 	display: grid;
 	gap: rem(10);
-	grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr)); 
+	// grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr)); 
+	grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr)); 
 	margin: 0;
 	&:not(:last-child){
 		margin-bottom: rem(50);
