@@ -93,7 +93,7 @@ body {
 }
 
 .page {
-	@media (min-width: 1025px) {
+	@media (min-width:em(1025)){
 		padding-top: rem(185);
 	}
 }
