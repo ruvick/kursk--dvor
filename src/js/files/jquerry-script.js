@@ -46,6 +46,7 @@ $(document).ready(function () {
 			e.preventDefault();
 		}
 	});
+	// $(".card-product ._icon-favorite").click(function (e) {
 	$("._icon-favorite").click(function (e) {
 		if ($('.card-product__image')) {
 			e.preventDefault();

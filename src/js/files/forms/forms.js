@@ -8,7 +8,8 @@ import { SelectConstructor } from "../../libs/select.js";
 // Класс масок
 import { InputMask } from "../../libs/inputmask.js";
 // Функционал попапа
-// const popupItem = initPopups();
+
+const popupItem = initPopups();
 //==============================================================================================================================================================================================================================================================================================================================
 // Объект модулей форм для экспорта
 export const formsModules = {
@@ -170,7 +171,7 @@ export function formSubmit(validate) {
 	async function formSubmitAction(form, e) {
 		const error = validate ? formValidate.getErrors(form) : 0;
 		if (error === 0) {
-			const popup = form.dataset.popup;
+			const popupMessage = form.dataset.popupMessage; // Извлекаем значение атрибута data-popup-message
 			const ajax = form.hasAttribute('data-ajax');
 			//SendForm
 			if (ajax) {
@@ -187,9 +188,9 @@ export function formSubmit(validate) {
 				if (response.ok) {
 					let responseResult = await response.json();
 					form.classList.remove('_sending');
-					if (popup) {
+					if (popupMessage) {
 						// Нужно подключить зависимость
-						popupItem.open(`#${popup}`);
+						popupItem.open(popupMessage); // Открываем попап, используя значение атрибута data-popup-message
 					}
 					formValidate.formClean(form);
 				} else {
@@ -200,9 +201,9 @@ export function formSubmit(validate) {
 			// Если режим разработки
 			if (form.hasAttribute('data-dev')) {
 				e.preventDefault();
-				if (popup) {
+				if (popupMessage) {
 					// Нужно подключить зависимость
-					popupItem.open(`#${popup}`);
+					popupItem.open(popupMessage); // Открываем попап, используя значение атрибута data-popup-message
 				}
 				formValidate.formClean(form);
 			}
@@ -212,7 +213,6 @@ export function formSubmit(validate) {
 			if (formError && form.hasAttribute('data-goto-error')) {
 				gotoBlock(formError, true, 1000);
 			}
-
 		}
 	}
 }
