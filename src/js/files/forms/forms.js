@@ -90,11 +90,28 @@ export let formValidate = {
 			} else {
 				this.removeError(formRequiredItem);
 			}
+		} else if (formRequiredItem.dataset.required === "name") {
+			formRequiredItem.value = formRequiredItem.value.replace(/[^А-Яа-яёA-Za-z-]/g, '');
+			if (formRequiredItem.value.trim().length < 3) {
+				this.addError(formRequiredItem);
+				error++;
+				formRequiredItem.parentElement.querySelector('.form__error').innerHTML = "Минимальная длинна 4 символа";
+			} else {
+				this.removeError(formRequiredItem);
+			}
+		} else if (formRequiredItem.dataset.required === "tel") {
+			if (formRequiredItem.value.trim().length < 17) {
+				this.addError(formRequiredItem);
+				error++;
+				formRequiredItem.parentElement.querySelector('.form__error').innerHTML = "Минимальная длинна 10 символов";
+			} else {
+				this.removeError(formRequiredItem);
+			}
 		} else if (formRequiredItem.type === "checkbox" && !formRequiredItem.checked) {
 			this.addError(formRequiredItem);
 			error++;
 		} else {
-			if (!formRequiredItem.value) {
+			if (!formRequiredItem.value.trim()) {
 				this.addError(formRequiredItem);
 				error++;
 			} else {
@@ -153,6 +170,19 @@ export let formValidate = {
 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
 	}
 }
+
+// Ограничение ввода цифровых символов и символов более 50 
+document.addEventListener('input', function (e) {
+	const input = e.target;
+	if (input.dataset.required === "name") {
+		// Удаляем все символы, кроме букв и "-"
+		input.value = input.value.replace(/[^А-Яа-яёA-Za-z-]/g, '');
+	}
+	if (input.value.length > 50) {
+		input.value = input.value.slice(0, 50);
+	}
+});
+
 /* Отправка форм */
 export function formSubmit(validate) {
 	const forms = document.forms;

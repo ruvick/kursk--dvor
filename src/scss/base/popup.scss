@@ -174,7 +174,7 @@ line-height: math.div(18, 14);
 	.checkbox {
 		padding: rem(41) 0;
 		display: block;
-		@media (max-width: 480px){
+		@media (max-width: 480px){ 
 			 padding: 0; 
 		}
 	}
@@ -212,6 +212,14 @@ transition: $mainTransition;
 		@media (max-width: 480px){
 			 margin-left: 0; 
 			 font-size: rem(12);
+		}
+	}
+	.checkbox._form-error {
+		.checkbox__text:before {
+			border: 1px solid red;
+	  }
+		.form__error {
+			display: none;
 		}
 	}
 }
