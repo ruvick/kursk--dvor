@@ -470,8 +470,34 @@ quantityInput.forEach(input => {
 });
 //========================================================================================================================================================
 
-
-
+const notification = document.querySelector('.input-file__notification');
+const fileInput = document.getElementById('myfile');
+// Получение файла
+fileInput.addEventListener('change', () => {
+	let file = fileInput.value;
+	file = file.replace(/\\/g, '/').split('/').pop();
+	document.getElementById('file-name').innerHTML = '' + file;
+	emptyFile();
+});
+// Проверка файла
+function emptyFile() {
+	if (fileInput.files.length == 0) {
+		console.log('Пустой файл');
+	}
+	else {
+		let fileSize = fileInput.files[0].size;
+		if (fileSize > 5000000) {
+			notification.style.opacity = "1";
+			notification.innerHTML = "Файл превышает 5 Мб";
+			notification.classList.add('_error');
+			fileInput.value = '';
+			document.getElementById('file-name').innerHTML = "Прикрепить файл";
+		} else {
+			notification.style.opacity = "0";
+			notification.classList.remove('_error');
+		}
+	}
+}
 
 
 

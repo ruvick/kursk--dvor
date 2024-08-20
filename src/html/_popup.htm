@@ -419,32 +419,10 @@
 										<span id="file-name" class="input-file__upload _icon-paper-clip"
 											placeholder="File.txt">Прикрепить схему
 											помещения</span>
-										<input id="myfile" type="file" name="file" onchange="getFileName ();">
+										<input id="myfile" type="file" name="file">
 									</label>
 								</div>
 								<div class="input-file__notification"></div>
-
-								<script>
-									const notification = document.querySelector('.input-file__notification');
-									// Получение файла
-									function getFileName() {
-										let file = document.getElementById('myfile').value;
-										file = file.replace(/\\/g, '/').split('/').pop();
-										document.getElementById('file-name').innerHTML = '' + file;
-										emptyFile();
-									}
-									// Проверка файла
-									function emptyFile() {
-										let file = document.getElementById('myfile');
-										if (file.files.value == 0) {
-											console.log('Пустой файл');
-										}
-										else {
-											notification.style.opacity = "0";
-											console.log('Пустой файл');
-										}
-									}
-								</script>
 
 							</div>
 

@@ -224,6 +224,12 @@ transition: $mainTransition;
 	}
 }
 
+.input-file__notification._error {
+	font-size: rem(12);
+	color: red;
+	margin-top: rem(3);
+}
+
 .form-popup__row {
 	&:not(:last-child){
 		margin-bottom: rem(30);
